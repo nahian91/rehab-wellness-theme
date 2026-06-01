@@ -1,0 +1,59 @@
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<!-- Preloader -->
+<div class="preloader">
+    <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/loader.svg" alt=""></div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="main-header">
+    <div class="header-sticky">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <div class="navbar-brand">
+                    <?php if ( has_custom_logo() ) {
+                        the_custom_logo();
+                    } else { ?>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo"></a>
+                    <?php } ?>
+                </div>
+
+                <!-- Main Menu -->
+                <div class="collapse navbar-collapse main-menu">
+                    <div class="nav-menu-wrapper">
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'menu-1',
+                            'container'      => false,
+                            'menu_class'     => 'navbar-nav mr-auto',
+                            'fallback_cb'    => '__return_false',
+                            'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'depth'          => 2,
+                        ) );
+                        ?>
+                    </div>
+                    
+                    <!-- Header Button -->
+                    <div class="header-btn">
+                        <a href="<?php echo esc_url( home_url( '/book-appointment' ) ); ?>" class="btn-default btn-highlighted">Book Appointment</a>
+                    </div>
+                </div>
+                <div class="navbar-toggle"></div>
+            </div>
+        </nav>
+        <div class="responsive-menu"></div>
+    </div>
+</header>
