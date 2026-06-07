@@ -9,14 +9,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- Preloader -->
-<div class="preloader">
-    <div class="loading-container">
-        <div class="loading"></div>
-        <div id="loading-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/loader.svg" alt=""></div>
-    </div>
-</div>
-
 <!-- Header -->
 <header class="main-header">
     <div class="header-sticky">
@@ -27,7 +19,7 @@
                     <?php if ( has_custom_logo() ) {
                         the_custom_logo();
                     } else { ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo"></a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"></a>
                     <?php } ?>
                 </div>
 
@@ -48,7 +40,7 @@
                     
                     <!-- Header Button -->
                     <div class="header-btn">
-                        <a href="<?php echo esc_url( home_url( '/book-appointment' ) ); ?>" class="btn-default btn-highlighted">Book Appointment</a>
+                        <a href="<?php echo esc_url( home_url( '/book-appointment' ) ); ?>" class="btn-default btn-highlighted">Appointment</a>
                     </div>
                 </div>
                 <div class="navbar-toggle"></div>

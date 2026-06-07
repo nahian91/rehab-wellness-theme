@@ -6,7 +6,7 @@ Template Name: Contact
 
 get_header();?>
 
-    <div class="page-header dark-section parallaxie">
+    <div class="page-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -47,7 +47,7 @@ get_header();?>
                     <!-- Contact Info Item Start -->
                     <div class="contact-info-item wow fadeInUp">
                         <div class="icon-box">
-                            <img src="assets/images/icon-headphone.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-headphone.svg" alt="">
                         </div>
                         <div class="contact-info-item-content">
                             <p>Emergency Call</p>
@@ -59,7 +59,7 @@ get_header();?>
                     <!-- Contact Info Item Start -->
                     <div class="contact-info-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src="assets/images/icon-mail-white.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-mail-white.svg" alt="">
                         </div>
                         <div class="contact-info-item-content">
                             <p>E-mail Us</p>
@@ -71,7 +71,7 @@ get_header();?>
                     <!-- Contact Info Item Start -->
                     <div class="contact-info-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="icon-box">
-                            <img src="assets/images/icon-location-white.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-location-white.svg" alt="">
                         </div>
                         <div class="contact-info-item-content">
                             <p>Our Location</p>

@@ -205,66 +205,7 @@ function add_bootstrap_link_classes($atts, $item, $args) {
     return $atts;
 }
 
-/**
- * Register Custom Post Types: Services, Doctors, and Testimonials
- */
-function rehab_wellness_register_cpts() {
-
-    // 1. Services CPT
-    register_post_type('services', array(
-        'labels' => array('name' => 'Services', 'singular_name' => 'Service'),
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'services'),
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-        'menu_icon' => 'dashicons-admin-tools',
-    ));
-
-    // 2. Doctors CPT
-    register_post_type('doctors', array(
-        'labels' => array('name' => 'Doctors', 'singular_name' => 'Doctor'),
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'doctors'),
-        'supports' => array('title', 'editor', 'thumbnail'),
-        'menu_icon' => 'dashicons-businessman',
-    ));
-
-    // 3. Testimonials CPT
-    register_post_type('testimonials', array(
-        'labels' => array('name' => 'Testimonials', 'singular_name' => 'Testimonial'),
-        'public' => true,
-        'publicly_queryable' => false, // সাধারণত টেস্টমোনিয়াল সিঙ্গেল পেজ দরকার হয় না
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'supports' => array('title', 'editor', 'thumbnail'),
-        'menu_icon' => 'dashicons-testimonial',
-    ));
+function my_acf_json_save_point( $path ) {
+    return get_stylesheet_directory() . '/acf-json';
 }
-add_action('init', 'rehab_wellness_register_cpts');
-
-/**
- * Register Custom Elementor Widgets
- */
-function register_rehab_custom_widgets( $widgets_manager ) {
-    // আগে উইজেট ফাইলটি ইনক্লুড করুন
-    require_once( get_template_directory() . '/widgets/my-rehab-widget.php' );
-
-    // উইজেট ক্লাসটি রেজিস্টার করুন
-    $widgets_manager->register( new \My_Rehab_Widget() );
-}
-add_action( 'elementor/widgets/register', 'register_rehab_custom_widgets' );
-
-/**
- * Register Custom Widget Category
- */
-function add_rehab_widgets_category( $elements_manager ) {
-    $elements_manager->add_category(
-        'rehab-widgets', // ক্যাটাগরি আইডি
-        [
-            'title' => esc_html__( 'Rehab Widgets', 'rehab-wellness-theme' ), // ক্যাটাগরি নাম
-            'icon'  => 'fa fa-plug', 
-        ]
-    );
-}
-add_action( 'elementor/elements/categories_registered', 'add_rehab_widgets_category' );
+add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );

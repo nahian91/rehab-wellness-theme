@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <!-- Page Header Section Start -->
-    <div class="page-header dark-section parallaxie">
+    <div class="page-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -46,6 +46,8 @@
                         <div class="post-item-body">
                             <div class="post-item-content">
                                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <br>
+                                <?php the_excerpt();?>
                             </div>
                             <div class="post-item-btn">
                                 <a href="<?php the_permalink(); ?>" class="readmore-btn">Read More</a>

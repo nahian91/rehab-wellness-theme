@@ -12,7 +12,7 @@
                 <div class="col-xl-4">
                     <div class="about-footer-prime">
                         <div class="footer-logo-prime">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo">
+                            <h2>About Us</h2>
                         </div>
                         <div class="about-footer-content-prime">
                             <p>We combine advanced medical technology with expert clinical knowledge to deliver efficient & effective healthcare services.</p>
