@@ -1,27 +1,6 @@
 <?php get_header();?>
 
-    <!-- Page Header Section Start -->
-    <div class="page-header dark-section parallaxie">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Family medicine</h1>
-                        <nav class="wow fadeInUp" >
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index-2.html">home</a></li>
-                                <li class="breadcrumb-item"><a href="services.html">Services</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Family medicine</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <!-- Page Header Box End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header Section End -->
+    <?php require get_template_directory() . '/inc/breadcrumb.php'; ?>
 
     <!-- Page Service Single Start -->
     <div class="page-service-single">
@@ -31,59 +10,67 @@
                     <!-- Page Single Sidebar Start -->
                     <div class="page-single-sidebar">
                         <!-- Page Category List Start -->
-                        <div class="page-category-list wow fadeInUp">
+                        <div class="page-category-list">
                             <h2 class="page-category-list-title">Discover Our Services</h2>
                             <ul class="service-list">
-    <?php
-    $dpt_args = array(
-        'post_type'      => 'service',
-        'posts_per_page' => -1, // -1 দিলে সব পোস্ট একসাথে দেখাবে
-        'orderby'        => 'title',
-        'order'          => 'ASC'
-    );
-    
-    $dpt_service_query = new WP_Query($dpt_args);
+                                <?php
+                                $dpt_args = array(
+                                    'post_type'      => 'service',
+                                    'posts_per_page' => -1,
+                                    'orderby'        => 'title',
+                                    'order'          => 'ASC'
+                                );
+                                
+                                $dpt_service_query = new WP_Query($dpt_args);
 
-    if ($dpt_service_query->have_posts()) :
-        while ($dpt_service_query->have_posts()) : $dpt_service_query->the_post();
-    ?>
-        <li>
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </li>
-    <?php
-        endwhile;
-        wp_reset_postdata();
-    else :
-        echo '<li>No services found</li>';
-    endif;
-    ?>
-</ul>
+                                if ($dpt_service_query->have_posts()) :
+                                    while ($dpt_service_query->have_posts()) : $dpt_service_query->the_post();
+                                ?>
+                                    <li>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </li>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                else :
+                                    echo '<li>No services found</li>';
+                                endif;
+                                ?>
+                            </ul>
                         </div>
                         <!-- Page Category List End -->
 
                         <!-- Sidebar CTA Box Start -->
-                        <div class="sidebar-cta-box dark-section wow fadeInUp" data-wow-delay="0.25s">
+                        <?php if (have_rows('service_schedules')) : ?>
+                        <div class="sidebar-cta-box dark-section">
                             <div class="sidebar-cta-header">
                                 <div class="icon-box">
                                     <i class="fa-regular fa-clock"></i>
                                 </div>
                                 <div class="sidebar-cta-title">
-                                    <h2>Schedule a hours:</h2>
+                                    <h2>Schedule hours:</h2>
                                 </div>
                             </div>
                             <div class="sidebar-cta-body">
                                 <div class="sidebar-cta-list">
                                     <ul>
-                                        <li><span>Mon to Fri:</span>9AM - 7PM</li>
-                                        <li><span>Saturday:</span>9AM - 7PM</li>
-                                        <li><span>Sunday</span>Only Emergency</li>
+                                        <?php while (have_rows('service_schedules')) : the_row(); 
+                                            $dpt_day  = get_sub_field('service_schedule_day');
+                                            $dpt_time = get_sub_field('service_schedule_time');
+                                        ?>
+                                            <li>
+                                                <span><?php echo esc_html($dpt_day); ?>:</span>
+                                                <?php echo esc_html($dpt_time); ?>
+                                            </li>
+                                        <?php endwhile; ?>
                                     </ul>
                                 </div>
                                 <div class="sidebar-cta-btn">
-                                    <a href="book-appointment.html" class="btn-default btn-highlighted">Book An Appointment</a>
+                                    <a href="#" class="btn-default btn-highlighted">Book An Appointment</a>
                                 </div>
                             </div>
                         </div>
+                        <?php endif; ?>
                         <!-- Sidebar CTA Box End -->
                     </div>
                     <!-- Page Single Sidebar End -->
@@ -93,160 +80,171 @@
                     <!-- Service Single Content Start -->
                     <div class="service-single-content">
                         <!-- Page Single Image Start -->
+                        <?php if (has_post_thumbnail()) : ?>
                         <div class="page-single-image">
-                            <figure class="image-anime reveal">
-                                <img src="assets/images/service-single-image.jpg" alt="">
+                            <figure class="image-anime">
+                                <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>">
                             </figure>
                         </div>
+                        <?php endif; ?>
                         <!-- Page Single Image End -->
                         
                         <!-- Service Entry Start -->
                         <div class="service-entry">
-                            <p class="wow fadeInUp">Family medicine plays a vital role in maintaining the overall health and well-being of individuals and families at every stage of life. It focuses on providing comprehensive, continuous, and personalized healthcare, addressing a wide range of medical needs—from routine check-ups and preventive care to the diagnosis and management of acute and chronic conditions.</p>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our approach to family medicine goes beyond treating symptoms. We emphasize preventive care, early detection, and patient education to help individuals make informed decisions about their health.</p>
+                            
+                            <!-- Main Service Description -->
+                            <?php 
+                            $dpt_description = get_field('service_description');
+                            if (!empty($dpt_description)) : 
+                                echo wp_kses_post(wpautop($dpt_description));
+                            endif; 
+                            ?>
 
-                            <!-- Service Why Choose Box Start -->
+                            <!-- Service Why Choose Box Start (Features) -->
+                            <?php 
+                            $dpt_feat_title = get_field('service_feature_title');
+                            $dpt_feat_desc  = get_field('service_feature_description');
+                            
+                            if (!empty($dpt_feat_title) || have_rows('service_features')) :
+                            ?>
                             <div class="service-why-choose-box">
-                                <h2 class="text-anime-style-3">Why choose our family medicine</h2>
-                                <p class="wow fadeInUp">Choosing the right healthcare provider is essential for long-term well-being, and our family medicine services are built on trust, experience, and personalized care. We take the time to understand your medical history, lifestyle, and unique needs to deliver treatments that are both effective and compassionate.</p>
+                                <?php if (!empty($dpt_feat_title)) : ?>
+                                    <h2 class="text-anime-style-3"><?php echo esc_html($dpt_feat_title); ?></h2>
+                                <?php endif; ?>
+                                
+                                <?php if (!empty($dpt_feat_desc)) : ?>
+                                    <p><?php echo esc_html($dpt_feat_desc); ?></p>
+                                <?php endif; ?>
 
+                                <?php if (have_rows('service_features')) : ?>
                                 <!-- Service Why Choose Item List Start -->
                                 <div class="service-why-choose-item-list">
+                                    <?php while (have_rows('service_features')) : the_row(); 
+                                        $dpt_item_title = get_sub_field('service_feature_item_title');
+                                        $dpt_item_desc  = get_sub_field('service_feature_item_description'); 
+                                    ?>
                                     <!-- Service Why Choose Item Start -->
-                                    <div class="service-why-choose-item wow fadeInUp" data-wow-delay="0.2s">
-                                        <div class="service-why-choose-item-image">
-                                            <figure class="image-anime">
-                                                <img src="assets/images/service-why-choose-item-image-1.jpg" alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="service-why-choose-item-content">
-                                            <h3>Modern Medical Facilities And Technology</h3>
-                                            <p>We are equipped with modern medical facilities and advanced technology to ensure accurate diagnosis and effective treatment for every patient.</p>
+                                    <div class="service-why-choose-item">
+                                        <div class="service-why-choose-item-content" style="padding-left: 0;">
+                                            <h3><?php echo esc_html($dpt_item_title); ?></h3>
+                                            <p><?php echo esc_html($dpt_item_desc); ?></p>
                                         </div>
                                     </div>
                                     <!-- Service Why Choose Item End -->
-
-                                    <!-- Service Why Choose Item Start -->
-                                    <div class="service-why-choose-item wow fadeInUp" data-wow-delay="0.4s">
-                                        <div class="service-why-choose-item-image">
-                                            <figure class="image-anime">
-                                                <img src="assets/images/service-why-choose-item-image-2.jpg" alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="service-why-choose-item-content">
-                                            <h3>Modern Medical Facilities And Technology</h3>
-                                            <p>We are equipped with modern medical facilities and advanced technology to ensure accurate diagnosis and effective treatment for every patient.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Service Why Choose Item End -->
+                                    <?php endwhile; ?>
                                 </div>
                                 <!-- Service Why Choose Item List End -->
+                                <?php endif; ?>
                             </div>
+                            <?php endif; ?>
                             <!-- Service Why Choose Box End -->
 
-                            <!-- Service Process Box Start -->
+                            <!-- Service Process Box Start (Offers) -->
+                            <?php 
+                            $dpt_offer_title = get_field('service_offer_title');
+                            $dpt_offer_desc  = get_field('service_offer_description');
+                            
+                            if (!empty($dpt_offer_title) || have_rows('service_offers')) :
+                            ?>
                             <div class="service-process-box">
-                                <h2 class="text-anime-style-3">Family medicine process</h2>
-                                <p class="wow fadeInUp">Our family medicine process is designed to provide seamless, personalized, and continuous care for every patient. We follow a structured approach to ensure accurate diagnosis, effective treatment.</p>
+                                <?php if (!empty($dpt_offer_title)) : ?>
+                                    <h2 class="text-anime-style-3"><?php echo esc_html($dpt_offer_title); ?></h2>
+                                <?php endif; ?>
+                                
+                                <?php if (!empty($dpt_offer_desc)) : ?>
+                                    <p><?php echo esc_html($dpt_offer_desc); ?></p>
+                                <?php endif; ?>
 
+                                <?php if (have_rows('service_offers')) : $dpt_step = 1; ?>
                                 <!-- Service Process item List Start -->
                                 <div class="service-process-item-list">
+                                    <?php while (have_rows('service_offers')) : the_row(); 
+                                        $dpt_offer_item_title = get_sub_field('service_offer_item_title');
+                                        $dpt_offer_item_desc  = get_sub_field('service_offer_item_description');
+                                    ?>
                                     <!-- Service Process Item Start -->
-                                    <div class="service-process-item wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="service-process-item">
                                         <div class="service-process-item-number">
-                                            <h3>01</h3>
+                                            <h3><?php echo str_pad($dpt_step, 2, '0', STR_PAD_LEFT); ?></h3>
                                         </div>
                                         <div class="service-process-item-content">
-                                            <h3>Consultation</h3>
-                                            <p>Our pediatric care focus on the health </p>
+                                            <h3><?php echo esc_html($dpt_offer_item_title); ?></h3>
+                                            <p><?php echo esc_html($dpt_offer_item_desc); ?></p>
                                         </div>
                                     </div>
                                     <!-- Service Process Item End -->
-
-                                    <!-- Service Process Item Start -->
-                                    <div class="service-process-item wow fadeInUp" data-wow-delay="0.4s">
-                                        <div class="service-process-item-number">
-                                            <h3>02</h3>
-                                        </div>
-                                        <div class="service-process-item-content">
-                                            <h3>Examination</h3>
-                                            <p>Our pediatric care focus on the health </p>
-                                        </div>
-                                    </div>
-                                    <!-- Service Process Item End -->
-
-                                    <!-- Service Process Item Start -->
-                                    <div class="service-process-item wow fadeInUp" data-wow-delay="0.6s">
-                                        <div class="service-process-item-number">
-                                            <h3>03</h3>
-                                        </div>
-                                        <div class="service-process-item-content">
-                                            <h3>Follow-Up</h3>
-                                            <p>Our pediatric care focus on the health </p>
-                                        </div>
-                                    </div>
-                                    <!-- Service Process Item End -->
+                                    <?php $dpt_step++; endwhile; ?>
                                 </div>
-                                <!-- Service Process item List End -->
-
-                                <!-- Section Footer Text Start -->
-                                <div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
-                                    <ul>
-                                        <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
-                                        <li>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </li>
-                                        <li><span class="counter">4.9</span>/5</li>
-                                    </ul>
-                                </div>
-                                <!-- Section Footer Text End -->
+                                <!-- Service Process item List End -->               
+                                <?php endif; ?>
                             </div>
+                            <?php endif; ?>
                             <!-- Service Process Box End -->
 
-                            <!-- Service Key Benefits Start -->
-                            <div class="service-benefits-box">
-                                <h2 class="text-anime-style-3">Who can benefit</h2>
-                                <p class="wow fadeInUp">Our family medicine services are designed to support individuals and families at every stage of life. From children and young adults to seniors, anyone seeking reliable, continuous.</p>
-                                
-                                <!-- Service Benefits Video Image Box Start -->
-                                <div class="service-benefits-video-image-box wow fadeInUp" data-wow-delay="0.2s">
-                                    <!-- Service Key Benefits Image Start -->
-                                    <div class="service-benefits-video-image">
-                                        <figure>
-                                            <img src="assets/images/service-benefits-video-image.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <!-- Service Key Benefits Image End -->
-                                    
-                                    <!-- Video Play Button Start -->
-                                    <div class="video-play-button">
-                                        <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
-                                            <span class="bg-effect"><i class="fa-solid fa-play"></i></span>
-                                        </a>
-                                    </div>
-                                    <!-- Video Play Button End -->
-                                    
-                                    <!-- Service Key Benefits List Start -->
-                                    <div class="service-benefits-list">
-                                        <ul>
-                                            <li>Individuals Of All Age Groups</li>
-                                            <li>General Health Patients</li>
-                                            <li>Preventive Care Seekers</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Service Key Benefits List End -->
-                                </div>                                
-                                <!-- Service Benefits Video Image Box End -->
+                            <!-- Service Video Part Start -->
+                            <?php 
+                            $dpt_video = get_field('service_video');
+                            if (!empty($dpt_video)) : 
+                            ?>
+                            <div class="service-video-section" style="margin-top: 40px; margin-bottom: 40px;">
+                                <h2 class="text-anime-style-3" style="margin-bottom: 20px;">Watch Our Overview</h2>
+                                <?php 
+// Passing false as the second parameter grabs the raw, unformatted YouTube link text
+$dpt_video_url = get_field('service_video', false, false); 
+
+if (!empty($dpt_video_url)) : 
+?>
+<div class="service-video-section" style="margin-top: 40px; margin-bottom: 40px;">
+    <h2 class="text-anime-style-3" style="margin-bottom: 20px;">Watch Our Overview</h2>
+    <div class="video-gallery-image">
+        <a href="<?php echo esc_url($dpt_video_url); ?>" class="popup-video" data-cursor-text="Play">
+            <figure class="image-anime">
+                <?php 
+                // Checks if a custom fallback gallery background is uploaded, otherwise defaults to the post thumbnail
+                $dpt_video_thumb = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                if (empty($dpt_video_thumb)) {
+                    $dpt_video_thumb = 'https://localhost/rehab-wellness-theme/wp-content/uploads/2026/06/gallery-8.jpg';
+                }
+                ?>
+                <img src="<?php echo esc_url($dpt_video_thumb); ?>" alt="<?php the_title_attribute(); ?> Video Thumbnail">
+            </figure>
+        </a>
+    </div>
+</div>
+<?php endif; ?>
                             </div>
-                            <!-- Service Key Benefits End -->
+                            <?php endif; ?>
+                            <!-- Service Video Part End -->
+
+                            <!-- Service Gallery Part Start -->
+                            <?php 
+                            $dpt_gallery = get_field('service_gallery');
+                            if (!empty($dpt_gallery) && is_array($dpt_gallery)) : 
+                            ?>
+                            <div class="service-gallery-section" style="margin-bottom: 40px;">
+                                <h2 class="text-anime-style-3" style="margin-bottom: 20px;">Our Gallery</h2>
+                                <div class="row g-3">
+                                    <?php foreach ($dpt_gallery as $dpt_image) : ?>
+                                    <div class="col-md-4">
+                                        <div class="photo-gallery">
+                                            <a href="<?php echo esc_url($dpt_image['url']); ?>" data-cursor-text="View">
+                                                <figure class="image-anime">
+                                                    <img src="<?php echo esc_url($dpt_image['sizes']['medium_large'] ?? $dpt_image['url']); ?>" alt="<?php echo esc_attr($dpt_image['alt']); ?>">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                            <?php endif; ?>
+                            <!-- Service Gallery Part End -->
+
                         </div>
                         <!-- Service Entry End -->
 
                         <!-- Page Single FAQs Start -->
+                        <?php if (have_rows('service_faqs')) : ?>
                         <div class="page-single-faqs">
                             <!-- Section Title Start -->
                             <div class="section-title">
@@ -255,84 +253,46 @@
                             <!-- Section Title End -->
 
                             <!-- FAQ Accordion Start -->
-                            <div class="faq-accordion" id="accordion">
-                                <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp">
-                                    <h2 class="accordion-header" id="heading1">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                            1. How can I book an appointment with a doctor?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse1" class="accordion-collapse collapse" role="region" aria-labelledby="heading1" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FAQ Item End -->
-
-                                <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                                    <h2 class="accordion-header" id="heading2">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                            2. Do you provide emergency medical services?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse2" class="accordion-collapse collapse" role="region" aria-labelledby="heading2" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FAQ Item End -->
-
-                                <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                                    <h2 class="accordion-header" id="heading3">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                                            3. What medical services do you provide?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse3" class="accordion-collapse collapse show" role="region" aria-labelledby="heading3" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FAQ Item End -->
-
-                                <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                                    <h2 class="accordion-header" id="heading4">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                            4. How early should I arrive for my appointment?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse4" class="accordion-collapse collapse" role="region" aria-labelledby="heading4" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FAQ Item End -->
-
-                                <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                                    <h2 class="accordion-header" id="heading5">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                            5. What should I bring to my medical appointment?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse5" class="accordion-collapse collapse" role="region" aria-labelledby="heading5" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FAQ Item End -->
-                            </div>
-                            <!-- FAQ Accordion End -->
+<div class="faq-accordion" id="dpt-service-accordion">
+    <?php 
+    $dpt_faq_index = 1; 
+    while (have_rows('service_faqs')) : the_row(); 
+        $dpt_question = get_sub_field('service_faqs_questions');
+        $dpt_answer   = get_sub_field('service_faqs_answer');
+        $dpt_is_first = ($dpt_faq_index === 1);
+    ?>
+    <!-- FAQ Item Start -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="dpt-heading-<?php echo esc_attr($dpt_faq_index); ?>">
+            <button class="accordion-button <?php echo $dpt_is_first ? '' : 'collapsed'; ?>" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#dpt-collapse-<?php echo esc_attr($dpt_faq_index); ?>" 
+                    aria-expanded="<?php echo $dpt_is_first ? 'true' : 'false'; ?>" 
+                    aria-controls="dpt-collapse-<?php echo esc_attr($dpt_faq_index); ?>">
+                <?php echo esc_html($dpt_faq_index); ?>. <?php echo esc_html($dpt_question); ?>
+            </button>
+        </h2>
+        
+        <div id="dpt-collapse-<?php echo esc_attr($dpt_faq_index); ?>" 
+             class="accordion-collapse collapse <?php echo $dpt_is_first ? 'show' : ''; ?>" 
+             role="region" 
+             aria-labelledby="dpt-heading-<?php echo esc_attr($dpt_faq_index); ?>" 
+             data-bs-parent="#dpt-service-accordion">
+            <div class="accordion-body">
+                <p><?php echo esc_html($dpt_answer); ?></p>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ Item End -->
+    <?php 
+        $dpt_faq_index++; 
+    endwhile; 
+    ?>
+</div>
+<!-- FAQ Accordion End -->
                         </div>
+                        <?php endif; ?>
                         <!-- Page Single FAQs End -->
                     </div>
                     <!-- Service Single Content End -->
@@ -342,4 +302,4 @@
     </div>
     <!-- Page Service Single End -->
 
-<?php get_footer();?>
+<?php get_header();?>

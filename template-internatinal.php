@@ -3,16 +3,7 @@
 get_header(); 
 ?>
 
-<!-- Page Header Section -->
-<div class="page-header dark-section parallaxie">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="text-anime-style-3" data-cursor="-opaque"><?php the_title(); ?></h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php require get_template_directory() . '/inc/breadcrumb.php'; ?>
 
 <div class="page-service-single-full py-5">
     <div class="container">

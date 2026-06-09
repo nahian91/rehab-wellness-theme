@@ -6,27 +6,7 @@ Template Name: Services
 
 get_header();?>
 
-    <!-- Page Header Section Start -->
-    <div class="page-header dark-section parallaxie">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Our services</h1>
-                        <nav class="wow fadeInUp" >
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index-2.html">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">services</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <!-- Page Header Box End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header Section End -->
+    <?php require get_template_directory() . '/inc/breadcrumb.php'; ?>
 
     <!-- Page Service Section Start -->
 <div class="page-service">
@@ -46,36 +26,48 @@ get_header();?>
                 while ($dpt_query->have_posts()) : $dpt_query->the_post();
             ?>
                 <div class="col-xl-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
-                        <div class="icon-box">
+                    <!-- Service Item Royal Start -->
+                    <div class="service-item-royal wow fadeInUp" data-wow-delay="<?php echo esc_attr($delay); ?>s" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="service-item-header-royal">
                             <?php 
-                            if (has_post_thumbnail()) {
-                                the_post_thumbnail('full', array('alt' => get_the_title()));
+                            // টেক্সোনমি বা ক্যাটাগরি দেখানোর জন্য (যদি সার্ভিস ক্যাটাগরি থাকে)
+                            $terms = get_the_terms(get_the_ID(), 'service-category'); // আপনার কাস্টম টেক্সোনমি নাম এখানে দিন
+                            if ($terms && !is_wp_error($terms)) {
+                                echo '<span>' . esc_html($terms[0]->name) . '</span>';
                             } else {
-                                // Default icon if no image
-                                echo '<img src="' . get_template_directory_uri() . '/assets/images/default-service.svg" alt="Service">';
+                                echo '<span>Healthcare</span>'; // ফলব্যাক
                             }
                             ?>
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         </div>
-                        <div class="service-item-body">
-                            <div class="service-item-content">
-                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                <p><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
+                        
+                        <?php if (has_post_thumbnail()) : ?>
+                            <div class="service-item-image-royal">
+                                <a href="<?php the_permalink(); ?>" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title_attribute(); ?>">
+                                    </figure>
+                                </a>
                             </div>
-                            <div class="service-item-btn">
+                        <?php endif; ?>
+
+                        <div class="service-item-body-royal">
+                            <div class="service-item-content-royal">
+                                <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
+                            </div>
+                            <div class="service-item-btn-royal">
                                 <a href="<?php the_permalink(); ?>" class="readmore-btn">View Details</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Service Item End -->
+                    <!-- Service Item Royal End -->
                 </div>
             <?php
-                $delay += 0.2; // প্রতিটি আইটেমের জন্য wow-delay বাড়ানো
+                $delay += 0.2; 
                 endwhile;
                 wp_reset_postdata();
             else :
-                echo '<p>No services found.</p>';
+                echo '<div class="col-12"><p>No services found.</p></div>';
             endif;
             ?>
         </div>
@@ -109,7 +101,7 @@ get_header();?>
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="assets/images/icon-fact-item-1.svg" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon-fact-item-1.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -130,7 +122,7 @@ get_header();?>
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="assets/images/icon-fact-item-2.svg" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon-fact-item-2.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -151,7 +143,7 @@ get_header();?>
                                 </ul>
                             </div>
                             <div class="icon-box">
-                                <img src="assets/images/icon-fact-item-3.svg" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon-fact-item-3.svg" alt="">
                             </div>
                         </div>
                         <div class="fact-item-content">
@@ -224,7 +216,7 @@ get_header();?>
                                 <!-- Why Choose Counter Image Start -->
                                 <div class="why-choose-counter-image">
                                     <figure class="image-anime">
-                                        <img src="assets/images/why-choose-counter-image.jpg" alt="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/why-choose-counter-image.jpg" alt="">
                                     </figure>
                                 </div>
                                 <!-- Why Choose Counter Image End -->
@@ -234,7 +226,7 @@ get_header();?>
                             <!-- Why Choose Body Image Start -->
                             <div class="why-choose-body-image">
                                 <figure class="image-anime reveal">
-                                    <img src="assets/images/why-choose-body-image.jpg" alt="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/why-choose-body-image.jpg" alt="">
                                 </figure>
                             </div>
                             <!-- Why Choose Body Image End -->
@@ -250,7 +242,7 @@ get_header();?>
                         <!-- Why Choose Experience Circle Start -->
                         <div class="years-experience-circle">
                             <figure>
-                                <img src="assets/images/years-experience-circle-white.svg" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/years-experience-circle-white.svg" alt="">
                             </figure>
                         </div>
                         <!-- Why Choose Experience Circle End -->
@@ -258,7 +250,7 @@ get_header();?>
                         <!-- Why Choose Us Image Start -->
                         <div class="why-choose-us-image">
                             <figure>
-                                <img src="assets/images/why-choose-us-image.png" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/why-choose-us-image.png" alt="">
                             </figure>
                         </div>
                         <!-- Why Choose Us Image End -->
@@ -266,7 +258,7 @@ get_header();?>
                         <!-- Why Choose Cta Box Start -->
                         <div class="why-choose-cta-box">
                             <div class="icon-box">
-                                <img src="assets/images/icon-why-choose-cta-box.svg" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon-why-choose-cta-box.svg" alt="">
                             </div>
                             <div class="why-choose-cta-content">
                                 <h2><span class="counter">12</span>+</h2>
@@ -306,17 +298,17 @@ get_header();?>
                             <div class="satisfy-client-images">
                                 <div class="satisfy-client-image">
                                     <figure class="image-anime">
-                                        <img src="assets/images/author-1.jpg" alt="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/author-1.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="satisfy-client-image">
                                     <figure class="image-anime">
-                                        <img src="assets/images/author-2.jpg" alt="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/author-2.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="satisfy-client-image">
                                     <figure class="image-anime">
-                                        <img src="assets/images/author-3.jpg" alt="">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/author-3.jpg" alt="">
                                     </figure>
                                 </div>
                             </div>
@@ -347,7 +339,7 @@ get_header();?>
                     <!-- Approach Item Start -->
                     <div class="approach-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src="assets/images/icon-approach-item-1.svg" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon-approach-item-1.svg" alt="">
                         </div>
                         <div class="approach-item-content">
                             <h3>Your Health Our Priority</h3>
@@ -361,7 +353,7 @@ get_header();?>
                     <!-- Approach Item Start -->
                     <div class="approach-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="icon-box">
-                            <img src="assets/images/icon-approach-item-2.svg" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon-approach-item-2.svg" alt="">
                         </div>
                         <div class="approach-item-content">
                             <h3>Vision For Better Healthcare</h3>
@@ -405,7 +397,7 @@ get_header();?>
                         <div class="expertise-image-box-1">
                             <div class="expertise-image">
                                 <figure class="image-anime">
-                                    <img src="assets/images/our-expertise-image-1.jpg" alt="">
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/our-expertise-image-1.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
@@ -415,12 +407,12 @@ get_header();?>
                         <div class="expertise-image-box-2">
                             <div class="expertise-experience-circle">
                                 <figure>
-                                    <img src="assets/images/experience-circle-accent.svg" alt="">
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/experience-circle-accent.svg" alt="">
                                 </figure>
                             </div>
                             <div class="expertise-image">
                                 <figure class="image-anime">
-                                    <img src="assets/images/our-expertise-image-2.jpg" alt="">
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/our-expertise-image-2.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
@@ -478,7 +470,7 @@ get_header();?>
                             <!-- What We Contact Item Start -->
                             <div class="what-we-contact-item">
                                 <div class="icon-box">
-                                    <img src="assets/images/icon-headphone.svg" alt="">
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon-headphone.svg" alt="">
                                 </div>
                                 <div class="what-we-contact-item-content">
                                     <p>Emergency Call</p>
@@ -523,266 +515,17 @@ get_header();?>
                                     <div class="testimonial-item">
                                         <div class="testimonial-item-header">
                                             <div class="testimonial-item-quote">
-                                                <img src="assets/images/testimonial-quote.svg" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-author">
-                                            <div class="testimonial-author-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/author-1.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content">
-                                                <h2>John Peterson</h2>
-                                                <p>Internal Medicine Specialist</p>
+                                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/testimonial-quote.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Testimonial Item End -->
                                 </div>
-                                <!-- Swiper Slide End -->
-
-                                <!-- Swiper Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-header">
-                                            <div class="testimonial-item-quote">
-                                                <img src="assets/images/testimonial-quote.svg" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-author">
-                                            <div class="testimonial-author-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/author-5.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content">
-                                                <h2>Maria Gonzalez</h2>
-                                                <p>Internal Medicine Specialist</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Swiper Slide End -->
-
-                                <!-- Swiper Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-header">
-                                            <div class="testimonial-item-quote">
-                                                <img src="assets/images/testimonial-quote.svg" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-author">
-                                            <div class="testimonial-author-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/author-3.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content">
-                                                <h2>David Robinson</h2>
-                                                <p>Internal Medicine Specialist</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Swiper Slide End -->
-
-                                <!-- Swiper Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-header">
-                                            <div class="testimonial-item-quote">
-                                                <img src="assets/images/testimonial-quote.svg" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-author">
-                                            <div class="testimonial-author-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/author-4.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content">
-                                                <h2>Savannah Nguyen</h2>
-                                                <p>Internal Medicine Specialist</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Swiper Slide End -->
                             </div>
                         </div>
                     </div>
-                    <!-- Testimonial Slider End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Satisfy Client Images Start -->
-                        <div class="satisfy-client-images">
-                            <div class="satisfy-client-image">
-                                <figure class="image-anime">
-                                    <img src="assets/images/author-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <div class="satisfy-client-image add-more">
-                                <img src="assets/images/icon-phone-white.svg" alt="">
-                            </div>
-                        </div>
-                        <!-- Satisfy Client Images End -->    
-                        <p>Helping You Move from Concern to Confidence with Expert Medical Care. -<a href="testimonials.html">View our All reviews</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Our Testimonial Section End -->
 
-    <!-- Our FAQs Section Start -->
-    <div class="our-faqs">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5">
-                    <!-- FAQ CTA Box Start -->
-                    <div class="faq-cta-box">
-                        <!-- FAQ CTA Image Start -->
-                        <div class="faq-cta-image">
-                            <figure class="image-anime reveal">
-                                <img src="assets/images/faq-cta-image.jpg" alt="">
-                            </figure>
-                        </div>
-                        <!-- FAQ CTA Image End -->
-
-                        <!-- FAQ CTA Body Start -->
-                        <div class="faq-cta-body">
-                            <!-- FAQ CTA Content Start -->
-                            <div class="faq-cta-content wow fadeInUp">
-                                <h3>Have a any Questions !</h3>
-                                <p>If you have any questions about our medical services, appointments, or treatments, our team is here to help. We are committed to providing clear information and friendly support to ensure you receive the care and guidance you need.</p>
-                            </div>
-                            <!-- FAQ CTA Content End -->
-
-                            <!-- FAQ CTA Button Start -->
-                            <div class="faq-cta-btn wow fadeInUp" data-wow-delay="0.2s">
-                                <a href="faqs.html" class="btn-default">View all Questions</a>
-                            </div>
-                            <!-- FAQ CTA Button End -->
-                        </div>
-                        <!-- FAQ CTA Body End -->
-                    </div>
-                    <!-- FAQ CTA Box End -->
-                </div>
-
-                <div class="col-xl-7">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <span class="section-sub-title wow fadeInUp">Frequently Asked Questions</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Your questions answered about our medical services</h2>
-                    </div>
-                    <!-- Section Title End -->
-
-                    <!-- FAQ Accordion Start -->
-                    <div class="faq-accordion" id="accordion">
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                    1. How can I book an appointment with a doctor?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse" role="region" aria-labelledby="heading1" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    2. Do you provide emergency medical services?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" role="region" aria-labelledby="heading2" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                                    3. What medical services do you provide?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse show" role="region" aria-labelledby="heading3" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    4. How early should I arrive for my appointment?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" role="region" aria-labelledby="heading4" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
-                            <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    5. What should I bring to my medical appointment?
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" role="region" aria-labelledby="heading5" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-                    </div>
-                    <!-- FAQ Accordion End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our FAQs Section End -->
-
-<?php get_footer();?>
+<?php get_footer(); ?>

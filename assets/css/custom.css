@@ -176,7 +176,7 @@ a:focus{
 	background: var(--accent-color);
 	border-radius: 5px;
 	padding: 17px 50px 17px 20px;
-	border: none;
+	border: 2px solid var(--accent-color);
 	overflow: hidden;
 	transition: all 0.4s ease-in-out;
 	z-index: 1;
@@ -598,7 +598,7 @@ header.main-header .header-sticky.active{
 
 .main-menu ul ul li a:hover,
 .main-menu ul ul li a:focus{
-	color: var(--primary-color);
+	color: #3d8e38;
 	background-color: transparent;
 	padding: 8px 20px 8px 23px !important;
 }
@@ -733,12 +733,10 @@ header.main-header .header-sticky.active{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	border-radius: 30px;
 	height: auto;
 	min-height: 100vh;
 	align-content: center;
 	padding: 230px 0 120px;
-	margin: 15px 15px 0;
 	overflow: hidden;
 }
 
@@ -750,7 +748,6 @@ header.main-header .header-sticky.active{
 	right: 0;
 	bottom: 0;
 	background: linear-gradient(180deg, rgba(8, 54, 59, 0.50) 0%, transparent 12.88%), linear-gradient(270deg, transparent 37.22%, rgba(8, 54, 59, 0.63) 58.83%, rgba(8, 54, 59, 0.90) 100%);
-	border-radius: 30px;
 	width: 100%;
 	height: 100%;
 	z-index: 1;
@@ -3535,7 +3532,7 @@ header.main-header .header-sticky.active{
 .page-category-list ul{
 	list-style: none;
     margin: 0;
-	padding: 30px;
+	padding: 20px;
 }
 
 .page-category-list ul li{
@@ -3558,6 +3555,7 @@ header.main-header .header-sticky.active{
 	color: inherit;
     padding-right: 25px;
 	transition: all 0.4s ease-in-out;
+	color: #333;
 }
 
 .page-category-list ul li a:hover{
@@ -10217,87 +10215,6 @@ header.main-header .header-sticky.active{
 	z-index: 2;
 }
 
-.expertise-item-royal{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 15px;
-	border-bottom: 1px solid var(--divider-color);
-	margin-bottom: 30px;
-	padding-bottom: 30px;
-}
-
-.expertise-item-royal:last-child{
-	border-bottom: 0;
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-
-.expertise-item-royal .icon-box{
-	position: relative;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: var(--accent-color);
-}
-
-.expertise-item-royal .icon-box::before{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: var(--primary-color);
-	border-radius: 50%;
-	width: 100%;
-	height: 100%;
-	transform: scale(0);
-	transition: all 0.4s ease-in-out;
-}
-
-.expertise-item-royal:hover .icon-box::before{
-	transform: scale(1);
-}
-
-.expertise-item-royal .icon-box img{
-	position: relative;
-	width: 100%;
-	max-width: 24px;
-	z-index: 1;
-}
-
-.expertise-item-content-royal{
-	width: calc(100% - 65px);
-}
-
-.expertise-item-content-royal h3{
-	font-size: 20px;
-}
-
-.expertise-item-content-royal p{
-	margin: 10px 0 0 0;
-}
-
-.expertise-body-image-royal{
-	margin-top: 30px;
-}
-
-.expertise-body-image-royal figure{
-	display: block;
-	border-radius: 30px 30px 0 0;
-	margin: 0 -40px -140px;
-}
-
-.expertise-body-image-royal figure img{
-	width: 100%;
-    aspect-ratio: 1 / 0.61;
-    object-fit: cover;
-	border-radius: 30px 30px 0 0;
-}
-
 .what-we-provide-royal{
 	padding: 120px 0;
 }
@@ -11762,19 +11679,6 @@ header.main-header .header-sticky.active{
 		font-size: 28px;
 	}
 
-	.footer-newsletter-form-royal .form-group .btn-default{
-		font-size: 14px;
-		padding: 12px;
-	}
-
-	.footer-newsletter-form-royal .form-group .btn-default::before{
-		display: none;
-	}
-
-	.footer-newsletter-form-royal p{
-		margin: 15px 0 0;
-	}
-
 	.footer-contact-item-royal{
 		width: 100%;
 	}
@@ -11803,4 +11707,25 @@ header.main-header .header-sticky.active{
 		width: 36px;
 		height: 36px;
 	}
+}
+.top-header {
+    background-color: var(--primary-color); /* Light grey background */
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.top-header-contact span, .top-header-address span {
+    margin-right: 20px;
+	color: #fff;
+	font-weight: 500;
+}
+
+.top-header-contact span i, 
+.top-header-address span i {
+    color: #fff; /* Use your primary theme color here */
+}
+
+.text-lg-right {
+    text-align: right;
 }

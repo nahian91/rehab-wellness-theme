@@ -9,12 +9,29 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- Header -->
 <header class="main-header">
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="top-header-contact">
+                        <span><i class="fa-solid fa-phone"></i> +880 13 2476 3317</span>
+                        <span><i class="fa-solid fa-envelope"></i> info@domainname.com</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-right">
+                    <div class="top-header-address">
+                        <span><i class="fa-solid fa-location-dot"></i> Garden Tower,
+Shahjalal Uposhahar, Sylhet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="header-sticky">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <!-- Logo -->
                 <div class="navbar-brand">
                     <?php if ( has_custom_logo() ) {
                         the_custom_logo();
@@ -23,7 +40,6 @@
                     <?php } ?>
                 </div>
 
-                <!-- Main Menu -->
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <?php
@@ -38,9 +54,8 @@
                         ?>
                     </div>
                     
-                    <!-- Header Button -->
                     <div class="header-btn">
-                        <a href="<?php echo esc_url( home_url( '/book-appointment' ) ); ?>" class="btn-default btn-highlighted">Appointment</a>
+                        <a href="<?php echo esc_url( home_url( '/appointment' ) ); ?>" class="btn-default btn-highlighted">Appointment</a>
                     </div>
                 </div>
                 <div class="navbar-toggle"></div>

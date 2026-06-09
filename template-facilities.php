@@ -3,94 +3,188 @@
 get_header(); 
 ?>
 
-<!-- Page Header Section -->
-<div class="page-header dark-section parallaxie">
+<?php require get_template_directory() . '/inc/breadcrumb.php'; ?>
+
+<div class="page-service-single-full">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="text-anime-style-3" data-cursor="-opaque"><?php the_title(); ?></h1>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="page-service-single-full py-5">
-    <div class="container">
-        
-        <!-- Hero Section: Image & Intro -->
-        <div class="row align-items-center mb-5 pb-5">
-            <div class="col-lg-6">
-                <div class="page-single-image">
-                    <figure class="image-anime reveal">
-                        <?php if (has_post_thumbnail()) { the_post_thumbnail('full', ['class' => 'rounded shadow-lg']); } ?>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="service-entry ps-lg-5">
-                    <h2 class="text-anime-style-3 mb-4">World-Class Medical Infrastructure</h2>
-                    <div class="text-muted">
-                        <?php the_content(); ?>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Diagnostic Lab</h3>
+                        <p>AI-powered pathology for rapid results.</p>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 12 Facilities Grid -->
-        <div class="service-facilities-box mt-5 pt-5">
-            <h2 class="text-anime-style-3 text-center mb-5">Our Core Facilities</h2>
-            
-            <div class="row">
-                <?php 
-                $dpt_facilities = [
-                    ['icon' => 'fa-microscope', 'title' => 'Diagnostic Lab', 'desc' => 'AI-powered pathology for rapid results.'],
-                    ['icon' => 'fa-heart-pulse', 'title' => 'Cardiac Care', 'desc' => 'State-of-the-art telemetry monitoring.'],
-                    ['icon' => 'fa-bed-pulse', 'title' => 'Smart ICU', 'desc' => '24/7 critical care tracking systems.'],
-                    ['icon' => 'fa-laptop-medical', 'title' => 'Telehealth Suite', 'desc' => 'Secure virtual consultation portal.'],
-                    ['icon' => 'fa-x-ray', 'title' => 'Digital Imaging', 'desc' => 'High-resolution X-ray and MRI scans.'],
-                    ['icon' => 'fa-syringe', 'title' => 'Pharmacy Station', 'desc' => 'On-site stocked medicine dispensary.'],
-                    ['icon' => 'fa-user-nurse', 'title' => 'Recovery Lounge', 'desc' => 'Comfort-focused post-op recovery zones.'],
-                    ['icon' => 'fa-shield-virus', 'title' => 'Sterilization Hub', 'desc' => 'Hospital-grade sanitization protocols.'],
-                    ['icon' => 'fa-wheelchair', 'title' => 'Accessibility Zone', 'desc' => 'Full ADA-compliant movement areas.'],
-                    ['icon' => 'fa-calendar-check', 'title' => 'Booking Kiosk', 'desc' => 'Fast-track digital appointment setup.'],
-                    ['icon' => 'fa-dna', 'title' => 'Genomic Testing', 'desc' => 'Advanced personalized health reports.'],
-                    ['icon' => 'fa-notes-medical', 'title' => 'Record Archives', 'desc' => 'Secure encrypted health history vault.']
-                ];
-
-                foreach ($dpt_facilities as $index => $item) {
-                    $dpt_delay = ($index * 0.1); 
-                    echo '
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="facility-card h-100 p-4 border rounded shadow-sm wow fadeInUp" data-wow-delay="'.$dpt_delay.'s">
-                            <div class="icon-box mb-3">
-                                <i class="fa-solid '.$item['icon'].' fa-2x text-primary"></i>
-                            </div>
-                            <h3>'.$item['title'].'</h3>
-                            <p class="text-muted mb-0">'.$item['desc'].'</p>
-                        </div>
-                    </div>';
-                }
-                ?>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Cardiac Care</h3>
+                        <p>State-of-the-art telemetry monitoring.</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-bed-pulse"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Smart ICU</h3>
+                        <p>24/7 critical care tracking systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-laptop-medical"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Telehealth Suite</h3>
+                        <p>Secure virtual consultation portal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-x-ray"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Digital Imaging</h3>
+                        <p>High-resolution X-ray and MRI scans.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Pharmacy</h3>
+                        <p>On-site stocked medicine dispensary.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-user-nurse"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Recovery Lounge</h3>
+                        <p>Comfort-focused post-op zones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Sterilization Hub</h3>
+                        <p>Hospital-grade sanitization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-wheelchair"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Accessibility Zone</h3>
+                        <p>Full ADA-compliant areas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Booking Kiosk</h3>
+                        <p>Fast-track digital setup.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Genomic Testing</h3>
+                        <p>Advanced personal reports.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="facilities-item h-100 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <div class="facilities-item-content">
+                        <h3>Record Archives</h3>
+                        <p>Secure health history vault.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 
-<!-- Custom Elite Styling -->
 <style>
-    .facility-card {
-        transition: all 0.4s ease;
+    .facilities-item {
+        transition: all 0.4s ease-in-out;
         background: #ffffff;
-        border-color: #f0f0f0 !important;
+        border: 1px solid #f0f0f0;
+        border-radius: 8px;
+        padding: 25px;
     }
-    .facility-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
-        border-color: var(--primary-color) !important;
+    .facilities-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        border-color: var(--primary-color, #007bff);
     }
-    .facility-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
-    .text-primary { color: var(--primary-color); }
+    .facilities-item .icon-box {
+        font-size: 2rem;
+        color: var(--primary-color, #007bff);
+        margin-bottom: 15px;
+    }
+    .facilities-item-content h3 { 
+        font-size: 1.25rem; 
+        margin-bottom: 10px; 
+        font-weight: 600;
+    }
+    .facilities-item-content p {
+        margin: 0;
+        color: #666666;
+        font-size: 0.95rem;
+    }
 </style>
 
 <?php get_footer(); ?>

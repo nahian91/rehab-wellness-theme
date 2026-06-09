@@ -6,527 +6,417 @@ Template Name: Home
 
 get_header();?>
 
-    <!-- Hero Section Start -->
     <div class="hero dark-section parallaxie">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7">
-                    <!-- Hero Content Start -->
-                    <div class="hero-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Better Care For Better Life.</span>
-                            <h1 class="text-anime-style-3" data-cursor="-opaque">Advanced healthcare solutions for healthier lives today</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">We provide advanced healthcare solutions designed to improve the well-being of every patient. With experienced medical professionals, modern technology.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Hero Content Body Start -->
-                        <div class="hero-content-body wow fadeInUp" data-wow-delay="0.4s">
-                            <!-- Hero Button Start -->
-                            <div class="hero-btn">
-                                <a href="contact.html" class="btn-default btn-highlighted">Start Consultation</a>
-                            </div>
-                            <!-- Hero Button End -->
-
-                            <!-- Hero Client Box Start -->
-                            <div class="hero-client-box">
-                                <!-- Satisfy Client Image Start -->
-                                <div class="satisfy-client-images">
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/author-2.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/author-3.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <!-- Satisfy Client Image End -->
-
-                                <!-- Hero Client Content Start -->
-                                <div class="hero-client-content">
-                                    <h2><span class="counter">4.9</span>/5<i class="fa fa-solid fa-star"></i></h2>
-                                    <p>More Than 2500 Reviews</p>
-                                </div>
-                                <!-- Hero Client Content End -->
-                            </div>
-                            <!-- Hero Client Box End -->
-                        </div>
-                        <!-- Hero Content Body End -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7">
+                <div class="hero-content">
+                    <div class="section-title">
+                        <span class="section-sub-title wow fadeInUp">Better Care For Better Life.</span>
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">Advanced healthcare solutions for healthier lives today</h1>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">We provide advanced healthcare solutions designed to improve the well-being of every patient, backed by experienced medical professionals and modern technology.</p>
                     </div>
-                    <!-- Hero Content End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Hero Section End -->
 
-    <!-- About Us Section Start -->
-    <div class="about-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <!-- About Us Image Box Start -->
-                    <div class="about-us-image-box wow fadeInUp">
-                        <!-- About Image Title Start -->
-                        <div class="about-image-title">
-                            <h2>Healthcare</h2>
+                    <div class="hero-content-body wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="hero-btn">
+                            <a href="contact.html" class="btn-default btn-highlighted">Start Consultation</a>
                         </div>
-                        <!-- About Image Title End -->
 
-                        <!-- About Image Box 1 Start -->
-                        <div class="about-image-box-1">
-                            <!-- About Us Image Start -->
-                            <div class="about-us-image">
-                                <figure>
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/about-us-image.jpg" alt="">
-                                </figure>
-                            </div>
-                            <!-- About Us Image End -->
-                            
-                            <!-- About Review Box Start -->
-                            <div class="about-review-box hero-client-box">
-                                <!-- Satisfy Client Image Start -->
-                                <div class="satisfy-client-images">
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/author-2.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="satisfy-client-image">
-                                        <figure class="image-anime">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/author-3.jpg" alt="">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <!-- Satisfy Client Image End -->
-
-                                <!-- Hero Client Content Start -->
-                                <div class="hero-client-content">
-                                    <h2><span class="counter">4.9</span>/5<i class="fa fa-solid fa-star"></i></h2>
-                                    <p>More Than 2500 Reviews</p>
-                                </div>
-                                <!-- Hero Client Content End -->
-                            </div>
-                            <!-- About Review Box End -->
-                        </div>
-                        <!-- About Image Box 1 End -->
-                    </div>
-                    <!-- About Us Image Box End -->
-                </div>
-
-                <div class="col-xl-6">
-                    <!-- About Us Content Start -->
-                    <div class="about-us-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">About Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">About our journey providing quality healthcare</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">We are dedicated to providing compassionate, high-quality healthcare that focuses on your overall well-being. Our experienced medical professionals technology with personalized care to ensure every patient receives.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- About Us Item List Start -->
-                        <div class="about-us-item-list wow fadeInUp" data-wow-delay="0.4s">
-                            <!-- About Us Item Start -->
-                            <div class="about-us-item">
-                                <h3>Patient Focused Care</h3>
-                                <p>We prioritize every personalized care, clear communication.</p>
-                            </div>
-                            <!-- About Us Item End -->
-
-                            <!-- About Us Item Start -->
-                            <div class="about-us-item">
-                                <h3>Quality Medical Treatment</h3>
-                                <p>We prioritize every personalized care, clear communication.</p>
-                            </div>
-                            <!-- About Us Item End -->
-                        </div>
-                        <!-- About Us Item List End -->
-
-                        <!-- About Content Footer Start -->
-                        <div class="about-content-footer wow fadeInUp" data-wow-delay="0.6s">
-                            <!-- About Us Button Start -->
-                            <div class="about-us-btn">
-                                <a href="about.html" class="btn-default">Learn More About</a>
-                            </div>
-                            <!-- About Us Button End -->
-
-                            <!-- About Us Author Box Start -->
-                            <div class="about-us-author-box">
-                                <!-- About Author Image Start -->
-                                <div class="about-us-author-image">
+                        <div class="hero-client-box">
+                            <div class="satisfy-client-images">
+                                <div class="satisfy-client-image">
                                     <figure class="image-anime">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="Client 1">
                                     </figure>
                                 </div>
-                                <!-- About Author Image End -->
-
-                                <!-- About Author Content Start -->
-                                <div class="about-us-author-content">
-                                    <h3>Devon Lane</h3>
-                                    <p>Internal Medicine Specialist</p>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/author-2.jpg" alt="Client 2">
+                                    </figure>
                                 </div>
-                                <!-- About Author Content End -->
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/author-3.jpg" alt="Client 3">
+                                    </figure>
+                                </div>
                             </div>
-                            <!-- About Us Author Box End -->
+                            <div class="hero-client-content">
+                                <h2><span class="counter">4.9</span>/5 <i class="fa fa-solid fa-star"></i></h2>
+                                <p>More Than 2500 Reviews</p>
+                            </div>
                         </div>
-                        <!-- About Content Footer End -->
                     </div>
-                    <!-- About Us Content End -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- About Us Section End -->
+</div>
 
-    <div class="our-service-royal bg-section">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Our Services</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Comprehensive healthcare services for better living</h2>
+<div class="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="about-us-image-box wow fadeInUp">
+                    <div class="about-image-title">
+                        <h2>Healthcare</h2>
                     </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item-royal wow fadeInUp">
-                        <div class="service-item-header-royal">
-                            <span>Healthcare</span>
-                            <h2><a href="service-single.html">General Consultation</a></h2>
-                        </div>
-                        <div class="service-item-image-royal">
-                            <a href="service-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="assets/images/service-image-1-royal.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="service-item-body-royal">
-                            <div class="service-item-content-royal">
-                                <p>Routine checkups, symptom evaluation, and personalized medical advices.</p>
-                            </div>
-                            <div class="service-item-btn-royal">
-                                <a href="service-single.html" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item-royal wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item-header-royal">
-                            <span>Medical Care</span>
-                            <h2><a href="service-single.html">Emergency Care</a></h2>
-                        </div>
-                        <div class="service-item-image-royal">
-                            <a href="service-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="assets/images/service-image-2-royal.jpg" alt="">
-                                </figure>  
-                            </a>
-                        </div>
-                        <div class="service-item-body-royal">
-                            <div class="service-item-content-royal">
-                                <p>Routine checkups, symptom evaluation, and personalized medical advices.</p>
-                            </div>
-                            <div class="service-item-btn-royal">
-                                <a href="service-single.html" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item-royal wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item-header-royal">
-                            <span>Medical Help</span>
-                            <h2><a href="service-single.html">Diagnostic Services</a></h2>
-                        </div>
-                        <div class="service-item-image-royal">
-                            <a href="service-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="assets/images/service-image-3-royal.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="service-item-body-royal">
-                            <div class="service-item-content-royal">
-                                <p>Routine checkups, symptom evaluation, and personalized medical advices.</p>
-                            </div>
-                            <div class="service-item-btn-royal">
-                                <a href="service-single.html" class="readmore-btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Satisfy Client Images Start -->
-                        <div class="satisfy-client-images">
-                            <div class="satisfy-client-image">
-                                <figure class="image-anime">
-                                    <img src="assets/images/author-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <div class="satisfy-client-image add-more">
-                                <img src="assets/images/icon-phone-white.svg" alt="">
-                            </div>
-                        </div>
-                        <!-- Satisfy Client Images End -->    
-                        <p>Helping You Move from Concern to Confidence with Expert Care. - <a href="contact.html">View all services</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="why-choose-us-royal">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6">
-                    <!-- Why Choose Image Box Start -->
-                    <div class="why-choose-image-box-royal wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                        <!-- Why Choose Image Start -->
-                        <div class="why-choose-image-royal box-1">
-                            <figure class="image-anime">
-                                <img src="images/why-choose-image-1-royal.jpg" alt="">
+                    <div class="about-image-box-1">
+                        <div class="about-us-image">
+                            <figure>
+                                <img src="<?php echo get_template_directory_uri();?>/assets/images/about-us-image.jpg" alt="About Us">
                             </figure>
                         </div>
-                        <!-- Why Choose Image End -->
-
-                        <!-- Years Experience Circle Start -->
-                        <div class="years-experience-circle-royal">
-                            <img src="images/years-experience-circle-primary.svg" alt="">
+                        
+                        <div class="about-review-box hero-client-box">
+                            <div class="hero-client-content">
+                                <h2><span class="counter">4.9</span>/5 <i class="fa fa-solid fa-star"></i></h2>
+                                <p>Trusted by patients</p>
+                            </div>
                         </div>
-                        <!-- Years Experience Circle End -->
-
-                        <!-- Why Choose Image Start -->
-                        <div class="why-choose-image-royal box-2">
-                            <figure class="image-anime">
-                                <img src="images/why-choose-image-2-royal.jpg" alt="">
-                            </figure>
-                        </div>
-                        <!-- Why Choose Image End -->
                     </div>
-                    <!-- Why Choose Image Box End -->
                 </div>
+            </div>
 
-                <div class="col-xl-6">
-                    <!-- Why Choose Content Start -->
-                    <div class="why-choose-content-royal">
-                        <!-- Section Title Start -->
-                        <div class="section-title section-title-center">
-                            <span class="section-sub-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Why Choose Us</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque" aria-label="Excellence in healthcare with trusted medical experts" style="perspective: 400px;"><div class="split-line" aria-hidden="true" style="position: relative; display: block; text-align: start;"><div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">E</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">x</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">l</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">l</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">n</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">h</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">l</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">h</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">w</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">h</div></div> </div><div class="split-line" aria-hidden="true" style="position: relative; display: block; text-align: start;"><div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">u</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">s</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">d</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">m</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">d</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">l</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">x</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">p</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">s</div></div></div></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">We are committed to providing exceptional healthcare services with a focus on patient comfort, safety, and effective treatment.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Why Choose Item List Start -->
-                        <div class="why-choose-item-list-royal wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                            <!-- Why Choose Item Start -->
-                            <div class="why-choose-item-royal">
-                                <div class="icon-box">
-                                    <img src="images/icon-why-choose-item-1-royal.svg" alt="">
-                                </div>
-                                <div class="why-choose-item-content-royal">
-                                    <h3>Experienced Doctors</h3>
-                                    <p>Our team of highly qualified doctors and specialists provides expert diagnosis</p>
-                                </div>
-                            </div>
-                            <!-- Why Choose Item End -->
-
-                            <!-- Why Choose Item Start -->
-                            <div class="why-choose-item-royal">
-                                <div class="icon-box">
-                                    <img src="images/icon-why-choose-item-2-royal.svg" alt="">
-                                </div>
-                                <div class="why-choose-item-content-royal">
-                                    <h3>Experienced Doctors</h3>
-                                    <p>Our team of highly qualified doctors and specialists provides expert diagnosis</p>
-                                </div>
-                            </div>
-                            <!-- Why Choose Item End -->
-                        </div>
-                        <!-- Why Choose Item List End -->
-
-                        <!-- Why Choose Footer Start -->
-                        <div class="why-choose-footer-royal wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                            <!-- Why Choose Button Start -->
-                            <div class="why-choose-btn-royal">
-                                <a href="contact.html" class="btn-default">Get in Touch</a>
-                            </div>
-                            <!-- Why Choose Button End -->
-
-                            <!-- Contact Item Box Start -->
-                            <div class="contact-item-box-royal">
-                                <div class="icon-box">
-                                    <img src="images/icon-headphone.svg" alt="">
-                                </div>
-                                <div class="contact-item-box-content-royal">
-                                    <p>Emergency call</p>
-                                    <h3><a href="tel:123456789">(123) 456-789</a></h3>
-                                </div>
-                            </div>
-                            <!-- Contact Item Box End -->
-                        </div>
-                        <!-- Why Choose Footer End -->
+            <div class="col-xl-6">
+                <div class="about-us-content">
+                    <div class="section-title">
+                        <span class="section-sub-title wow fadeInUp">About Us</span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our journey providing quality healthcare</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">We are dedicated to providing compassionate, high-quality healthcare that focuses on your overall well-being. By integrating advanced technology with a personalized human touch, we ensure every patient receives the best possible outcome.</p>
                     </div>
-                    <!-- Why Choose Content End -->
+
+                    <div class="about-us-item-list wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="about-us-item">
+                            <h3>Patient-Focused Care</h3>
+                            <p>We prioritize clear communication and tailor every treatment plan to meet your unique needs.</p>
+                        </div>
+                        <div class="about-us-item">
+                            <h3>Advanced Medical Technology</h3>
+                            <p>Equipped with state-of-the-art diagnostic and treatment tools for precise, effective care.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-content-footer wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="about-us-btn">
+                            <a href="about.html" class="btn-default">Learn More About Us</a>
+                        </div>
+                        <div class="about-us-author-box">
+                            <div class="about-us-author-image">
+                                <figure class="image-anime">
+                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="Doctor">
+                                </figure>
+                            </div>
+                            <div class="about-us-author-content">
+                                <h3>Devon Lane</h3>
+                                <p>Internal Medicine Specialist</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+    <!-- Our Service Section Start -->
+<div class="our-service-royal bg-section">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <div class="section-title section-title-center">
+                    <span class="section-sub-title wow fadeInUp">Our Services</span>
+                    <h2 class="text-anime-style-3">Comprehensive healthcare services for better living</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Service 1: General Consultation -->
+            <div class="col-xl-4 col-md-6">
+                <div class="service-item-royal wow fadeInUp">
+                    <div class="service-item-header-royal">
+                        <span>Healthcare</span>
+                        <h2><a href="service-single.html">General Consultation</a></h2>
+                    </div>
+                    <div class="service-item-image-royal">
+                        <a href="service-single.html">
+                            <figure class="image-anime">
+                                <img src="assets/images/service-image-1-royal.jpg" alt="General Consultation">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="service-item-body-royal">
+                        <div class="service-item-content-royal">
+                            <p>Routine checkups, symptom evaluation, and personalized medical advice from our primary care team.</p>
+                        </div>
+                        <div class="service-item-btn-royal">
+                            <a href="service-single.html" class="readmore-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Emergency Care -->
+            <div class="col-xl-4 col-md-6">
+                <div class="service-item-royal wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item-header-royal">
+                        <span>Medical Care</span>
+                        <h2><a href="service-single.html">Emergency Care</a></h2>
+                    </div>
+                    <div class="service-item-image-royal">
+                        <a href="service-single.html">
+                            <figure class="image-anime">
+                                <img src="assets/images/service-image-2-royal.jpg" alt="Emergency Care">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="service-item-body-royal">
+                        <div class="service-item-content-royal">
+                            <p>24/7 immediate medical intervention and critical care services for urgent health situations.</p>
+                        </div>
+                        <div class="service-item-btn-royal">
+                            <a href="service-single.html" class="readmore-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Diagnostic Services -->
+            <div class="col-xl-4 col-md-6">
+                <div class="service-item-royal wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item-header-royal">
+                        <span>Medical Help</span>
+                        <h2><a href="service-single.html">Diagnostic Services</a></h2>
+                    </div>
+                    <div class="service-item-image-royal">
+                        <a href="service-single.html">
+                            <figure class="image-anime">
+                                <img src="assets/images/service-image-3-royal.jpg" alt="Diagnostic Services">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="service-item-body-royal">
+                        <div class="service-item-content-royal">
+                            <p>State-of-the-art laboratory testing, imaging, and screening for accurate and fast diagnoses.</p>
+                        </div>
+                        <div class="service-item-btn-royal">
+                            <a href="service-single.html" class="readmore-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="satisfy-client-images">
+                        <div class="satisfy-client-image">
+                            <figure class="image-anime">
+                                <img src="assets/images/author-1.jpg" alt="Client Author">
+                            </figure>
+                        </div>
+                        <div class="satisfy-client-image add-more">
+                            <img src="assets/images/icon-phone-white.svg" alt="Phone Icon">
+                        </div>
+                    </div>
+                    <p>Helping You Move from Concern to Confidence with Expert Care. - <a href="contact.html">View all services</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Service Section End -->
+
+    <!-- Why Choose Us Section Start -->
+<div class="why-choose-us-royal">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6">
+                <!-- Why Choose Image Box Start -->
+                <div class="why-choose-image-box-royal wow fadeInUp">
+                    <!-- Why Choose Image 1 -->
+                    <div class="why-choose-image-royal box-1">
+                        <figure class="image-anime">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/why-choose-image-1-royal.jpg" alt="Medical Care">
+                        </figure>
+                    </div>
+
+                    <!-- Years Experience Circle -->
+                    <div class="years-experience-circle-royal">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/images/years-experience-circle-primary.svg" alt="Experience">
+                    </div>
+
+                    <!-- Why Choose Image 2 -->
+                    <div class="why-choose-image-royal box-2">
+                        <figure class="image-anime">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/why-choose-image-2-royal.jpg" alt="Healthcare Services">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <!-- Why Choose Content Start -->
+                <div class="why-choose-content-royal">
+                    <div class="section-title">
+                        <span class="section-sub-title wow fadeInUp">Why Choose Us</span>
+                        <h2 class="text-anime-style-3">Excellence in healthcare with trusted medical experts</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">We are committed to providing exceptional healthcare services with a focus on patient comfort, safety, and effective treatment.</p>
+                    </div>
+
+                    <!-- Why Choose Item List Start -->
+                    <div class="why-choose-item-list-royal wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- Feature 1 -->
+                        <div class="why-choose-item-royal">
+                            <div class="icon-box">
+                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-why-choose-item-1-royal.svg" alt="Icon">
+                            </div>
+                            <div class="why-choose-item-content-royal">
+                                <h3>Experienced Doctors</h3>
+                                <p>Our team of highly qualified specialists provides expert diagnosis and personalized care plans.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="why-choose-item-royal">
+                            <div class="icon-box">
+                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-why-choose-item-2-royal.svg" alt="Icon">
+                            </div>
+                            <div class="why-choose-item-content-royal">
+                                <h3>Advanced Technology</h3>
+                                <p>We utilize state-of-the-art medical equipment to ensure accurate results and effective treatments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Why Choose Footer Start -->
+                    <div class="why-choose-footer-royal wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="why-choose-btn-royal">
+                            <a href="contact.html" class="btn-default">Get in Touch</a>
+                        </div>
+
+                        <div class="contact-item-box-royal">
+                            <div class="icon-box">
+                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-headphone.svg" alt="Emergency">
+                            </div>
+                            <div class="contact-item-box-content-royal">
+                                <p>Emergency call</p>
+                                <h3><a href="tel:123456789">(123) 456-789</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Why Choose Us Section End -->
 
     <!-- Core Features Section Start -->
-    <div class="core-features bg-section dark-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5">
-                    <!-- Core Features Content Start -->
-                    <div class="core-features-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Core Feature</span>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Core features of our healthcare services</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Our medical services are designed to provide reliable, high-quality care with a strong focus on patient comfort and safety</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Core Features Content Button Start -->
-                        <div class="core-features-content-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="contact.html" class="btn-default btn-highlighted">Contact Us</a>
-                        </div>
-                        <!-- Core Features Content Button End -->
+<div class="core-features bg-section dark-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <!-- Core Features Content Start -->
+                <div class="core-features-content">
+                    <div class="section-title">
+                        <span class="section-sub-title wow fadeInUp">Our Expertise</span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Elevating the Standard of Healthcare</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">We combine state-of-the-art medical technology with compassionate human care, ensuring that every patient receives a personalized treatment plan tailored to their unique wellness journey.</p>
                     </div>
-                    <!-- Core Features Content End -->
+
+                    <div class="core-features-content-btn wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="about.html" class="btn-default btn-highlighted">Learn About Our Approach</a>
+                    </div>
                 </div>
+            </div>
 
-                <div class="col-xl-7">
-                    <!-- Core Features Item List Start -->
-                    <div class="core-features-item-list">
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-1.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Quality Medical Treatment</h3>
-                            </div>
+            <div class="col-xl-7">
+                <div class="core-features-item-list">
+                    <!-- Feature 1 -->
+                    <div class="core-features-item wow fadeInUp">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-1.svg" alt="Quality Care">
                         </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-2.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Personalized Patient Care</h3>
-                            </div>
+                        <div class="core-features-item-content">
+                            <h3>Evidence-Based Treatment</h3>
                         </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-3.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Modern Medical Facilities</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-4.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>24/7 Emergency Support</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="0.8s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-5.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Fast and Accurate Test Results</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="1s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-6.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Safe and Comfortable Environment</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="1.2s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-7.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Experienced Medical Professionals</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
-
-                        <!-- Core Features Item Start -->
-                        <div class="core-features-item wow fadeInUp" data-wow-delay="1.4s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-8.svg" alt="">
-                            </div>
-                            <div class="core-features-item-content">
-                                <h3>Advanced Diagnostic Technology</h3>
-                            </div>
-                        </div>
-                        <!-- Core Features Item End -->
                     </div>
-                    <!-- Core Features Item List End -->
+
+                    <!-- Feature 2 -->
+                    <div class="core-features-item wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-2.svg" alt="Personalized Care">
+                        </div>
+                        <div class="core-features-item-content">
+                            <h3>Patient-Centered Recovery</h3>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="core-features-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-3.svg" alt="Facilities">
+                        </div>
+                        <div class="core-features-item-content">
+                            <h3>State-of-the-Art Infrastructure</h3>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="core-features-item wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-4.svg" alt="Emergency">
+                        </div>
+                        <div class="core-features-item-content">
+                            <h3>24/7 Acute Care Response</h3>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="core-features-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-5.svg" alt="Diagnostics">
+                        </div>
+                        <div class="core-features-item-content">
+                            <h3>Rapid Diagnostic Precision</h3>
+                        </div>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="core-features-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-6.svg" alt="Environment">
+                        </div>
+                        <div class="core-features-item-content">
+                            <h3>Healing-Focused Environment</h3>
+                        </div>
+                    </div>
+
+                    <!-- Feature 7 -->
+                    <div class="core-features-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-7.svg" alt="Professionals">
+                        </div>
+                        <div class="core-features-item-content">
+                            <h3>Board-Certified Specialists</h3>
+                        </div>
+                    </div>
+
+                    <!-- Feature 8 -->
+                    <div class="core-features-item wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-core-features-item-8.svg" alt="Technology">
+                        </div>
+                        <div class="core-features-item-content">
+                            <h3>Advanced Robotic Surgery</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Core Features Section End -->
+</div>
+<!-- Core Features Section End -->
 
     <!-- Case Study Section Start -->
     <div class="our-case-study">
@@ -622,631 +512,322 @@ get_header();?>
     </div>
     <!-- Case Study Section End -->
 
-    <!-- Our Fact Section Start -->
-    <div class="our-facts bg-section dark-section">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Fact / Statistics</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Key statistics that reflect our medical excellence</h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <!-- Fact Item Start -->
-                    <div class="fact-item wow fadeInUp">
-                        <div class="fact-item-header">
-                            <div class="fact-item-counter-content">
-                                <h2><span class="counter">35</span>+</h2>
-                                <ul>
-                                    <li>Experienced Doctors</li>
-                                </ul>
-                            </div>
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-fact-item-1.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="fact-item-content">
-                            <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                        </div>
-                    </div>
-                    <!-- Fact Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Fact Item Start -->
-                    <div class="fact-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="fact-item-header">
-                            <div class="fact-item-counter-content">
-                                <h2><span class="counter">12</span>+</h2>
-                                <ul>
-                                    <li>Medical Departments</li>
-                                </ul>
-                            </div>
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-fact-item-2.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="fact-item-content">
-                            <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                        </div>
-                    </div>
-                    <!-- Fact Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Fact Item Start -->
-                    <div class="fact-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="fact-item-header">
-                            <div class="fact-item-counter-content">
-                                <h2><span class="counter">24</span>/7</h2>
-                                <ul>
-                                    <li>Emergency Support</li>
-                                </ul>
-                            </div>
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-fact-item-3.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="fact-item-content">
-                            <p>Our team of experienced doctor dedicated to providing expert medical care with.</p>
-                        </div>
-                    </div>
-                    <!-- Fact Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
-                        <p>Browse all professional healthcare services available for you and family</p>
-                        <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-                            <li><span class="counter">4.9</span>/5</li>
-                        </ul>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Fact Section End -->
-
     <!-- How It Work Section Start -->
-    <div class="how-it-work bg-section">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">How It Work</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Simple steps to get started</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Getting started with us is quick and hassle-free. We follow a streamlined process designed to make your journey smooth from the very beginning.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- How Work Items List Start -->
-                    <div class="how-work-items-list">
-                        <!-- How Work Item Start -->
-                        <div class="how-work-item wow fadeInUp">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-1.svg" alt="">
-                            </div>
-                            <div class="how-work-item-content">
-                                <span>Step - 01</span>
-                                <h3>Strategy & Planning</h3>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                        </div>
-                        <!-- How Work Item End -->
-
-                        <!-- How Work Item Start -->
-                        <div class="how-work-item wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-2.svg" alt="">
-                            </div>
-                            <div class="how-work-item-content">
-                                <span>Step - 02</span>
-                                <h3>Design & Development</h3>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                        </div>
-                        <!-- How Work Item End -->
-
-                        <!-- How Work Item Start -->
-                        <div class="how-work-item wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-3.svg" alt="">
-                            </div>
-                            <div class="how-work-item-content">
-                                <span>Step - 03</span>
-                                <h3>Review & Launch</h3>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                        </div>
-                        <!-- How Work Item End -->
-
-                        <!-- How Work Item Start -->
-                        <div class="how-work-item wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-4.svg" alt="">
-                            </div>
-                            <div class="how-work-item-content">
-                                <span>Step - 04</span>
-                                <h3>Support & Growth</h3>
-                                <p>Our pediatric care focus on the health and well-being of infants, children.</p>
-                            </div>
-                        </div>
-                        <!-- How Work Item End -->
-                    </div>
-                    <!-- How Work Items List End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Satisfy Client Images Start -->
-                        <div class="satisfy-client-images">
-                            <div class="satisfy-client-image">
-                                <figure class="image-anime">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <div class="satisfy-client-image add-more">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-phone-white.svg" alt="">
-                            </div>
-                        </div>
-                        <!-- Satisfy Client Images End -->    
-                        <p>Helping You Move from Concern to Confidence with Expert Medical Care. -<a href="contact.html">Contact Us Today!</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
+<div class="how-it-work bg-section">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <div class="section-title section-title-center">
+                    <span class="section-sub-title wow fadeInUp">Our Process</span>
+                    <h2 class="text-anime-style-3" data-cursor="-opaque">Your journey to better health</h2>
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">We’ve simplified our care process to ensure you get the medical attention you need quickly, comfortably, and effectively.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- How It Work Section End -->
 
-    <!-- Our Pricing Section Start -->
-    <div class="our-pricing bg-section">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Pricing Plan</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Affordable healthcare plans for every need</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="how-work-items-list">
+                    <!-- Step 01 -->
+                    <div class="how-work-item wow fadeInUp">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-1.svg" alt="Step 1">
+                        </div>
+                        <div class="how-work-item-content">
+                            <span>Step - 01</span>
+                            <h3>Schedule Appointment</h3>
+                            <p>Book your visit online or via phone at a time that works best for your schedule.</p>
+                        </div>
                     </div>
-                    <!-- Section Title End -->
+
+                    <!-- Step 02 -->
+                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-2.svg" alt="Step 2">
+                        </div>
+                        <div class="how-work-item-content">
+                            <span>Step - 02</span>
+                            <h3>Initial Consultation</h3>
+                            <p>Meet with our medical professionals for a thorough health assessment and evaluation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-3.svg" alt="Step 3">
+                        </div>
+                        <div class="how-work-item-content">
+                            <span>Step - 03</span>
+                            <h3>Treatment Plan</h3>
+                            <p>Receive a personalized recovery or maintenance plan tailored to your specific needs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-4.svg" alt="Step 4">
+                        </div>
+                        <div class="how-work-item-content">
+                            <span>Step - 04</span>
+                            <h3>Follow-Up Care</h3>
+                            <p>We provide ongoing monitoring and support to ensure your long-term health and success.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <!-- Pricing Item Start -->
-                    <div class="pricing-item wow fadeInUp">
-                        <!-- Pricing Item Header Start -->
-                        <div class="pricing-item-header">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-item-1.svg" alt="">
-                            </div>
-                            <div class="pricing-item-content">
-                                <h2>Basic Care</h2>
-                                <p>Ideal for individuals seeking medical check - ups and consultations.</p>
-                            </div>
-                            <div class="pricing-item-price">
-                                <h2>$49.00<sub>/Month</sub></h2>
-                            </div>   
-                        </div>
-                        <!-- Pricing Item Header End -->
-                            
-                        <!-- Pricing Item Body Start -->
-                        <div class="pricing-item-body">
-                            <div class="pricing-item-list">
-                                <ul>
-                                    <li>2 General Consultations</li>
-                                    <li>Basic Lab Tests</li>
-                                    <li>Online Health Portal Access</li>
-                                    <li>Prescriptions Services</li>
-                                </ul>
-                            </div>
-                            <div class="pricing-item-btn">
-                                <a href="contact.html" class="btn-default">Choose This Plan</a>
-                            </div>
-                        </div>
-                        <!-- Pricing Item Body End -->
-                    </div>
-                    <!-- Pricing Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Pricing Item Start -->
-                    <div class="pricing-item wow fadeInUp">
-                        <!-- Pricing Item Header Start -->
-                        <div class="pricing-item-header">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-item-2.svg" alt="">
-                            </div>
-                            <div class="pricing-item-content">
-                                <h2>Advanced Care</h2>
-                                <p>Ideal for individuals seeking medical check - ups and consultations.</p>
-                            </div>
-                            <div class="pricing-item-price">
-                                <h2>$69.00<sub>/Month</sub></h2>
-                            </div>   
-                        </div>
-                        <!-- Pricing Item Header End -->
-                            
-                        <!-- Pricing Item Body Start -->
-                        <div class="pricing-item-body">
-                            <div class="pricing-item-list">
-                                <ul>
-                                    <li>2 General Consultations</li>
-                                    <li>Basic Lab Tests</li>
-                                    <li>Online Health Portal Access</li>
-                                    <li>Prescriptions Services</li>
-                                </ul>
-                            </div>
-                            <div class="pricing-item-btn">
-                                <a href="contact.html" class="btn-default">Choose This Plan</a>
-                            </div>
-                        </div>
-                        <!-- Pricing Item Body End -->
-                    </div>
-                    <!-- Pricing Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Pricing Item Start -->
-                    <div class="pricing-item wow fadeInUp">
-                        <!-- Pricing Item Header Start -->
-                        <div class="pricing-item-header">
-                            <div class="icon-box">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-item-3.svg" alt="">
-                            </div>
-                            <div class="pricing-item-content">
-                                <h2>Premium Care</h2>
-                                <p>Ideal for individuals seeking medical check - ups and consultations.</p>
-                            </div>
-                            <div class="pricing-item-price">
-                                <h2>$99.00<sub>/Month</sub></h2>
-                            </div>   
-                        </div>
-                        <!-- Pricing Item Header End -->
-                            
-                        <!-- Pricing Item Body Start -->
-                        <div class="pricing-item-body">
-                            <div class="pricing-item-list">
-                                <ul>
-                                    <li>2 General Consultations</li>
-                                    <li>Basic Lab Tests</li>
-                                    <li>Online Health Portal Access</li>
-                                    <li>Prescriptions Services</li>
-                                </ul>
-                            </div>
-                            <div class="pricing-item-btn">
-                                <a href="contact.html" class="btn-default">Choose This Plan</a>
-                            </div>
-                        </div>
-                        <!-- Pricing Item Body End -->
-                    </div>
-                    <!-- Pricing Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Pricing Benifit List Start -->
-                    <div class="pricing-benefit-list wow fadeInUp" data-wow-delay="0.6s">
-                        <ul>
-                            <li><img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-benefit-1.svg" alt="">Get 30 day free trial</li>
-                            <li><img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-benefit-2.svg" alt="">No any hidden fee pay</li>
-                            <li><img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-benefit-3.svg" alt="">You can cancel anytime </li>
-                        </ul>
-                    </div>
-                    <!-- Pricing Benifit List End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Pricing Section End -->
-
-    <!-- Our Support Section Start -->
-    <div class="our-support">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Emergency Care</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">24/7 emergency support</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Our emergency department is available around the clock to provide immediate medical assistance and life-saving care when you need it most.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Support Video Image Box Start -->
-                    <div class="support-video-image-box wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Support CTA Box Start -->
-                        <div class="support-cta-box">
-                            <!-- Support CTA Header Start -->
-                            <div class="support-cta-header">
-                                <div class="icon-box">
-                                    <i class="fa-regular fa-clock"></i>
-                                </div>
-                                <div class="support-cta-title">
-                                    <h3>Schedule a hours:</h3>
-                                </div>
-                            </div>
-                            <!-- Support CTA Header End -->
-
-                            <!-- Support CTA Body Start -->
-                            <div class="support-cta-body">
-                                <!-- Support CTA List Start -->
-                                <div class="support-cta-list">
-                                    <ul>
-                                        <li><span>Mon to Fri:</span>09:00 AM - 07:00 PM</li>
-                                        <li><span>Saturday:</span>09:00 AM - 07:00 PM</li>
-                                        <li><span>Sunday</span>Closed</li>
-                                    </ul>
-                                </div>
-                                <!-- Support CTA List End -->
-
-                                <!-- Support CTA Button Start -->
-                                <div class="support-cta-btn">
-                                    <a href="contact.html" class="btn-default">24/7 Services for Emergancy</a>
-                                </div>
-                                <!-- Support CTA Button End -->
-                            </div>
-                            <!-- Support CTA Body End -->
-                        </div>
-                        <!-- Support CTA Box End -->
-
-                        <!-- Support Video Box Start -->
-                        <div class="support-video-box">
-                            <!-- Support Video Image Start -->
-                            <div class="support-video-image">
-                                <figure>
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/support-video-image.jpg" alt="">
-                                </figure>
-                            </div>
-                            <!-- Support Video Image End -->
-
-                            <!-- Video Play Button Start -->
-                            <div class="video-play-button">
-                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
-                                    <span class="bg-effect"><i class="fa-solid fa-play"></i></span>
-                                </a>
-                            </div>
-                            <!-- Video Play Button End -->
-                        </div>
-                        <!-- Support Video Box End -->
-                    </div>
-                    <!-- Support Video Image Box End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.6s">
-                        <p>Browse all professional healthcare services available for you and family</p>
-                        <ul>
-                            <li class="section-footer-content">Trusted By <b>58,900+</b> Users</li>
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-                            <li><span class="counter">4.9</span>/5</li>
-                        </ul>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Support Section End -->
-
-    <div class="our-testimonial-royal">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Our Testimonial</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque" aria-label="Stories of care from our patients" style="perspective: 400px;"><div class="split-line" aria-hidden="true" style="position: relative; display: block; text-align: center;"><div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">S</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">s</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">f</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">f</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">m</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">u</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">p</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">s</div></div></div></h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">We follow a structured and patient centered process that ensures accurate evaluation, timely treatment, and ongoing support</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-4 col-md-5">
-                    <!-- Testimonial Image Box Start -->
-                    <div class="testimonial-image-box-royal wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                        <div class="testimonial-image-royal">
-                            <figure>
-                                <img src="images/testimonials-image-royal.jpg" alt="">
+            <div class="col-lg-12">
+                <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="satisfy-client-images">
+                        <div class="satisfy-client-image">
+                            <figure class="image-anime">
+                                <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="Doctor">
                             </figure>
                         </div>
-                        <div class="google-rating-box-royal">
-                            <div class="google-rating-logo-royal">
-                                <img src="images/icon-google.svg" alt="">
-                            </div>
-                            <div class="google-rating-content-royal">
-                                <h2><span class="counter">4.9</span>/5 <span class="google-rating-star-royal"><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i></span></h2>
-                                <p>Based on 250 review</p>
-                            </div>
+                        <div class="satisfy-client-image add-more">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-phone-white.svg" alt="Support">
                         </div>
                     </div>
-                    <!-- Testimonial Image Box End -->
+                    <p>Helping you move from concern to confidence with expert medical care. - <a href="contact.html">Contact Us Today!</a></p>
                 </div>
-
-                <div class="col-xl-8 col-md-7">
-                    <!-- Testimonial Slider Start -->
-                    <div class="testimonial-slider-royal wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-                            <div class="swiper-wrapper" data-cursor-text="Drag" id="swiper-wrapper-eddec6b26d72184d" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-433.5px, 0px, 0px); transition-delay: 0ms;">
-                                <!-- Testimonial Slide Start -->
-                                
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                
-                                <!-- Testimonial Slide End -->
-                            <div class="swiper-slide swiper-slide-prev" style="width: 403.5px; margin-right: 30px;" role="group" aria-label="2 / 3" data-swiper-slide-index="1">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item-royal">
-                                        <div class="testimonial-item-header-royal">
-                                            <div class="testimonial-item-rating-royal">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-item-title-royal">
-                                                <h2>“Trusted By Thousands Of Happy Healthcare Patients”</h2>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-content-royal">
-                                            <p>The doctors and staff were incredibly kind and professional. They explained everything clearly and made sure I was comfortable during my treatment.</p>
-                                        </div>
-                                        <div class="testimonial-item-author-royal">
-                                            <div class="testimonial-author-image-royal">
-                                                <figure>
-                                                    <img src="images/author-2.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content-royal">
-                                                <h3>Dianne Russell</h3>
-                                                <p>Regular Patient</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div><div class="swiper-slide swiper-slide-active" style="width: 403.5px; margin-right: 30px;" role="group" aria-label="3 / 3" data-swiper-slide-index="2">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item-royal">
-                                        <div class="testimonial-item-header-royal">
-                                            <div class="testimonial-item-rating-royal">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-item-title-royal">
-                                                <h2>“I had an excellent experience during health checkup.”</h2>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-content-royal">
-                                            <p>The doctors and staff were incredibly kind and professional. They explained everything clearly and made sure I was comfortable during my treatment.</p>
-                                        </div>
-                                        <div class="testimonial-item-author-royal">
-                                            <div class="testimonial-author-image-royal">
-                                                <figure>
-                                                    <img src="images/author-3.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content-royal">
-                                                <h3>Rahul Mehta</h3>
-                                                <p>Regular Patient</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div><div class="swiper-slide swiper-slide-next" style="width: 403.5px; margin-right: 30px;" role="group" aria-label="1 / 3" data-swiper-slide-index="0">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item-royal">
-                                        <div class="testimonial-item-header-royal">
-                                            <div class="testimonial-item-rating-royal">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-item-title-royal">
-                                                <h2>“What Our Patients Say About Our Care”</h2>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-item-content-royal">
-                                            <p>The doctors and staff were incredibly kind and professional. They explained everything clearly and made sure I was comfortable during my treatment.</p>
-                                        </div>
-                                        <div class="testimonial-item-author-royal">
-                                            <div class="testimonial-author-image-royal">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-1.jpg" alt="">
-                                                </figure>
-                                            </div>
-                                            <div class="testimonial-author-content-royal">
-                                                <h3>Ritika Sharma</h3>
-                                                <p>Regular Patient</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div></div>
-                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-                    </div>
-                    <!-- Testimonial Slider End --> 
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                        <!-- Satisfy Client Images Start -->
-                        <div class="satisfy-client-images">
-                            <div class="satisfy-client-image">
-                                <figure class="image-anime">
-                                    <img src="images/author-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <div class="satisfy-client-image add-more">
-                                <img src="images/icon-phone-white.svg" alt="">
-                            </div>
-                        </div>
-                        <!-- Satisfy Client Images End -->    
-                        <p>From first consultation to full recovery - <a href="testimonials.html">we deliver care you can truly trust</a></p>
-                        <ul>
-                            <li><span class="counter">4.9</span></li>
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-                            <li>Over 2000 Reviews</li>
-                        </ul>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>            
+            </div>
         </div>
     </div>
+</div>
+<!-- How It Work Section End -->
+
+    <!-- Our Pricing Section Start -->
+<div class="our-pricing bg-section">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <div class="section-title section-title-center">
+                    <span class="section-sub-title wow fadeInUp">Pricing Plan</span>
+                    <h2 class="text-anime-style-3" data-cursor="-opaque">Affordable healthcare plans for every need</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Basic Care -->
+            <div class="col-xl-4 col-md-6">
+                <div class="pricing-item wow fadeInUp">
+                    <div class="pricing-item-header">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-item-1.svg" alt="Basic Care">
+                        </div>
+                        <div class="pricing-item-content">
+                            <h2>Basic Care</h2>
+                            <p>Essential check-ups and routine consultations for individuals.</p>
+                        </div>
+                        <div class="pricing-item-price">
+                            <h2>৳ 5,000<sub>/Month</sub></h2>
+                        </div>   
+                    </div>
+                    <div class="pricing-item-body">
+                        <div class="pricing-item-list">
+                            <ul>
+                                <li>2 General Consultations</li>
+                                <li>Basic Laboratory Tests</li>
+                                <li>Health Portal Access</li>
+                                <li>Prescription Services</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-item-btn">
+                            <a href="contact.html" class="btn-default">Choose This Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Care -->
+            <div class="col-xl-4 col-md-6">
+                <div class="pricing-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="pricing-item-header">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-item-2.svg" alt="Advanced Care">
+                        </div>
+                        <div class="pricing-item-content">
+                            <h2>Advanced Care</h2>
+                            <p>Comprehensive health monitoring and priority specialist access.</p>
+                        </div>
+                        <div class="pricing-item-price">
+                            <h2>৳ 7,800<sub>/Month</sub></h2>
+                        </div>   
+                    </div>
+                    <div class="pricing-item-body">
+                        <div class="pricing-item-list">
+                            <ul>
+                                <li>4 General Consultations</li>
+                                <li>Advanced Diagnostic Tests</li>
+                                <li>24/7 Priority Support</li>
+                                <li>Digital Medical Records</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-item-btn">
+                            <a href="contact.html" class="btn-default">Choose This Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Care -->
+            <div class="col-xl-4 col-md-6">
+                <div class="pricing-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="pricing-item-header">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-pricing-item-3.svg" alt="Premium Care">
+                        </div>
+                        <div class="pricing-item-content">
+                            <h2>Premium Care</h2>
+                            <p>All-inclusive wellness management with dedicated care teams.</p>
+                        </div>
+                        <div class="pricing-item-price">
+                            <h2>৳ 11,200<sub>/Month</sub></h2>
+                        </div>   
+                    </div>
+                    <div class="pricing-item-body">
+                        <div class="pricing-item-list">
+                            <ul>
+                                <li>Unlimited Consultations</li>
+                                <li>Full Diagnostic Screening</li>
+                                <li>Personalized Care Team</li>
+                                <li>Priority Appointment Booking</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-item-btn">
+                            <a href="contact.html" class="btn-default">Choose This Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Pricing Section End -->
+
+
+   <div class="our-testimonial-royal">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <!-- Section Title Start -->
+                <div class="section-title section-title-center">
+                    <span class="section-sub-title">Our Testimonial</span>
+                    <h2 class="text-anime-style-3">Stories of care from our patients</h2>
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">We follow a structured and patient centered process that ensures accurate evaluation, timely treatment, and ongoing support</p>
+                </div>
+                <!-- Section Title End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-4 col-md-5">
+                <!-- Testimonial Image Box Start -->
+                <div class="testimonial-image-box-royal wow fadeInUp">
+                    <div class="testimonial-image-royal">
+                        <figure>
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/testimonials-image-royal.jpg" alt="Patients Testimony">
+                        </figure>
+                    </div>
+                    <div class="google-rating-box-royal">
+                        <div class="google-rating-logo-royal">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-google.svg" alt="Google Logo">
+                        </div>
+                        <div class="google-rating-content-royal">
+                            <h2>
+                                <span class="counter">4.9</span>/5 
+                                <span class="google-rating-star-royal">
+                                    <i class="fa fa-solid fa-star"></i>
+                                    <i class="fa fa-solid fa-star"></i>
+                                    <i class="fa fa-solid fa-star"></i>
+                                    <i class="fa fa-solid fa-star"></i>
+                                    <i class="fa fa-solid fa-star"></i>
+                                </span>
+                            </h2>
+                            <p>Based on 250 reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Image Box End -->
+            </div>
+
+            <?php
+/**
+ * Dynamic Testimonial Slider powered by ACF Options Page
+ */
+
+if ( have_rows( 'testimonials_list', 'option' ) ) : ?>
+    <div class="col-xl-8 col-md-7">
+        <div class="testimonial-slider-royal wow fadeInUp" data-wow-delay="0.2s">
+            <div class="swiper">
+                <div class="swiper-wrapper" data-cursor-text="Drag">
+                    
+                    <?php while ( have_rows( 'testimonials_list', 'option' ) ) : the_row(); 
+                        $dpt_title       = get_sub_field( 'testimonial_list_title' );
+                        $dpt_description = get_sub_field( 'testimonial_list_description' );
+                        $dpt_image_url   = get_sub_field( 'testimonial_list_image' ); // Type: URL field
+                        $dpt_name        = get_sub_field( 'testimonial_list_name' );
+                        $dpt_designation = get_sub_field( 'testimonial_list_designation' );
+                        ?>
+                        
+                        <div class="swiper-slide">
+                            <div class="testimonial-item-royal">
+                                <div class="testimonial-item-header-royal">
+                                    <div class="testimonial-item-rating-royal">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <?php if ( ! empty( $dpt_title ) ) : ?>
+                                        <div class="testimonial-item-title-royal">
+                                            <h2>“<?php echo esc_html( $dpt_title ); ?>”</h2>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                
+                                <?php if ( ! empty( $dpt_description ) ) : ?>
+                                    <div class="testimonial-item-content-royal">
+                                        <p><?php echo esc_html( $dpt_description ); ?></p>
+                                    </div>
+                                <?php endif; ?>
+                                
+                                <div class="testimonial-item-author-royal">
+                                    <?php if ( ! empty( $dpt_image_url ) ) : ?>
+                                        <div class="testimonial-author-image-royal">
+                                            <figure class="image-anime">
+                                                <img src="<?php echo esc_url( $dpt_image_url ); ?>" alt="<?php echo esc_attr( $dpt_name ); ?>">
+                                            </figure>
+                                        </div>
+                                    <?php endif; ?>
+                                    
+                                    <div class="testimonial-author-content-royal">
+                                        <?php if ( ! empty( $dpt_name ) ) : ?>
+                                            <h3><?php echo esc_html( $dpt_name ); ?></h3>
+                                        <?php endif; ?>
+                                        
+                                        <?php if ( ! empty( $dpt_designation ) ) : ?>
+                                            <p><?php echo esc_html( $dpt_designation ); ?></p>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endwhile; ?>
+
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+        </div>
+<?php endif; ?>
+        </div>            
+    </div>
+</div>
 
     <div class="our-blog">
     <div class="container">

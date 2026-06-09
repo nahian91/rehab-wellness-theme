@@ -6,24 +6,7 @@ Template Name: Contact
 
 get_header();?>
 
-    <div class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-header-box">
-                        <h1>Contact us</h1> 
-                        
-                        <nav>
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.php">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Contact us</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    </div>
-            </div>
-        </div>
-    </div>
+    <?php require get_template_directory() . '/inc/breadcrumb.php'; ?>
 
     <!-- Page Contact Us Start -->
     <div class="page-contact-us">
