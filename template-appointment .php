@@ -12,7 +12,7 @@ get_header();?>
     <div class="page-appointment">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-xl-5">
                     <!-- Appointment Content Start -->
                     <div class="our-appointment-content">
                         <!-- Section Title Start -->
@@ -58,7 +58,7 @@ get_header();?>
                     <!-- Appointment Content End -->
                 </div>
 
-                <div class="col-xl-6">
+                <div class="col-xl-7">
                     <!-- Appointment Form Start -->
                     <div class="appointment-form">
                         <!-- Section Title Start -->
@@ -129,7 +129,7 @@ get_header();?>
     </div>
     <!-- Page Appointment End -->
 
-    <!-- Core Features Section Start -->
+     <!-- Core Features Section Start -->
 <div class="core-features bg-section dark-section">
     <div class="container">
         <div class="row">
@@ -244,7 +244,7 @@ get_header();?>
                 <!-- FAQ CTA Box Start -->
                 <div class="faq-cta-box">
                     <div class="faq-cta-image">
-                        <figure class="image-anime reveal">
+                        <figure class="image-anime">
                             <img src="<?php echo get_template_directory_uri();?>/assets/images/faq-cta-image.jpg" alt="Support Team">
                         </figure>
                     </div>

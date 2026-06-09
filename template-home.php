@@ -208,17 +208,7 @@ get_header();?>
 
             <div class="col-lg-12">
                 <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="satisfy-client-images">
-                        <div class="satisfy-client-image">
-                            <figure class="image-anime">
-                                <img src="assets/images/author-1.jpg" alt="Client Author">
-                            </figure>
-                        </div>
-                        <div class="satisfy-client-image add-more">
-                            <img src="assets/images/icon-phone-white.svg" alt="Phone Icon">
-                        </div>
-                    </div>
-                    <p>Helping You Move from Concern to Confidence with Expert Care. - <a href="contact.html">View all services</a></p>
+                    <p>Helping You Move from Concern to Confidence with Expert Care. - <a href="<?php echo esc_url( home_url( '/our-services' ) ); ?>">View all services</a></p>
                 </div>
             </div>
         </div>
@@ -493,11 +483,6 @@ get_header();?>
                     <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
                         <!-- Satisfy Client Images Start -->
                         <div class="satisfy-client-images">
-                            <div class="satisfy-client-image">
-                                <figure class="image-anime">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="">
-                                </figure>
-                            </div>
                             <div class="satisfy-client-image add-more">
                                 <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-phone-white.svg" alt="">
                             </div>
@@ -511,92 +496,6 @@ get_header();?>
         </div>
     </div>
     <!-- Case Study Section End -->
-
-    <!-- How It Work Section Start -->
-<div class="how-it-work bg-section">
-    <div class="container">
-        <div class="row section-row">
-            <div class="col-lg-12">
-                <div class="section-title section-title-center">
-                    <span class="section-sub-title wow fadeInUp">Our Process</span>
-                    <h2 class="text-anime-style-3" data-cursor="-opaque">Your journey to better health</h2>
-                    <p class="wow fadeInUp" data-wow-delay="0.2s">We’ve simplified our care process to ensure you get the medical attention you need quickly, comfortably, and effectively.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="how-work-items-list">
-                    <!-- Step 01 -->
-                    <div class="how-work-item wow fadeInUp">
-                        <div class="icon-box">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-1.svg" alt="Step 1">
-                        </div>
-                        <div class="how-work-item-content">
-                            <span>Step - 01</span>
-                            <h3>Schedule Appointment</h3>
-                            <p>Book your visit online or via phone at a time that works best for your schedule.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 02 -->
-                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="icon-box">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-2.svg" alt="Step 2">
-                        </div>
-                        <div class="how-work-item-content">
-                            <span>Step - 02</span>
-                            <h3>Initial Consultation</h3>
-                            <p>Meet with our medical professionals for a thorough health assessment and evaluation.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 03 -->
-                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon-box">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-3.svg" alt="Step 3">
-                        </div>
-                        <div class="how-work-item-content">
-                            <span>Step - 03</span>
-                            <h3>Treatment Plan</h3>
-                            <p>Receive a personalized recovery or maintenance plan tailored to your specific needs.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 04 -->
-                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="icon-box">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-4.svg" alt="Step 4">
-                        </div>
-                        <div class="how-work-item-content">
-                            <span>Step - 04</span>
-                            <h3>Follow-Up Care</h3>
-                            <p>We provide ongoing monitoring and support to ensure your long-term health and success.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12">
-                <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="satisfy-client-images">
-                        <div class="satisfy-client-image">
-                            <figure class="image-anime">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="Doctor">
-                            </figure>
-                        </div>
-                        <div class="satisfy-client-image add-more">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-phone-white.svg" alt="Support">
-                        </div>
-                    </div>
-                    <p>Helping you move from concern to confidence with expert medical care. - <a href="contact.html">Contact Us Today!</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- How It Work Section End -->
 
     <!-- Our Pricing Section Start -->
 <div class="our-pricing bg-section">
@@ -828,6 +727,82 @@ if ( have_rows( 'testimonials_list', 'option' ) ) : ?>
         </div>            
     </div>
 </div>
+
+<!-- How It Work Section Start -->
+<div class="how-it-work bg-section">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <div class="section-title section-title-center">
+                    <span class="section-sub-title wow fadeInUp">Our Process</span>
+                    <h2 class="text-anime-style-3" data-cursor="-opaque">Your journey to better health</h2>
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">We’ve simplified our care process to ensure you get the medical attention you need quickly, comfortably, and effectively.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="how-work-items-list">
+                    <!-- Step 01 -->
+                    <div class="how-work-item wow fadeInUp">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-1.svg" alt="Step 1">
+                        </div>
+                        <div class="how-work-item-content">
+                            <span>Step - 01</span>
+                            <h3>Schedule Appointment</h3>
+                            <p>Book your visit online or via phone at a time that works best for your schedule.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-2.svg" alt="Step 2">
+                        </div>
+                        <div class="how-work-item-content">
+                            <span>Step - 02</span>
+                            <h3>Initial Consultation</h3>
+                            <p>Meet with our medical professionals for a thorough health assessment and evaluation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-3.svg" alt="Step 3">
+                        </div>
+                        <div class="how-work-item-content">
+                            <span>Step - 03</span>
+                            <h3>Treatment Plan</h3>
+                            <p>Receive a personalized recovery or maintenance plan tailored to your specific needs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="how-work-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="icon-box">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-how-work-item-4.svg" alt="Step 4">
+                        </div>
+                        <div class="how-work-item-content">
+                            <span>Step - 04</span>
+                            <h3>Follow-Up Care</h3>
+                            <p>We provide ongoing monitoring and support to ensure your long-term health and success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.4s">
+                    <p>Helping you move from concern to confidence with expert medical care. - <a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact Us Today!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- How It Work Section End -->
 
     <div class="our-blog">
     <div class="container">

@@ -16,7 +16,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Diagnostic Lab</h3>
-                        <p>AI-powered pathology for rapid results.</p>
+                        <p>Our facility offers advanced, AI-powered pathology testing grids to analyze complex molecular sequences, delivering comprehensive diagnostic insights and highly rapid recovery results within minutes.</p>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Cardiac Care</h3>
-                        <p>State-of-the-art telemetry monitoring.</p>
+                        <p>Experience precision cardiovascular protection powered by our state-of-the-art telemetry monitoring networks, running continuous real-time assessments to ensure immediate trauma prevention routines.</p>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Smart ICU</h3>
-                        <p>24/7 critical care tracking systems.</p>
+                        <p>Deploying optimized critical care environments managed by automated, 24/7 centralized patient tracking systems to sustain vital signs and log real-time biochemical metrics dynamically.</p>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Telehealth Suite</h3>
-                        <p>Secure virtual consultation portal.</p>
+                        <p>Connect with cross-border specialist panels instantly via our enterprise-grade, secure virtual consultation portal dashboard, optimizing remote care workflows without clinical queue delays.</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Digital Imaging</h3>
-                        <p>High-resolution X-ray and MRI scans.</p>
+                        <p>Utilizing high-resolution digital X-ray grids and ultra-precise structural MRI diagnostic scans to trace underlying anatomical anomalies with exceptional layer-by-layer graphic accuracy.</p>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Pharmacy</h3>
-                        <p>On-site stocked medicine dispensary.</p>
+                        <p>Our expansive, on-site certified dispensary operates a fully stocked medicine procurement engine, offering verified pharmacological clinical compounds around the clock for outpatients.</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Recovery Lounge</h3>
-                        <p>Comfort-focused post-op zones.</p>
+                        <p>Rest and recuperate within luxury, comfort-focused post-operative zones engineered specifically to lower ambient clinical stress variables while ensuring specialized monitoring routines.</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Sterilization Hub</h3>
-                        <p>Hospital-grade sanitization.</p>
+                        <p>Enforcing rigorous biological safety protocols via hospital-grade deep sanitization systems and chemical containment barriers to preserve sterile cross-contamination defense structures.</p>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Accessibility Zone</h3>
-                        <p>Full ADA-compliant areas.</p>
+                        <p>Providing comprehensively mapped, fully ADA-compliant physical transition pathways, spatial elevators, and tactile guidance assets to empower fluid patient movement paradigms everywhere.</p>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Booking Kiosk</h3>
-                        <p>Fast-track digital setup.</p>
+                        <p>Streamline your clinical reception experience using our fast-track automated digital setup points, reducing physical registration touchpoints to under sixty seconds cleanly.</p>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Genomic Testing</h3>
-                        <p>Advanced personal reports.</p>
+                        <p>Unlock customized health management paths with our advanced gene sequencing arrays, generating comprehensive personal reports detailing long-term metabolic risk variations.</p>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@ get_header();
                     </div>
                     <div class="facilities-item-content">
                         <h3>Record Archives</h3>
-                        <p>Secure health history vault.</p>
+                        <p>Your confidential clinical history is fully safeguarded inside an encrypted health history data vault, offering immediate, verified access channels for authorized care teams.</p>
                     </div>
                 </div>
             </div>
@@ -158,32 +158,69 @@ get_header();
 </div>
 
 <style>
+    /* Absolute Equal Height and Flex Column Realignment */
     .facilities-item {
-        transition: all 0.4s ease-in-out;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         background: #ffffff;
         border: 1px solid #f0f0f0;
-        border-radius: 8px;
-        padding: 25px;
+        border-radius: 12px;
+        padding: 30px 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
     }
+    
+    /* Interactive Layered Hover Effect */
     .facilities-item:hover {
         transform: translateY(-8px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        border-color: var(--primary-color, #007bff);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07);
+        border-color: var(--primary-color, #0073aa);
+        background: #ffffff;
     }
+    
+    /* Center Aligned Round Background Icon Box */
     .facilities-item .icon-box {
-        font-size: 2rem;
-        color: var(--primary-color, #007bff);
-        margin-bottom: 15px;
+        font-size: 1.8rem;
+        color: var(--primary-color, #0073aa);
+        background: #f4f9fc;
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        border-radius: 50%;
+        margin-bottom: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in-out;
     }
+    
+    /* Icon Transform on Hover Trigger */
+    .facilities-item:hover .icon-box {
+        background: var(--primary-color, #0073aa);
+        color: #ffffff;
+        transform: rotateY(180deg);
+    }
+    
+    .facilities-item-content {
+        width: 100%;
+    }
+    
     .facilities-item-content h3 { 
         font-size: 1.25rem; 
-        margin-bottom: 10px; 
+        margin-bottom: 12px; 
         font-weight: 600;
+        color: #222222;
     }
+    
+    /* Perfect Line-Height and Text Distribution */
     .facilities-item-content p {
         margin: 0;
         color: #666666;
-        font-size: 0.95rem;
+        font-size: 0.92rem;
+        line-height: 1.6;
+        text-align: center;
     }
 </style>
 
