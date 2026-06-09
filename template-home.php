@@ -821,172 +821,6 @@ get_header();?>
     </div>
     <!-- How It Work Section End -->
 
-    <!-- Our Team Section Start -->
-    <div class="our-team">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Our Team</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our skilled medical team serving patients with care</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp">
-                        <!-- Team Item Iamage Start -->
-                        <div class="team-item-image">
-                            <a href="team-single.html" data-cursor-text="View">
-                                <figure>
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/team-1.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Team Item Iamage End -->
-
-                        <!-- Team Item Body Start -->
-                        <div class="team-item-body">
-                            <!-- Team Social List Box Start -->
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.html"><img src="<?php echo get_template_directory_uri();?>/assets/images/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Team Social List Box End -->
-
-                            <!-- Team Item Content Start -->
-                            <div class="team-item-content">
-                                <h2><a href="team-single.html">Dr. David Wilson</a></h2>
-                                <p>Cardiologist</p>
-                            </div>
-                            <!-- Team Item Content End -->
-                        </div>
-                        <!-- Team Item Body End -->
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Team Item Iamage Start -->
-                        <div class="team-item-image">
-                            <a href="team-single.html" data-cursor-text="View">
-                                <figure>
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/team-2.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Team Item Iamage End -->
-
-                        <!-- Team Item Body Start -->
-                        <div class="team-item-body">
-                            <!-- Team Social List Box Start -->
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.html"><img src="<?php echo get_template_directory_uri();?>/assets/images/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Team Social List Box End -->
-
-                            <!-- Team Item Content Start -->
-                            <div class="team-item-content">
-                                <h2><a href="team-single.html">Dr. Emma Roberts</a></h2>
-                                <p>Pediatric Specialist</p>
-                            </div>
-                            <!-- Team Item Content End -->
-                        </div>
-                        <!-- Team Item Body End -->
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Team Item Iamage Start -->
-                        <div class="team-item-image">
-                            <a href="team-single.html" data-cursor-text="View">
-                                <figure>
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/team-3.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Team Item Iamage End -->
-
-                        <!-- Team Item Body Start -->
-                        <div class="team-item-body">
-                            <!-- Team Social List Box Start -->
-                            <div class="team-social-list-box">
-                                <div class="team-social-btn">
-                                    <a href="team-single.html"><img src="<?php echo get_template_directory_uri();?>/assets/images/icon-share.svg" alt=""></a>
-                                </div> 
-                                <div class="team-social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Team Social List Box End -->
-
-                            <!-- Team Item Content Start -->
-                            <div class="team-item-content">
-                                <h2><a href="team-single.html">Dr. Michael Johnson</a></h2>
-                                <p>Orthopedic Surgeon</p>
-                            </div>
-                            <!-- Team Item Content End -->
-                        </div>
-                        <!-- Team Item Body End -->
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Satisfy Client Images Start -->
-                        <div class="satisfy-client-images">
-                            <div class="satisfy-client-image">
-                                <figure class="image-anime">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <div class="satisfy-client-image add-more">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-phone-white.svg" alt="">
-                            </div>
-                        </div>
-                        <!-- Satisfy Client Images End -->    
-                        <p>Helping You Move from Concern to Confidence with Expert Medical Care. - <a href="contact.html"> Contact Us Today!</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Team Section End -->
-
     <!-- Our Pricing Section Start -->
     <div class="our-pricing bg-section">
         <div class="container">
@@ -1229,193 +1063,173 @@ get_header();?>
     </div>
     <!-- Our Support Section End -->
 
-    <!-- Our Testimonials Section Start -->
-    <div class="our-testimonials-prime">
+    <div class="our-testimonial-royal">
         <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-xl-6">
+            <div class="row section-row">
+                <div class="col-lg-12">
                     <!-- Section Title Start -->
-                    <div class="section-title">
-                        <span class="section-sub-title wow fadeInUp">Our Testimonials</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Delivering care that patients truly appreciate</h2>
+                    <div class="section-title section-title-center">
+                        <span class="section-sub-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Our Testimonial</span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque" aria-label="Stories of care from our patients" style="perspective: 400px;"><div class="split-line" aria-hidden="true" style="position: relative; display: block; text-align: center;"><div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">S</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">s</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">f</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">f</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">m</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">u</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">p</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">s</div></div></div></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">We follow a structured and patient centered process that ensures accurate evaluation, timely treatment, and ongoing support</p>
                     </div>
                     <!-- Section Title End -->
-                </div>
-
-                <div class="col-xl-6">
-                    <!-- Section Content Button Start -->
-                    <div class="section-content-btn">
-                        <!-- Section Title Content Start -->
-                        <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
-                            <p>We believe trust is built through results and meaningful relationships. Hear directly from patients who have experienced our personalized medical attention.</p>
-                        </div>
-                        <!-- Section Title Content End -->
-    
-                        <!-- Section Button Start -->
-                        <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="testimonials.html" class="btn-default">View All Reviews</a>
-                        </div>
-                        <!-- Section Button End -->
-                    </div>   
-                    <!-- Section Content Button End -->
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-lg-12">
-                    <!-- Testimonial Slider Start -->
-                    <div class="testimonial-slider-prime wow fadeInUp">
-                        <div class="swiper">
-                            <div class="swiper-wrapper" data-cursor-text="Drag">
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item-prime">
-                                        <div class="testimonial-item-rating-prime">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="testimonial-item-content-box-prime">
-                                            <div class="testimonial-item-content-prime">
-                                                <p>I had an excellent experience during my health checkup. The doctors were very attentive and explained everything clearly. The entire staff was supportive.</p>
-                                            </div>
-                                            <div class="testimonial-item-author-prime">
-                                                <div class="testimonial-author-image-prime">
-                                                    <figure class="image-anime">
-                                                        <img src="assets/images/author-1.jpg" alt="">
-                                                    </figure>
-                                                </div>
-                                                <div class="testimonial-author-content-prime">
-                                                    <h2>Ritika Sharma</h2>
-                                                    <p>Regular Patient</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item-prime">
-                                        <div class="testimonial-item-rating-prime">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="testimonial-item-content-box-prime">
-                                            <div class="testimonial-item-content-prime">
-                                                <p>From reception to consultation, everything was well organized. The staff maintained high hygiene standards, and the doctors were knowledgeable.</p>
-                                            </div>
-                                            <div class="testimonial-item-author-prime">
-                                                <div class="testimonial-author-image-prime">
-                                                    <figure class="image-anime">
-                                                        <img src="assets/images/author-2.jpg" alt="">
-                                                    </figure>
-                                                </div>
-                                                <div class="testimonial-author-content-prime">
-                                                    <h2>Rahul Mehta</h2>
-                                                    <p>Regular Patient</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item-prime">
-                                        <div class="testimonial-item-rating-prime">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="testimonial-item-content-box-prime">
-                                            <div class="testimonial-item-content-prime">
-                                                <p>The medical team made me feel comfortable and well informed throughout my treatment. Their professional approach and caring attitude truly stood out.</p>
-                                            </div>
-                                            <div class="testimonial-item-author-prime">
-                                                <div class="testimonial-author-image-prime">
-                                                    <figure class="image-anime">
-                                                        <img src="assets/images/author-3.jpg" alt="">
-                                                    </figure>
-                                                </div>
-                                                <div class="testimonial-author-content-prime">
-                                                    <h2>Neha Verma</h2>
-                                                    <p>Regular Patient</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Item Start -->
-                                    <div class="testimonial-item-prime">
-                                        <div class="testimonial-item-rating-prime">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <div class="testimonial-item-content-box-prime">
-                                            <div class="testimonial-item-content-prime">
-                                                <p>The doctors and staff were extremely professional and caring. They explained my treatment clearly and made me feel comfortable throughout</p>
-                                            </div>
-                                            <div class="testimonial-item-author-prime">
-                                                <div class="testimonial-author-image-prime">
-                                                    <figure class="image-anime">
-                                                        <img src="assets/images/author-4.jpg" alt="">
-                                                    </figure>
-                                                </div>
-                                                <div class="testimonial-author-content-prime">
-                                                    <h2>Savannah Nguyen</h2>
-                                                    <p>Regular Patient</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Item End -->
-                                </div>
-                                <!-- Testimonial Slide End -->
+                <div class="col-xl-4 col-md-5">
+                    <!-- Testimonial Image Box Start -->
+                    <div class="testimonial-image-box-royal wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="testimonial-image-royal">
+                            <figure>
+                                <img src="images/testimonials-image-royal.jpg" alt="">
+                            </figure>
+                        </div>
+                        <div class="google-rating-box-royal">
+                            <div class="google-rating-logo-royal">
+                                <img src="images/icon-google.svg" alt="">
+                            </div>
+                            <div class="google-rating-content-royal">
+                                <h2><span class="counter">4.9</span>/5 <span class="google-rating-star-royal"><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i></span></h2>
+                                <p>Based on 250 review</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Testimonial Slider End -->
+                    <!-- Testimonial Image Box End -->
+                </div>
+
+                <div class="col-xl-8 col-md-7">
+                    <!-- Testimonial Slider Start -->
+                    <div class="testimonial-slider-royal wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                            <div class="swiper-wrapper" data-cursor-text="Drag" id="swiper-wrapper-eddec6b26d72184d" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-433.5px, 0px, 0px); transition-delay: 0ms;">
+                                <!-- Testimonial Slide Start -->
+                                
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                
+                                <!-- Testimonial Slide End -->
+                            <div class="swiper-slide swiper-slide-prev" style="width: 403.5px; margin-right: 30px;" role="group" aria-label="2 / 3" data-swiper-slide-index="1">
+                                    <!-- Testimonial Item Start -->
+                                    <div class="testimonial-item-royal">
+                                        <div class="testimonial-item-header-royal">
+                                            <div class="testimonial-item-rating-royal">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="testimonial-item-title-royal">
+                                                <h2>“Trusted By Thousands Of Happy Healthcare Patients”</h2>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-item-content-royal">
+                                            <p>The doctors and staff were incredibly kind and professional. They explained everything clearly and made sure I was comfortable during my treatment.</p>
+                                        </div>
+                                        <div class="testimonial-item-author-royal">
+                                            <div class="testimonial-author-image-royal">
+                                                <figure>
+                                                    <img src="images/author-2.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="testimonial-author-content-royal">
+                                                <h3>Dianne Russell</h3>
+                                                <p>Regular Patient</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Item End -->
+                                </div><div class="swiper-slide swiper-slide-active" style="width: 403.5px; margin-right: 30px;" role="group" aria-label="3 / 3" data-swiper-slide-index="2">
+                                    <!-- Testimonial Item Start -->
+                                    <div class="testimonial-item-royal">
+                                        <div class="testimonial-item-header-royal">
+                                            <div class="testimonial-item-rating-royal">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="testimonial-item-title-royal">
+                                                <h2>“I had an excellent experience during health checkup.”</h2>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-item-content-royal">
+                                            <p>The doctors and staff were incredibly kind and professional. They explained everything clearly and made sure I was comfortable during my treatment.</p>
+                                        </div>
+                                        <div class="testimonial-item-author-royal">
+                                            <div class="testimonial-author-image-royal">
+                                                <figure>
+                                                    <img src="images/author-3.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="testimonial-author-content-royal">
+                                                <h3>Rahul Mehta</h3>
+                                                <p>Regular Patient</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Item End -->
+                                </div><div class="swiper-slide swiper-slide-next" style="width: 403.5px; margin-right: 30px;" role="group" aria-label="1 / 3" data-swiper-slide-index="0">
+                                    <!-- Testimonial Item Start -->
+                                    <div class="testimonial-item-royal">
+                                        <div class="testimonial-item-header-royal">
+                                            <div class="testimonial-item-rating-royal">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="testimonial-item-title-royal">
+                                                <h2>“What Our Patients Say About Our Care”</h2>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-item-content-royal">
+                                            <p>The doctors and staff were incredibly kind and professional. They explained everything clearly and made sure I was comfortable during my treatment.</p>
+                                        </div>
+                                        <div class="testimonial-item-author-royal">
+                                            <div class="testimonial-author-image-royal">
+                                                <figure class="image-anime">
+                                                    <img src="images/author-1.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="testimonial-author-content-royal">
+                                                <h3>Ritika Sharma</h3>
+                                                <p>Regular Patient</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Item End -->
+                                </div></div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                    </div>
+                    <!-- Testimonial Slider End --> 
                 </div>
 
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
-                    <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
                         <!-- Satisfy Client Images Start -->
                         <div class="satisfy-client-images">
                             <div class="satisfy-client-image">
                                 <figure class="image-anime">
-                                    <img src="assets/images/author-1.jpg" alt="">
+                                    <img src="images/author-1.jpg" alt="">
                                 </figure>
                             </div>
                             <div class="satisfy-client-image add-more">
-                                <img src="assets/images/icon-phone-white.svg" alt="">
+                                <img src="images/icon-phone-white.svg" alt="">
                             </div>
                         </div>
-                        <!-- Satisfy Client Images End -->
-                        <p>From first consultation to full recovery - <a href="contact.html">we deliver care you can truly trust</a></p>
+                        <!-- Satisfy Client Images End -->    
+                        <p>From first consultation to full recovery - <a href="testimonials.html">we deliver care you can truly trust</a></p>
                         <ul>
                             <li><span class="counter">4.9</span></li>
                             <li>
@@ -1430,212 +1244,78 @@ get_header();?>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Testimonials Section End -->
-
-   <div class="our-faq-royal bg-section dark-section parallaxie" style="background-image: url(&quot;https://html.arisetheme.com/pluxes/images/faqs-bg-image-royal.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center 78.045px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-9">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <span class="section-sub-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Frequently Asked Questions</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque" aria-label="Everything you need to know before your visit" style="perspective: 400px;"><div class="split-line" aria-hidden="true" style="position: relative; display: block; text-align: start;"><div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">E</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">v</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">y</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">h</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">g</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">y</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">u</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">d</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">k</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">w</div></div> </div><div class="split-line" aria-hidden="true" style="position: relative; display: block; text-align: start;"><div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">b</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">f</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">y</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">u</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">r</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">v</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">s</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">t</div></div></div></h2>
-                    </div>
-                    <!-- Section Title End -->
-
-                    <!-- FAQ Accordion Start -->
-                    <div class="faq-accordion-royal" id="accordion">
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                    Q1. What insurance plans do you accept?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse" role="region" aria-labelledby="heading1" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We combine advanced medical technology with expert clinical knowledge to deliver efficient and effective healthcare services.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    Q2. How can I book an appointment?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse show" role="region" aria-labelledby="heading2" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We combine advanced medical technology with expert clinical knowledge to deliver efficient and effective healthcare services.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    Q3. Do you provide emergency services?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" role="region" aria-labelledby="heading3" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We combine advanced medical technology with expert clinical knowledge to deliver efficient and effective healthcare services.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    Q4. What should I bring to my first appointment?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" role="region" aria-labelledby="heading4" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We combine advanced medical technology with expert clinical knowledge to deliver efficient and effective healthcare services.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                            <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    Q5. How long does a typical consultation take?
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" role="region" aria-labelledby="heading5" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We combine advanced medical technology with expert clinical knowledge to deliver efficient and effective healthcare services.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-                    </div>
-                    <!-- FAQ Accordion End -->
-                </div>
-            </div>
+            </div>            
         </div>
     </div>
 
-    <!-- Our Blog Section Start -->
     <div class="our-blog">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Latest Article</span>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Latest articles and insights on healthcare trends</h2>
-                    </div>
-                    <!-- Section Title End -->
+    <div class="container">
+        <div class="row section-row align-items-center">
+            <div class="col-lg-12">
+                <div class="section-title section-title-center">
+                    <span class="section-sub-title wow fadeInUp">Latest Article</span>
+                    <h2 class="text-anime-style-3" data-cursor="-opaque">Latest articles and insights on healthcare trends</h2>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
+        <div class="row">
+            <?php
+            // WP_Query দিয়ে লেটেস্ট ৩টি পোস্ট ফেচ করা হচ্ছে
+            $args = array(
+                'post_type'      => 'post',
+                'posts_per_page' => 3,
+                'orderby'        => 'date',
+                'order'          => 'DESC'
+            );
+            $blog_query = new WP_Query($args);
+
+            if ($blog_query->have_posts()) :
+                $delay = 0; // অ্যানিমেশনের ডিলে কন্ট্রোল করার জন্য
+                while ($blog_query->have_posts()) : $blog_query->the_post();
+            ?>
                 <div class="col-xl-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp">
-                        <!-- Post Featured Image Start-->
+                    <div class="post-item wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
                         <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="View">
+                            <a href="<?php the_permalink(); ?>" data-cursor-text="View">
                                 <figure class="image-anime">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/post-1.jpg" alt="">
+                                    <?php if (has_post_thumbnail()) {
+                                        the_post_thumbnail('large');
+                                    } else { ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post-1.jpg" alt="<?php the_title(); ?>">
+                                    <?php } ?>
                                 </figure>
                             </a>
                             <div class="post-item-tags">
-                                <a href="blog-single.html">General Health</a>
-                            </div>                           
+                                <?php 
+                                    $categories = get_the_category();
+                                    if (!empty($categories)) {
+                                        echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
+                                    }
+                                ?>
+                            </div>
                         </div>
-                        <!-- Post Featured Image End -->
 
-                        <!-- Post Item Body Start -->
                         <div class="post-item-body">
                             <div class="post-item-content">
-                                <h2><a href="blog-single.html">10 Early Warning Signs You Should Never Ignore</a></h2>
+                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             </div>
                             <div class="post-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">Read More</a>
+                                <a href="<?php the_permalink(); ?>" class="readmore-btn">Read More</a>
                             </div>
                         </div>
-                        <!-- Post Item Body End -->
                     </div>
-                    <!-- Post Item End -->
                 </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/post-2.jpg" alt="">
-                                </figure>    
-                            </a>
-                            <div class="post-item-tags">
-                                <a href="blog-single.html">Cardiology</a>
-                            </div>                           
-                        </div>
-                        <!-- Post Featured Image End -->
-
-                        <!-- Post Item Body Start -->
-                        <div class="post-item-body">
-                            <div class="post-item-content">
-                                <h2><a href="blog-single.html">Heart Health 101 Simple Habits for a Stronger Heart</a></h2>
-                            </div>
-                            <div class="post-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">Read More</a>
-                            </div>
-                        </div>
-                        <!-- Post Item Body End -->
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/post-3.jpg" alt="">
-                                </figure>    
-                            </a>
-                            <div class="post-item-tags">
-                                <a href="blog-single.html">Pediatrics</a>
-                            </div>
-                        </div>
-                        <!-- Post Featured Image End -->
-
-                        <!-- Post Item Body Start -->
-                        <div class="post-item-body">
-                            <div class="post-item-content">
-                                <h2><a href="blog-single.html">Essential Vaccinations Every Child Should Receive</a></h2>
-                            </div>
-                            <div class="post-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">Read More</a>
-                            </div>
-                        </div>
-                        <!-- Post Item Body End -->
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-            </div>
+            <?php
+                $delay += 0.2; // পরের কার্ডের জন্য ডিলে বাড়ানো
+                endwhile;
+                wp_reset_postdata(); // কুয়েরি রিসেট করা
+            else :
+                echo '<p>No articles found.</p>';
+            endif;
+            ?>
         </div>
     </div>
-    <!-- Our Blog Section End -->
+</div>
 
 <?php get_footer();?>

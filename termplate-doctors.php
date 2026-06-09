@@ -64,7 +64,7 @@ get_header();?>
                             <div class="team-item-body">
                                 <div class="team-item-content" style="padding-top: 20px;">
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <p><?php echo esc_html(get_post_meta(get_the_ID(), 'specialization', true)); ?></p>
+    <p><?php echo esc_html(get_field('doctor_designation')); ?></p>
     
     <a href="<?php the_permalink(); ?>" class="btn-default" style="margin-bottom: 10px; display: inline-block;">View Profile</a>
 </div>
