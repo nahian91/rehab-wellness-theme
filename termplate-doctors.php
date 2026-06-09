@@ -67,9 +67,6 @@ get_header();?>
     <p><?php echo esc_html(get_post_meta(get_the_ID(), 'specialization', true)); ?></p>
     
     <a href="<?php the_permalink(); ?>" class="btn-default" style="margin-bottom: 10px; display: inline-block;">View Profile</a>
-    
-    <br>
-    <a href="<?php echo home_url('/book-appointment'); ?>" class="btn-default btn-highlighted">Book Appointment</a>
 </div>
                             </div>
                         </div>

@@ -7,12 +7,11 @@
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Dr. david wilson</h1>
+                        <h1 class="text-anime-style-3" data-cursor="-opaque"><?php the_title();?></h1>
                         <nav class="wow fadeInUp" >
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="team.html">Team</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"> Dr. david wilson</li>
+                                <li class="breadcrumb-item"><a href="<?php echo site_url();?>">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"> <?php the_title();?></li>
                             </ol>
                         </nav>
                     </div>
@@ -32,8 +31,8 @@
                     <div class="page-single-sidebar">
                         <!-- Team Single Image Start -->
                         <div class="team-single-image">
-                            <figure class="image-anime reveal">
-                                <img src="assets/images/team-1.jpg" alt="">
+                            <figure class="image-anime">
+                                <img src="<?php the_post_thumbnail_url();?>" alt="">
                             </figure>
                         </div>
                         <!-- Team Single Image End -->
@@ -49,7 +48,7 @@
                                 <!-- Team Sidebar CTA Item Start -->
                                 <div class="team-sidebar-cta-item">
                                     <div class="icon-box">
-                                        <img src="assets/images/icon-headphone.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-headphone.svg" alt="">
                                     </div>
                                     <div class="team-sidebar-cta-item-content">
                                         <p>Call Us!</p>
@@ -61,7 +60,7 @@
                                 <!-- Team Sidebar CTA Item Start -->
                                 <div class="team-sidebar-cta-item">
                                     <div class="icon-box">
-                                        <img src="assets/images/icon-mail-white.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-mail-white.svg" alt="">
                                     </div>
                                     <div class="team-sidebar-cta-item-content">
                                         <p>E-mail Us!</p>
@@ -73,7 +72,7 @@
                                 <!-- Team Sidebar CTA Item Start -->
                                 <div class="team-sidebar-cta-item">
                                     <div class="icon-box">
-                                        <img src="assets/images/icon-position.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-position.svg" alt="">
                                     </div>
                                     <div class="team-sidebar-cta-item-content">
                                         <p>Position:</p>
@@ -85,10 +84,10 @@
                                 <!-- Team Sidebar CTA Item Start -->
                                 <div class="team-sidebar-cta-item">
                                     <div class="icon-box">
-                                        <img src="assets/images/icon-location-white.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-location-white.svg" alt="">
                                     </div>
                                     <div class="team-sidebar-cta-item-content">
-                                        <p>Location:</p>
+                                        <p>Chamber:</p>
                                         <h3>123 Health Street, 001</h3>
                                     </div>
                                 </div>
@@ -112,30 +111,6 @@
                                 <p class="wow fadeInUp">Dr. David Wilson is a highly experienced cardiologist specializing in the diagnosis and treatment of heart-related conditions. With over 12 years of medical expertise, he is dedicated to providing advanced cardiac care using modern technology and evidence-based treatments.</p>
                             </div>
                             <!-- Section Title End -->
-
-                            <!-- About Item List Start -->
-                            <div class="member-about-item-list">
-                                <!-- About Item Start -->
-                                <div class="member-about-item wow fadeInUp" data-wow-delay="0.2s">
-                                    <h3>Pediatric And Geriatric Care</h3>
-                                    <p>Our Mission is to become a trusted and leading healthcare provider known for excellence, innovation, and advanced medical care.</p>
-                                    <ul>
-                                        <li>Patient-Centered Care Approach</li>
-                                    </ul>
-                                </div>
-                                <!-- About Item End -->
-
-                                <!-- About Item Start -->
-                                <div class="member-about-item wow fadeInUp" data-wow-delay="0.4s">
-                                    <h3>Wellness Counseling</h3>
-                                    <p>Our vision is to become a trusted and leading healthcare provider known for excellence, innovation, and advanced medical care.</p>
-                                    <ul>
-                                        <li>Modern UI Mission & Vision Layout</li>
-                                    </ul>
-                                </div>
-                                <!-- About Item End -->
-                            </div>
-                            <!-- About Item List End -->
                         </div>
                         <!-- Team Member About End -->
 
@@ -143,8 +118,7 @@
                         <div class="team-member-education">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-3" data-cursor="-opaque">Education & qualifications</h2>
-                                <p class="wow fadeInUp">With years of experience and deep medical knowledge, I specialize in providing accurate diagnosis, advanced treatment, and personalized care. My expertise focuses on ensuring the best possible outcomes while maintaining patient comfort and trust.</p>
+                                <h2 class="text-anime-style-3" data-cursor="-opaque">Education</h2>
                             </div>
                             <!-- Section Title End -->
                             
@@ -153,7 +127,7 @@
                                 <!-- Member Education Item Start -->
                                 <div class="member-education-item wow fadeInUp" data-wow-delay="0.2s">
                                     <div class="icon-box">
-                                        <img src="assets/images/icon-member-education-1.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-member-education-1.svg" alt="">
                                     </div>
                                     <div class="member-education-item-content">
                                         <h3>Doctor of Medicine (MD)</h3>
@@ -162,19 +136,34 @@
                                 </div>
                                 <!-- Member Education Item End -->
 
-                                <!-- Member Education Item Start -->
-                                <div class="member-education-item wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="icon-box">
-                                        <img src="assets/images/icon-member-education-2.svg" alt="">
-                                    </div>
-                                    <div class="member-education-item-content">
-                                        <h3>Board Certified In Family Medicine</h3>
-                                        <p>This qualification reflects a strong commitment to medical excellence, ethical continuous learning in delivering safe.</p>
-                                    </div>
-                                </div>
-                                <!-- Member Education Item End -->
                             </div>
                             <!-- Member Education List End -->
+                        </div>
+                        <!-- Team Member Education End -->
+
+                        <!-- Team Member Education Start -->
+                        <div class="team-member-education">
+                            <!-- Section Title Start -->
+                            <div class="section-title">
+                                <h2 class="text-anime-style-3">Qualifications</h2>
+                            </div>
+                            <!-- Section Title End -->
+                            
+                            <div class="member-about-item-list">
+                                <!-- About Item Start -->
+                                <div class="member-about-item wow fadeInUp" data-wow-delay="0.2s">
+                                    <h3>Pediatric And Geriatric Care</h3>
+                                    <p>Our Mission is to become a trusted and leading healthcare provider known for excellence, innovation, and advanced medical care.</p>
+                                </div>
+                                <!-- About Item End -->
+
+                                <!-- About Item Start -->
+                                <div class="member-about-item wow fadeInUp" data-wow-delay="0.4s">
+                                    <h3>Wellness Counseling</h3>
+                                    <p>Our vision is to become a trusted and leading healthcare provider known for excellence, innovation, and advanced medical care.</p>
+                                </div>
+                                <!-- About Item End -->
+                            </div>
                         </div>
                         <!-- Team Member Education End -->
 
@@ -183,7 +172,6 @@
                             <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="text-anime-style-3" data-cursor="-opaque">Areas of expertise</h2>
-                                <p class="wow fadeInUp">With extensive experience in the medical field, I have developed strong clinical and diagnostic skills to provide accurate treatment and high-quality patient care.</p>
                             </div>
                             <!-- Section Title End -->
 
@@ -256,52 +244,6 @@
                             <!-- Member Skills List End -->
                         </div>
                         <!-- Team Member Expertise End -->
-
-                        <!-- Contact Form Start -->
-                        <div class="contact-form team-contact-form">
-                            <!-- Section Title Start -->
-                            <div class="section-title">
-                                <h2 class="text-anime-style-3" data-cursor="-opaque">Contact to david wilson</h2>
-                            </div>
-                            <!-- Section Title End -->
-
-                            <!-- Contact Form Start -->
-                            <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="row">
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name*" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name*" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="call" class="form-control" id="call" placeholder="Phone Number*" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="email" name ="mail" class="form-control" id="mail" placeholder="E-mail Address*" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-12 mb-5">
-                                        <textarea name="msg" class="form-control" id="msg" rows="5" placeholder="Write Message Here..."></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn-default">Submit Message</button>
-                                        <div id="formsubmit" class="h3 hidden"></div>
-                                    </div>
-                                </div>
-                            </form>
-                            <!-- Contact Form End -->
-                        </div>
-                        <!-- Contact Form End -->
                     </div>
                 </div>
             </div>

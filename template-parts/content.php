@@ -10,54 +10,74 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+    <!-- Page Header Section -->
+    <div class="page-header dark-section parallaxie">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header-box">
+                        <!-- Dynamic Title -->
+                        <h1 class="text-anime-style-3" data-cursor="-opaque"><?php the_title(); ?></h1>
+                        <nav class="wow fadeInUp">
+                            <div class="post-single-meta wow fadeInUp">
+                                <ol class="breadcrumb">
+                                    <li><i class="fa-regular fa-user"></i> <?php the_author(); ?></li>
+                                    <li><i class="fa-regular fa-clock"></i> <?php echo get_the_date('j F, Y'); ?></li>
+                                </ol>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				rehab_wellness_theme_posted_on();
-				rehab_wellness_theme_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+    <!-- Page Single Post Start -->
+    <div class="page-single-post">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Dynamic Featured Image -->
+                    <?php if (has_post_thumbnail()) : ?>
+                        <div class="post-image">
+                            <figure class="image-anime reveal">
+                                <?php the_post_thumbnail('full'); ?>
+                            </figure>
+                        </div>
+                    <?php endif; ?>
 
-	<?php rehab_wellness_theme_post_thumbnail(); ?>
+                    <div class="post-content">
+                        <div class="post-entry">
+                            <!-- Dynamic Content -->
+                            <?php the_content(); ?>
+                        </div>
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'rehab-wellness-theme' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rehab-wellness-theme' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php rehab_wellness_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+                        <!-- Post Tag Links -->
+                        <div class="post-tag-links">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8">
+                                    <div class="post-tags wow fadeInUp" data-wow-delay="0.5s">
+                                        <span class="tag-links">
+                                            <?php the_tags('Tags: ', ', ', ''); ?>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Social links remain static as they usually require a plugin or custom JS -->
+                                <div class="col-lg-4">
+                                    <div class="post-social-sharing wow fadeInUp" data-wow-delay="0.5s">
+                                        <ul>
+                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

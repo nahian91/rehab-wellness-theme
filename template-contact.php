@@ -51,7 +51,7 @@ get_header();?>
                         </div>
                         <div class="contact-info-item-content">
                             <p>Emergency Call</p>
-                            <h3><a href="tel:123456789">+(123) 456-789</a></h3>
+                            <h3> +880 13 2476 3317 <br>+880 13 2476 3318</h3>
                         </div>
                     </div>
                     <!-- Contact Info Item End -->
@@ -75,7 +75,7 @@ get_header();?>
                         </div>
                         <div class="contact-info-item-content">
                             <p>Our Location</p>
-                            <h3>123 Health Street, State, 001</h3>
+                            <h3>Shahjalal City College Building, <br> Garden Tower,<br>Shahjalal Uposhahar, Sylhet</h3>
                         </div>
                     </div>
                     <!-- Contact Info Item End -->
@@ -103,7 +103,7 @@ get_header();?>
 
                         <!-- Google Map Start -->
                         <div class="google-map-iframe wow fadeInUp" data-wow-delay="0.2s">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96737.10562045308!2d-74.08535042841811!3d40.739265258395164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1703158537552!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3228.2213225233286!2d91.87758001031256!3d24.885082594180872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3751ab31dfb5a90d%3A0x52a8fb11a9d072d8!2sGarden%20Tower!5e1!3m2!1sen!2sbd!4v1780976820499!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <!-- Google Map End -->
                     </div>

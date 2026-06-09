@@ -75,7 +75,7 @@
                             </div>
                             <div class="footer-contact-item-content-prime">
                                 <p>Our Location</p>
-                                <h3>2715 Ash Dr. San Jose, South Dakota 83475</h3>
+                                <h3>Shahjalal City College Building, <br/>Garden Tower,Shahjalal Uposhahar, Sylhet</h3>
                             </div>
                         </div>
                         <div class="footer-contact-item-prime">
@@ -84,7 +84,8 @@
                             </div>
                             <div class="footer-contact-item-content-prime">
                                 <p>Phone Number</p>
-                                <h3><a href="tel:+123456789">+(123) 456-789</a></h3>
+                                <h3>+880 13 2476 3317 <br>
++880 13 2476 3318</h3>
                             </div>
                         </div>
                         <div class="footer-contact-item-prime">
@@ -102,7 +103,7 @@
                 <!-- Copyright -->
                 <div class="col-lg-12">
                     <div class="footer-copyright-text-prime">
-                        <p>Copyright © <?php echo date('Y'); ?> All Rights Reserved.</p>
+                        <p>Copyright © <?php echo date('Y'); ?> All Rights Reserved. Design & Developed by <a href="https://infinityflamesoft.com/" target="_blank">Infinity Flame Soft.</a></p>
                     </div>
                 </div>
             </div>
