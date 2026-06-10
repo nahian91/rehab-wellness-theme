@@ -10,6 +10,21 @@ get_header(); ?>
 
 <?php require get_template_directory() . '/inc/breadcrumb.php'; ?>
 
+<?php
+// Fetch Advanced Custom Fields (ACF) Values
+$case_client_name      = get_field( 'case_client_name' );
+$case_start_date       = get_field( 'case_start_date' );
+$case_treatment_cost   = get_field( 'case_treatment_cost' );
+$case_total_duration   = get_field( 'case_total_duration' );
+$case_long_description = get_field( 'case_long_description' );
+
+$solutions_title       = get_field( 'solutions_title' );
+$solutions_description = get_field( 'solutions_description' );
+
+$results_title         = get_field( 'results_title' );
+$results_description   = get_field( 'results_description' );
+?>
+
 <div class="page-case-study-single py-5">
     <div class="container">
         <div class="row">
@@ -21,26 +36,38 @@ get_header(); ?>
                         <h2 class="page-category-list-title">Case Study Information</h2>
 
                         <div class="case-study-category-item-list">
-                            <div class="case-study-category-item">
-                                <h2>Client:</h2>
-                                <p>Darlene Robertson</p>
-                            </div>
-                            <div class="case-study-category-item"> 
-                                <h2>Start Date:</h2>
-                                <p>18 November, 2025</p>
-                            </div>
-                            <div class="case-study-category-item">
-                                <h2>Treatment Cost:</h2>
-                                <p>$280.00</p>
-                            </div>
-                            <div class="case-study-category-item">
-                                <h2>Total Duration:</h2>
-                                <p>06 Month</p>
-                            </div>
-                            </div>
+                            <?php if ( ! empty( $case_client_name ) ) : ?>
+                                <div class="case-study-category-item">
+                                    <h2>Client:</h2>
+                                    <p><?php echo esc_html( $case_client_name ); ?></p>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if ( ! empty( $case_start_date ) ) : ?>
+                                <div class="case-study-category-item"> 
+                                    <h2>Start Date:</h2>
+                                    <p><?php echo esc_html( $case_start_date ); ?></p>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if ( ! empty( $case_treatment_cost ) ) : ?>
+                                <div class="case-study-category-item">
+                                    <h2>Treatment Cost:</h2>
+                                    <p><?php echo esc_html( $case_treatment_cost ); ?></p>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if ( ! empty( $case_total_duration ) ) : ?>
+                                <div class="case-study-category-item">
+                                    <h2>Total Duration:</h2>
+                                    <p><?php echo esc_html( $case_total_duration ); ?></p>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
+
                 </div>
+            </div>
 
             <div class="col-lg-8 order-1 order-lg-2 mb-5 mb-lg-0">
                 <div class="case-study-single-content">
@@ -48,7 +75,7 @@ get_header(); ?>
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         
                         <div class="page-single-image mb-4">
-                            <figure class="image-anime reveal">
+                            <figure class="image-anime">
                                 <?php if ( has_post_thumbnail() ) : ?>
                                     <?php the_post_thumbnail( 'full', [ 'class' => 'img-fluid', 'alt' => esc_attr( get_the_title() ) ] ); ?>
                                 <?php else : ?>
@@ -56,154 +83,143 @@ get_header(); ?>
                                 <?php endif; ?>
                             </figure>
                         </div>
+
                         <div class="case-study-entry">
-                            <h1 class="entry-title mb-4"><?php the_title(); ?></h1>
                             
                             <div class="entry-content">
-                                <?php the_content(); ?>
+                                <?php 
+                                if ( ! empty( $case_long_description ) ) : 
+                                    echo wp_kses_post( wpautop( $case_long_description ) );
+                                else :
+                                    the_content();
+                                endif; 
+                                ?>
                             </div>
 
-                            <div class="case-study-solution mt-5">
-                                <h2 class="text-anime-style-3 mb-3" data-cursor="-opaque">Solutions implemented</h2>
-                                <p class="wow fadeInUp">To address the identified challenges, we introduced a series of strategic improvements focused on enhancing efficiency, patient experience, and quality of care.</p>
+                            <?php if ( have_rows( 'solutions_list' ) || ! empty( $solutions_title ) || ! empty( $solutions_description ) ) : ?>
+                                <div class="case-study-solution mt-5">
+                                    <?php if ( ! empty( $solutions_title ) ) : ?>
+                                        <h2 class="text-anime-style-3 mb-3" data-cursor="-opaque"><?php echo esc_html( $solutions_title ); ?></h2>
+                                    <?php endif; ?>
+                                    
+                                    <?php if ( ! empty( $solutions_description ) ) : ?>
+                                        <p class="wow fadeInUp"><?php echo esc_html( $solutions_description ); ?></p>
+                                    <?php endif; ?>
 
-                                <div class="case-study-solution-item-list mt-4">
-                                    <div class="case-study-solution-item wow fadeInUp mb-4" data-wow-delay="0.2s">
-                                        <div class="case-study-solution-item-image">
-                                            <figure class="image-anime">
-                                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-solution-item-image-1.jpg' ); ?>" alt="Solution 01">
-                                            </figure>
+                                    <?php if ( have_rows( 'solutions_list' ) ) : ?>
+                                        <div class="case-study-solution-item-list mt-4">
+                                            <?php 
+                                            $sol_counter = 1;
+                                            while ( have_rows( 'solutions_list' ) ) : the_row(); 
+                                                $sol_label       = get_sub_field( 'solutions_list_label' );
+                                                $sol_title       = get_sub_field( 'solutions_list_title' );
+                                                $sol_description = get_sub_field( 'solutions_list_description' );
+                                                $sol_delay       = 0.2 * $sol_counter;
+                                                $img_toggle      = ( $sol_counter % 2 === 0 ) ? 2 : 1;
+                                                ?>
+                                                <div class="case-study-solution-item wow fadeInUp mb-4" data-wow-delay="<?php echo esc_attr( $sol_delay ); ?>s">
+                                                    <div class="case-study-solution-item-image">
+                                                        <figure class="image-anime">
+                                                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-solution-item-image-' . $img_toggle . '.jpg' ); ?>" alt="<?php echo esc_attr( $sol_title ); ?>">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="case-study-solution-item-content">
+                                                        <?php if ( ! empty( $sol_label ) ) : ?>
+                                                            <span><?php echo esc_html( $sol_label ); ?></span>
+                                                        <?php endif; ?>
+                                                        
+                                                        <?php if ( ! empty( $sol_title ) ) : ?>
+                                                            <h3><?php echo esc_html( $sol_title ); ?></h3>
+                                                        <?php endif; ?>
+                                                        
+                                                        <?php if ( ! empty( $sol_description ) ) : ?>
+                                                            <p><?php echo esc_html( $sol_description ); ?></p>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                </div>
+                                                <?php 
+                                                $sol_counter++;
+                                            endwhile; 
+                                            ?>
                                         </div>
-                                        <div class="case-study-solution-item-content">
-                                            <span>Solutions - 01</span>
-                                            <h3>Conducted staff training programs focused on pediatric care best practices</h3>
-                                            <ul>
-                                                <li>Provided staff training in pediatric care best practices</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-solution-item wow fadeInUp mb-4" data-wow-delay="0.4s">
-                                        <div class="case-study-solution-item-image">
-                                            <figure class="image-anime">
-                                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-solution-item-image-2.jpg' ); ?>" alt="Solution 02">
-                                            </figure>
-                                        </div>
-                                        <div class="case-study-solution-item-content">
-                                            <span>Solutions - 02</span>
-                                            <h3>Integrated modern diagnostic tools for faster accurate and reliable treatment</h3>
-                                            <ul>
-                                                <li>Optimized patient flow to improve service efficiency overall</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    </div>
+                                    <?php endif; ?>
                                 </div>
-                            <div class="case-study-result mt-5">
-                                <h2 class="text-anime-style-3 mb-3" data-cursor="-opaque">Results achieved</h2>
-                                <p class="wow fadeInUp">The implemented improvements led to significant positive outcomes in both patient care and efficiency. Waiting times were greatly reduced, allowing children to receive timely medical attention.</p>
+                            <?php endif; ?>
 
-                                <div class="case-study-result-body d-flex flex-wrap align-items-center mt-4">
-                                    <div class="case-study-result-image-box wow fadeInUp mb-4 me-lg-4" data-wow-delay="0.2s">
-                                        <div class="case-study-result-image">
-                                            <figure>
-                                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-result-image.jpg' ); ?>" alt="Results Overview">
-                                            </figure>
-                                        </div>
-                                        <div class="case-study-result-counter-item">
-                                            <div class="icon-box">
-                                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/icon-case-study-result-counter-item.svg' ); ?>" alt="Counter Icon">
-                                            </div>
-                                            <div class="case-study-result-counter-item-content">
-                                                <h2><span class="counter">12</span>+</h2>
-                                                <p>Years of Experience</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="case-study-result-content wow fadeInUp mb-4" data-wow-delay="0.4s">
-                                        <p>Additionally, the use of advanced diagnostic tools and improved workflows increased the accuracy and effectiveness of treatments.</p>
+                            <?php if ( have_rows( 'results_list' ) || ! empty( $results_title ) || ! empty( $results_description ) ) : ?>
+                                <div class="case-study-result mt-5">
+                                    <?php if ( ! empty( $results_title ) ) : ?>
+                                        <h2 class="text-anime-style-3 mb-3" data-cursor="-opaque"><?php echo esc_html( $results_title ); ?></h2>
+                                    <?php endif; ?>
+                                    
+                                    <?php if ( ! empty( $results_description ) ) : ?>
+                                        <p class="wow fadeInUp"><?php echo esc_html( $results_description ); ?></p>
+                                    <?php endif; ?>
+
+                                    <?php if ( have_rows( 'results_list' ) ) : ?>
                                         <ul>
-                                            <li>Reduced Patient Wait Time Significantly</li>
-                                            <li>Improved Patient & Parent Satisfaction</li>
-                                            <li>Better Engagement With Young Patients</li>
-                                            <li>Increased Overall Efficiency In Pediatric Services</li>
+                                            <?php while ( have_rows( 'results_list' ) ) : the_row(); 
+                                                $res_title       = get_sub_field( 'results_list_title' );
+                                                $res_description = get_sub_field( 'results_list_description' );
+                                                ?>
+                                                <li>
+                                                    <?php if ( ! empty( $res_title ) ) : ?>
+                                                        <strong><?php echo esc_html( $res_title ); ?></strong>
+                                                    <?php endif; ?>
+                                                    
+                                                    <?php if ( ! empty( $res_description ) ) : ?>
+                                                        <span class="d-block mt-1"><?php echo esc_html( $res_description ); ?></span>
+                                                    <?php endif; ?>
+                                                </li>
+                                            <?php endwhile; ?>
                                         </ul>
-                                    </div>
-                                    </div>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+
+                        </div>
+
+                        <?php if ( have_rows( 'faq_list' ) ) : ?>
+                            <div class="page-single-faqs mt-5">
+                                <div class="section-title mb-4">
+                                    <h2 class="text-anime-style-3" data-cursor="-opaque">Frequently Asked Questions</h2>
+                                </div>
+                                <div class="faq-accordion accordion" id="dptSingleCaseStudyAccordion">
+                                    <?php 
+                                    $faq_counter = 1;
+                                    while ( have_rows( 'faq_list' ) ) : the_row(); 
+                                        $faq_title       = get_sub_field( 'faq_list_title' );
+                                        $faq_description = get_sub_field( 'faq_list_description' );
+                                        $faq_delay       = 0.2 * ( $faq_counter - 1 );
+                                        $is_first        = ( $faq_counter === 1 );
+                                        ?>
+                                        <div class="accordion-item wow fadeInUp mb-3" data-wow-delay="<?php echo esc_attr( $faq_delay ); ?>s">
+                                            <h2 class="accordion-header" id="dptHeading<?php echo esc_attr( $faq_counter ); ?>">
+                                                <button class="accordion-button <?php echo $is_first ? '' : 'collapsed'; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#dptCollapse<?php echo esc_attr( $faq_counter ); ?>" aria-expanded="<?php echo $is_first ? 'true' : 'false'; ?>" aria-controls="dptCollapse<?php echo esc_attr( $faq_counter ); ?>">
+                                                    <?php echo esc_html( $faq_title ); ?>
+                                                </button>
+                                            </h2>
+                                            <div id="dptCollapse<?php echo esc_attr( $faq_counter ); ?>" class="accordion-collapse collapse <?php echo $is_first ? 'show' : ''; ?>" role="region" aria-labelledby="dptHeading<?php echo esc_attr( $faq_counter ); ?>" data-bs-parent="#dptSingleCaseStudyAccordion">
+                                                <div class="accordion-body">
+                                                    <p><?php echo esc_html( $faq_description ); ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php 
+                                        $faq_counter++;
+                                    endwhile; 
+                                    ?>
                                 </div>
                             </div>
-                        <div class="page-single-faqs mt-5">
-                            <div class="section-title mb-4">
-                                <h2 class="text-anime-style-3" data-cursor="-opaque">Frequently Asked Questions</h2>
-                            </div>
-                            <div class="faq-accordion accordion" id="dptSingleCaseStudyAccordion">
-                                <div class="accordion-item wow fadeInUp mb-3">
-                                    <h2 class="accordion-header" id="dptHeading1">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dptCollapse1" aria-expanded="false" aria-controls="dptCollapse1">
-                                            1. How can I book an appointment with a doctor?
-                                        </button>
-                                    </h2>
-                                    <div id="dptCollapse1" class="accordion-collapse collapse" role="region" aria-labelledby="dptHeading1" data-bs-parent="#dptSingleCaseStudyAccordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item wow fadeInUp mb-3" data-wow-delay="0.2s">
-                                    <h2 class="accordion-header" id="dptHeading2">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dptCollapse2" aria-expanded="false" aria-controls="dptCollapse2">
-                                            2. Do you provide emergency medical services?
-                                        </button>
-                                    </h2>
-                                    <div id="dptCollapse2" class="accordion-collapse collapse" role="region" aria-labelledby="dptHeading2" data-bs-parent="#dptSingleCaseStudyAccordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item wow fadeInUp mb-3" data-wow-delay="0.4s">
-                                    <h2 class="accordion-header" id="dptHeading3">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dptCollapse3" aria-expanded="true" aria-controls="dptCollapse3">
-                                            3. What medical services do you provide?
-                                        </button>
-                                    </h2>
-                                    <div id="dptCollapse3" class="accordion-collapse collapse show" role="region" aria-labelledby="dptHeading3" data-bs-parent="#dptSingleCaseStudyAccordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item wow fadeInUp mb-3" data-wow-delay="0.6s">
-                                    <h2 class="accordion-header" id="dptHeading4">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dptCollapse4" aria-expanded="false" aria-controls="dptCollapse4">
-                                            4. How early should I arrive for my appointment?
-                                        </button>
-                                    </h2>
-                                    <div id="dptCollapse4" class="accordion-collapse collapse" role="region" aria-labelledby="dptHeading4" data-bs-parent="#dptSingleCaseStudyAccordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item wow fadeInUp mb-3" data-wow-delay="0.6s">
-                                    <h2 class="accordion-header" id="dptHeading5">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dptCollapse5" aria-expanded="false" aria-controls="dptCollapse5">
-                                            5. What should I bring to my medical appointment?
-                                        </button>
-                                    </h2>
-                                    <div id="dptCollapse5" class="accordion-collapse collapse" role="region" aria-labelledby="dptHeading5" data-bs-parent="#dptSingleCaseStudyAccordion">
-                                        <div class="accordion-body">
-                                            <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        <?php endwhile; endif; ?>
+                        <?php endif; ?>
+
+                    <?php endwhile; endif; ?>
 
                 </div>
-                </div>
+            </div>
 
         </div>
     </div>
 </div>
+
 <?php get_footer(); ?>

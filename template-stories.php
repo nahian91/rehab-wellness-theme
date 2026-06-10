@@ -48,8 +48,8 @@ get_header();
                                 </div>
                                 <div class="case-study-item-content">
                                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                    <p><?php echo esc_html( $dpt_excerpt ); ?></p>
-                                    <a href="<?php the_permalink(); ?>" class="btn-default">View More</a>
+                                    <?php the_excerpt();?>
+                                    <a href="<?php the_permalink(); ?>" class="btn-case">View More</a>
                                 </div>
                             </div>
                             <!-- Case Study Item End -->

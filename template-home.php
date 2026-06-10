@@ -131,86 +131,53 @@ get_header();?>
         </div>
 
         <div class="row">
-            <!-- Service 1: General Consultation -->
-            <div class="col-xl-4 col-md-6">
-                <div class="service-item-royal wow fadeInUp">
-                    <div class="service-item-header-royal">
-                        <span>Healthcare</span>
-                        <h2><a href="service-single.html">General Consultation</a></h2>
-                    </div>
-                    <div class="service-item-image-royal">
-                        <a href="service-single.html">
-                            <figure class="image-anime">
-                                <img src="assets/images/service-image-1-royal.jpg" alt="General Consultation">
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="service-item-body-royal">
-                        <div class="service-item-content-royal">
-                            <p>Routine checkups, symptom evaluation, and personalized medical advice from our primary care team.</p>
-                        </div>
-                        <div class="service-item-btn-royal">
-                            <a href="service-single.html" class="readmore-btn">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+            $dpt_args = array(
+                'post_type'      => 'service',
+                'posts_per_page' => 3,
+                'orderby'        => 'random',
+                'order'          => 'ASC'
+            );
+            $dpt_query = new WP_Query($dpt_args);
 
-            <!-- Service 2: Emergency Care -->
-            <div class="col-xl-4 col-md-6">
-                <div class="service-item-royal wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-item-header-royal">
-                        <span>Medical Care</span>
-                        <h2><a href="service-single.html">Emergency Care</a></h2>
-                    </div>
-                    <div class="service-item-image-royal">
-                        <a href="service-single.html">
-                            <figure class="image-anime">
-                                <img src="assets/images/service-image-2-royal.jpg" alt="Emergency Care">
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="service-item-body-royal">
-                        <div class="service-item-content-royal">
-                            <p>24/7 immediate medical intervention and critical care services for urgent health situations.</p>
-                        </div>
-                        <div class="service-item-btn-royal">
-                            <a href="service-single.html" class="readmore-btn">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            if ($dpt_query->have_posts()) :
+                $delay = 0;
+                while ($dpt_query->have_posts()) : $dpt_query->the_post();
+            ?>
+                <div class="col-xl-4 col-md-6">
+                    <!-- Service Item Royal Start -->
+                    <div class="service-item-royal">
+                        
+                        <?php if (has_post_thumbnail()) : ?>
+                            <div class="service-item-image-royal">
+                                <a href="<?php the_permalink(); ?>" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title_attribute(); ?>">
+                                    </figure>
+                                </a>
+                            </div>
+                        <?php endif; ?>
 
-            <!-- Service 3: Diagnostic Services -->
-            <div class="col-xl-4 col-md-6">
-                <div class="service-item-royal wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item-header-royal">
-                        <span>Medical Help</span>
-                        <h2><a href="service-single.html">Diagnostic Services</a></h2>
-                    </div>
-                    <div class="service-item-image-royal">
-                        <a href="service-single.html">
-                            <figure class="image-anime">
-                                <img src="assets/images/service-image-3-royal.jpg" alt="Diagnostic Services">
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="service-item-body-royal">
-                        <div class="service-item-content-royal">
-                            <p>State-of-the-art laboratory testing, imaging, and screening for accurate and fast diagnoses.</p>
-                        </div>
-                        <div class="service-item-btn-royal">
-                            <a href="service-single.html" class="readmore-btn">View Details</a>
+                        <div class="service-item-body-royal">
+                            <div class="service-item-content-royal">
+                                <h2><?php the_title();?></h2>
+                                <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
+                            </div>
+                            <div class="service-item-btn-royal">
+                                <a href="<?php the_permalink(); ?>" class="readmore-btn">View Details</a>
+                            </div>
                         </div>
                     </div>
+                    <!-- Service Item Royal End -->
                 </div>
-            </div>
-
-            <div class="col-lg-12">
-                <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
-                    <p>Helping You Move from Concern to Confidence with Expert Care. - <a href="<?php echo esc_url( home_url( '/our-services' ) ); ?>">View all services</a></p>
-                </div>
-            </div>
+            <?php
+                $delay += 0.2; 
+                endwhile;
+                wp_reset_postdata();
+            else :
+                echo '<div class="col-12"><p>No services found.</p></div>';
+            endif;
+            ?>
         </div>
     </div>
 </div>
@@ -424,75 +391,69 @@ get_header();?>
             </div>
 
             <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <!-- Case Study Item Start -->
-                    <div class="case-study-item wow fadeInUp">
-                        <div class="case-study-item-image">
-                            <a href="case-study-single.html" data-cursor-text="View">
-                                <figure>
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/case-study-image-1.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="case-study-item-content">
-                            <h2><a href="case-study-single.html">Heart Health Recovery</a></h2>
-                            <p>A patient experiencing severe as diagnosed with a cardiac condition.</p>
-                        </div>
-                    </div>
-                    <!-- Case Study Item End -->
-                </div>
+    <?php
+    // 1. Setup arguments for the query
+    $args = array(
+        'post_type'      => 'case-study',
+        'posts_per_page' => 3,
+    );
 
-                <div class="col-xl-4 col-md-6">
-                    <!-- Case Study Item Start -->
-                    <div class="case-study-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="case-study-item-image">
-                            <a href="case-study-single.html" data-cursor-text="View">
-                                <figure>
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/case-study-image-2.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="case-study-item-content">
-                            <h2><a href="case-study-single.html">Pediatric Care Improvement</a></h2>
-                            <p>A patient experiencing severe as diagnosed with a cardiac condition.</p>
-                        </div>
-                    </div>
-                    <!-- Case Study Item End -->
-                </div>
+    // 2. Execute the query
+    $case_study_query = new WP_Query( $args );
 
-                <div class="col-xl-4 col-md-6">
-                    <!-- Case Study Item Start -->
-                    <div class="case-study-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="case-study-item-image">
-                            <a href="case-study-single.html" data-cursor-text="View">
-                                <figure>
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/case-study-image-3.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="case-study-item-content">
-                            <h2><a href="case-study-single.html">Dermatology Skin Treatment</a></h2>
-                            <p>A patient experiencing severe as diagnosed with a cardiac condition.</p>
-                        </div>
-                    </div>
-                    <!-- Case Study Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Satisfy Client Images Start -->
-                        <div class="satisfy-client-images">
-                            <div class="satisfy-client-image add-more">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/icon-phone-white.svg" alt="">
+    // 3. Start the Loop
+    if ( $case_study_query->have_posts() ) :
+        $counter = 0;
+        while ( $case_study_query->have_posts() ) : $case_study_query->the_post();
+            
+            // Calculate animation delay: 0s, 0.2s, 0.4s
+            $delay = ( $counter > 0 ) ? ' data-wow-delay="' . esc_attr( 0.2 * $counter ) . 's"' : '';
+            ?>
+            
+            <div class="col-xl-4 col-md-6 mb-4">
+                            <!-- Case Study Item Start -->
+                            <div class="case-study-item wow fadeInUp" <?php echo ! empty( $dpt_delay ) ? 'data-wow-delay="' . esc_attr( $dpt_delay ) . '"' : ''; ?>>
+                                <div class="case-study-item-image">
+                                    <a href="<?php the_permalink(); ?>" data-cursor-text="View">
+                                        <figure>
+                                            <?php if ( has_post_thumbnail() ) : ?>
+                                                <?php the_post_thumbnail( 'large', [ 'alt' => esc_attr( get_the_title() ) ] ); ?>
+                                            <?php else : ?>
+                                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/case-study-image-1.jpg" alt="<?php the_title_attribute(); ?>">
+                                            <?php endif; ?>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="case-study-item-content">
+                                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                    <?php the_excerpt();?>
+                                    <a href="<?php the_permalink(); ?>" class="btn-case">View More</a>
+                                </div>
                             </div>
+                            <!-- Case Study Item End -->
                         </div>
-                        <!-- Satisfy Client Images End -->    
-                        <p>Helping You Move from Concern to Confidence with Expert Medical Care. - <a href="case-study.html">View all Case study</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
+
+            <?php
+            $counter++;
+        endwhile;
+        wp_reset_postdata(); // Essential for restoring original main query data
+    else : ?>
+        <div class="col-12 text-center py-4">
+            <p><?php esc_html_e( 'No case studies found.', 'custom-theme' ); ?></p>
+        </div>
+    <?php endif; ?>
+
+    <div class="col-lg-12">
+        <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
+            <div class="satisfy-client-images">
+                <div class="satisfy-client-image add-more">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/icon-phone-white.svg' ); ?>" alt="<?php esc_attr_e( 'Phone Icon', 'custom-theme' ); ?>">
                 </div>
             </div>
+            <p>Helping You Move from Concern to Confidence with Expert Medical Care. - <a href="<?php echo esc_url( get_post_type_archive_link( 'case-study' ) ); ?>">View all Case study</a></p>
+        </div>
+        </div>
+</div>
         </div>
     </div>
     <!-- Case Study Section End -->

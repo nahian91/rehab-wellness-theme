@@ -1,10 +1,10 @@
 {
-    "key": "group_6a28314d00922",
-    "title": "Our Services",
+    "key": "group_6a298ed963399",
+    "title": "Case Study",
     "fields": [
         {
-            "key": "field_6a28314e839ad",
-            "label": "General",
+            "key": "field_6a298ed939128",
+            "label": "Information",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -21,9 +21,9 @@
             "selected": 0
         },
         {
-            "key": "field_6a298486ef84b",
-            "label": "Service Excerpt",
-            "name": "service_excerpt",
+            "key": "field_6a298f6fdde76",
+            "label": "Case Long Description",
+            "name": "case_long_description",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -42,48 +42,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_6a2832725b27b",
-            "label": "Service Description",
-            "name": "service_description",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_6a2832525b27a",
-            "label": "Features",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6a2832f9036ac",
-            "label": "Service Feature Title",
-            "name": "service_feature_title",
+            "key": "field_6a298f023a764",
+            "label": "Case Client Name",
+            "name": "case_client_name",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -102,116 +63,9 @@
             "append": ""
         },
         {
-            "key": "field_6a2832fe036ad",
-            "label": "Service Feature Description",
-            "name": "service_feature_description",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_6a2832bb5b27e",
-            "label": "Service Features",
-            "name": "service_features",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_6a2832c95b27f",
-                    "label": "Service Feature Item Title",
-                    "name": "service_feature_item_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6a2832bb5b27e"
-                },
-                {
-                    "key": "field_6a2832d45b280",
-                    "label": "Service Feature Item Description",
-                    "name": "service_feature_item_description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_6a2832bb5b27e"
-                }
-            ]
-        },
-        {
-            "key": "field_6a28324c5b279",
-            "label": "Offers",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6a2832935b27c",
-            "label": "Service Offer Title",
-            "name": "service_offer_title",
+            "key": "field_6a298f163a765",
+            "label": "Case Start Date",
+            "name": "case_start_date",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -230,9 +84,90 @@
             "append": ""
         },
         {
-            "key": "field_6a2832a95b27d",
-            "label": "Service Offer Description",
-            "name": "service_offer_description",
+            "key": "field_6a298f263a766",
+            "label": "Case Treatment Cost",
+            "name": "case_treatment_cost",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a298f463a767",
+            "label": "Case Total Duration",
+            "name": "case_total_duration",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a298fc3e5a6d",
+            "label": "Solutions",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6a298fd0e5a6e",
+            "label": "Solutions Title",
+            "name": "solutions_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a298fdde5a6f",
+            "label": "Solutions Description",
+            "name": "solutions_description",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -251,9 +186,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_6a283303036ae",
-            "label": "Service Offers",
-            "name": "service_offers",
+            "key": "field_6a298fece5a70",
+            "label": "Solutions List",
+            "name": "solutions_list",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -273,9 +208,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6a283303036af",
-                    "label": "Service Offer Item Title",
-                    "name": "service_offer_item_title",
+                    "key": "field_6a298ff8e5a71",
+                    "label": "Solutions List Label",
+                    "name": "solutions_list_label",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -292,12 +227,34 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_6a283303036ae"
+                    "parent_repeater": "field_6a298fece5a70"
                 },
                 {
-                    "key": "field_6a283303036b0",
-                    "label": "Service Offer Item Description",
-                    "name": "service_offer_item_description",
+                    "key": "field_6a299004e5a72",
+                    "label": "Solutions List Title",
+                    "name": "solutions_list_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6a298fece5a70"
+                },
+                {
+                    "key": "field_6a29900be5a73",
+                    "label": "Solutions List Description",
+                    "name": "solutions_list_description",
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
@@ -314,13 +271,13 @@
                     "rows": "",
                     "placeholder": "",
                     "new_lines": "",
-                    "parent_repeater": "field_6a283303036ae"
+                    "parent_repeater": "field_6a298fece5a70"
                 }
             ]
         },
         {
-            "key": "field_6a2832115b276",
-            "label": "Schedule",
+            "key": "field_6a29902a66c05",
+            "label": "Results",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -337,9 +294,51 @@
             "selected": 0
         },
         {
-            "key": "field_6a28335c71a74",
-            "label": "Service Schedules",
-            "name": "service_schedules",
+            "key": "field_6a29903366c06",
+            "label": "Results Title",
+            "name": "results_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a29903a66c07",
+            "label": "Results Description",
+            "name": "results_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6a29904666c08",
+            "label": "Results List",
+            "name": "results_list",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -359,9 +358,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6a28337371a75",
-                    "label": "Service Schedule Day",
-                    "name": "service_schedule_day",
+                    "key": "field_6a29905166c09",
+                    "label": "Results List Title",
+                    "name": "results_list_title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -378,14 +377,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_6a28335c71a74"
+                    "parent_repeater": "field_6a29904666c08"
                 },
                 {
-                    "key": "field_6a28337c71a76",
-                    "label": "Service Schedule Time",
-                    "name": "service_schedule_time",
+                    "key": "field_6a29905866c0a",
+                    "label": "Results List Description",
+                    "name": "results_list_description",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -397,15 +396,15 @@
                     "default_value": "",
                     "maxlength": "",
                     "allow_in_bindings": 0,
+                    "rows": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6a28335c71a74"
+                    "new_lines": "",
+                    "parent_repeater": "field_6a29904666c08"
                 }
             ]
         },
         {
-            "key": "field_6a28321b5b277",
+            "key": "field_6a29906766c0b",
             "label": "FAQs",
             "name": "",
             "aria-label": "",
@@ -423,9 +422,9 @@
             "selected": 0
         },
         {
-            "key": "field_6a28339695002",
-            "label": "Service Faqs",
-            "name": "service_faqs",
+            "key": "field_6a29907266c0c",
+            "label": "FAQ List",
+            "name": "faq_list",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -445,9 +444,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6a2833a795003",
-                    "label": "Service Faqs Questions",
-                    "name": "service_faqs_questions",
+                    "key": "field_6a29908666c0d",
+                    "label": "FAQ List Title",
+                    "name": "faq_list_title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -464,16 +463,16 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_6a28339695002"
+                    "parent_repeater": "field_6a29907266c0c"
                 },
                 {
-                    "key": "field_6a2833b195004",
-                    "label": "Service Faqs Answer",
-                    "name": "service_faqs_answer",
+                    "key": "field_6a29908e66c0e",
+                    "label": "FAQ List Description",
+                    "name": "faq_list_description",
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
-                    "required": false,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -481,77 +480,14 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "new_lines": "",
                     "maxlength": "",
-                    "placeholder": "",
+                    "allow_in_bindings": 0,
                     "rows": "",
-                    "parent_repeater": "field_6a28339695002"
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_6a29907266c0c"
                 }
             ]
-        },
-        {
-            "key": "field_6a2832235b278",
-            "label": "Gallery",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6a2833c74f58f",
-            "label": "Service Gallery",
-            "name": "service_gallery",
-            "aria-label": "",
-            "type": "gallery",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min": "",
-            "max": "",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "insert": "append",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_6a2833d34f590",
-            "label": "Service Video",
-            "name": "service_video",
-            "aria-label": "",
-            "type": "oembed",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "width": "",
-            "height": "",
-            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -559,7 +495,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "service"
+                "value": "case-study"
             }
         ]
     ],
@@ -575,5 +511,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781105815
+    "modified": 1781108886
 }

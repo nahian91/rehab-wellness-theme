@@ -302,4 +302,4 @@ if (!empty($dpt_video_url)) :
     </div>
     <!-- Page Service Single End -->
 
-<?php get_header();?>
+<?php get_footer();?>

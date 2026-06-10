@@ -94,7 +94,7 @@
                             </div>
                             <div class="footer-contact-item-content-prime">
                                 <p>Email Address</p>
-                                <h3><a href="mailto:info@domainname.com">info@domainname.com</a></h3>
+                                <h3><a href="mailto:info@domainname.com">info@arawbd.com</a></h3>
                             </div>
                         </div>
                     </div>

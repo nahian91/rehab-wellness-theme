@@ -46,7 +46,7 @@ get_header();?>
                         </div>
                         <div class="contact-info-item-content">
                             <p>E-mail Us</p>
-                            <h3><a href="mailto:info@domainname.com">info@domainname.com</a></h3>
+                            <h3><a href="mailto:info@arawbd.com">info@arawbd.com</a></h3>
                         </div>
                     </div>
                     <!-- Contact Info Item End -->

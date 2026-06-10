@@ -69,7 +69,7 @@
                     "label": "Testimonial List Description",
                     "name": "testimonial_list_description",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -81,9 +81,9 @@
                     "default_value": "",
                     "maxlength": "",
                     "allow_in_bindings": 0,
+                    "rows": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "new_lines": "",
                     "parent_repeater": "field_6a2845f91cd5c"
                 },
                 {
@@ -330,5 +330,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781024334
+    "modified": 1781105319
 }

@@ -539,7 +539,10 @@ header.main-header .header-sticky.active{
 	font-size: 14px;
 	margin-left: 4px;
 }
-
+.service-item-content-royal h2 {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
 .main-menu ul li a:hover,
 .main-menu ul li a:focus{
 	color: var(--accent-color);
@@ -577,9 +580,16 @@ header.main-header .header-sticky.active{
 	visibility: visible;
 	opacity: 1;
 	transform: scale(1,1);
-    padding: 5px 0;
+    padding: 15px 0;
 }
-
+.section-title.section-title-center h2 {
+	border-bottom: 0;
+}
+.dpt-step-badge {
+	font-size: 0.72rem;
+	letter-spacing: 0.5px;
+	background-color: #003376 !important;
+}
 .main-menu ul li.submenu ul li.submenu > a:after{
     content: '\f105';
     float: right;
@@ -1633,7 +1643,7 @@ header.main-header .header-sticky.active{
 	position: relative;
 	background: var(--white-color);
 	border-radius: 20px;
-	padding: 30px;
+	padding: 18px;
 	transition: all 0.4s ease-in-out;
 	z-index: 1;
 }
@@ -1643,7 +1653,7 @@ header.main-header .header-sticky.active{
 }
 
 .case-study-item-content h2{
-	font-size: 20px;
+	font-size: 22px;
 }
 
 .case-study-item-content h2 a{
@@ -1652,10 +1662,15 @@ header.main-header .header-sticky.active{
 
 .case-study-item-content p{
 	border-top: 1px solid var(--divider-color);
-	padding-top: 20px;
-	margin: 20px 0 0;
+	padding-top: 10px;
+	margin: 15px 0 0;
 }
-
+.case-study-item-content .btn-case {
+	display: block;
+	margin-top: 25px;
+	font-weight: 500;
+	color: #0a3b7b;
+}
 /************************************/
 /*** 	  10. Our Facts css	      ***/
 /************************************/
@@ -3678,9 +3693,8 @@ header.main-header .header-sticky.active{
 }
 
 .service-entry h2{
-	font-size: 48px;
+	font-size: 35px;
 	font-weight: 600;
-    letter-spacing: -0.01em;
 	margin-bottom: 20px;
 }
 
@@ -4259,9 +4273,8 @@ header.main-header .header-sticky.active{
 }
 
 .case-study-entry h2{
-	font-size: 48px;
+	font-size: 35px;
 	font-weight: 600;
-	letter-spacing: -0.01em;
     margin-bottom: 20px;
 }
 
@@ -4906,6 +4919,20 @@ header.main-header .header-sticky.active{
     visibility: visible;
 }
 
+.service-item-prime.international-paitent {
+  background-color: #edf9fc;
+  text-align: center;
+}
+.service-item-prime.international-paitent .service-item-header-prime {
+  justify-content: center;
+}
+.service-item-prime.international-paitent i {
+  color: #fff !important;
+}
+.service-item-prime.international-paitent .icon-box {
+  width: 70px;
+  height: 70px;
+}
 .video-gallery-image img{
 	width: 100%;
 	aspect-ratio: 1 / 0.87;
@@ -8764,7 +8791,11 @@ header.main-header .header-sticky.active{
 	text-align: center;
 	padding: 60px 0;
 }
-
+.footer-copyright-text-prime a {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+}
 .footer-copyright-text-prime p{
 	color: var(--white-color);
 	margin-bottom: 0;

@@ -27,19 +27,7 @@ get_header();?>
             ?>
                 <div class="col-xl-4 col-md-6">
                     <!-- Service Item Royal Start -->
-                    <div class="service-item-royal wow fadeInUp" data-wow-delay="<?php echo esc_attr($delay); ?>s" style="visibility: visible; animation-name: fadeInUp;">
-                        <div class="service-item-header-royal">
-                            <?php 
-                            // টেক্সোনমি বা ক্যাটাগরি দেখানোর জন্য (যদি সার্ভিস ক্যাটাগরি থাকে)
-                            $terms = get_the_terms(get_the_ID(), 'service-category'); // আপনার কাস্টম টেক্সোনমি নাম এখানে দিন
-                            if ($terms && !is_wp_error($terms)) {
-                                echo '<span>' . esc_html($terms[0]->name) . '</span>';
-                            } else {
-                                echo '<span>Healthcare</span>'; // ফলব্যাক
-                            }
-                            ?>
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                        </div>
+                    <div class="service-item-royal">
                         
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="service-item-image-royal">
@@ -53,6 +41,7 @@ get_header();?>
 
                         <div class="service-item-body-royal">
                             <div class="service-item-content-royal">
+                                <h2><?php the_title();?></h2>
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
                             </div>
                             <div class="service-item-btn-royal">
