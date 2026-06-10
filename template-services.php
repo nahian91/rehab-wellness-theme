@@ -317,7 +317,7 @@ get_header();?>
                                 <p>We prioritize comfort, trust, and treatment to ensure the best possible health outcomes for every patient.</p>
                             </div>
                             <div class="approach-cta-btn">
-                                <a href="contact.html" class="btn-default">24/7 Services for Emergancy</a>
+                                <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default">24/7 Services for Emergancy</a>
                             </div>
                         </div>
                     </div>
@@ -463,7 +463,7 @@ get_header();?>
                                 </div>
                                 <div class="what-we-contact-item-content">
                                     <p>Emergency Call</p>
-                                    <h3><a href="tel:+123456789">+(123) 456-789</a></h3>
+                                    <h3><a href="tel:+123456789">++880 13 2476 3317 </a></h3>
                                 </div>
                             </div>
                             <!-- What We Contact Item End -->

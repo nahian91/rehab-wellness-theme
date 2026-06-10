@@ -319,7 +319,7 @@ get_header();?>
 
                                 <!-- Support CTA Button Start -->
                                 <div class="support-cta-btn">
-                                    <a href="contact.html" class="btn-default">24/7 Services for Emergancy</a>
+                                    <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default">24/7 Services for Emergancy</a>
                                 </div>
                                 <!-- Support CTA Button End -->
                             </div>
@@ -390,7 +390,7 @@ get_header();?>
 
                         <!-- Core Features Content Button Start -->
                         <div class="core-features-content-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="contact.html" class="btn-default btn-highlighted">Contact Us</a>
+                            <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default btn-highlighted">Contact Us</a>
                         </div>
                         <!-- Core Features Content Button End -->
                     </div>

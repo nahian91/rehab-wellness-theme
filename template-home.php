@@ -19,7 +19,7 @@ get_header();?>
 
                     <div class="hero-content-body wow fadeInUp" data-wow-delay="0.4s">
                         <div class="hero-btn">
-                            <a href="contact.html" class="btn-default btn-highlighted">Start Consultation</a>
+                            <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default btn-highlighted">Start Consultation</a>
                         </div>
 
                         <div class="hero-client-box">
@@ -248,7 +248,7 @@ get_header();?>
                     <!-- Why Choose Footer Start -->
                     <div class="why-choose-footer-royal wow fadeInUp" data-wow-delay="0.6s">
                         <div class="why-choose-btn-royal">
-                            <a href="contact.html" class="btn-default">Get in Touch</a>
+                            <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default">Get in Touch</a>
                         </div>
 
                         <div class="contact-item-box-royal">
@@ -257,7 +257,7 @@ get_header();?>
                             </div>
                             <div class="contact-item-box-content-royal">
                                 <p>Emergency call</p>
-                                <h3><a href="tel:123456789">(123) 456-789</a></h3>
+                                <h3><a href="tel:123456789">+880 13 2476 3317 </a></h3>
                             </div>
                         </div>
                     </div>
@@ -496,7 +496,7 @@ get_header();?>
                             </ul>
                         </div>
                         <div class="pricing-item-btn">
-                            <a href="contact.html" class="btn-default">Choose This Plan</a>
+                            <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default">Choose This Plan</a>
                         </div>
                     </div>
                 </div>
@@ -527,7 +527,7 @@ get_header();?>
                             </ul>
                         </div>
                         <div class="pricing-item-btn">
-                            <a href="contact.html" class="btn-default">Choose This Plan</a>
+                            <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default">Choose This Plan</a>
                         </div>
                     </div>
                 </div>
@@ -558,7 +558,7 @@ get_header();?>
                             </ul>
                         </div>
                         <div class="pricing-item-btn">
-                            <a href="contact.html" class="btn-default">Choose This Plan</a>
+                            <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default">Choose This Plan</a>
                         </div>
                     </div>
                 </div>

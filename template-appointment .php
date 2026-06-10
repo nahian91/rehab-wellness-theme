@@ -48,7 +48,7 @@ get_header();?>
 
                                 <!-- Support CTA Button Start -->
                                 <div class="support-cta-btn">
-                                    <a href="contact.html" class="btn-default">24/7 Services for Emergancy</a>
+                                    <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default">24/7 Services for Emergancy</a>
                                 </div>
                                 <!-- Support CTA Button End -->
                             </div>
@@ -255,7 +255,7 @@ get_header();?>
                             <p>We are here to help. If you need clarity on our appointment process, insurance requirements, or specific medical treatments, please don't hesitate to reach out to our support staff.</p>
                         </div>
                         <div class="faq-cta-btn wow fadeInUp" data-wow-delay="0.2s">
-                            <a href="contact.html" class="btn-default">Contact Support</a>
+                            <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default">Contact Support</a>
                         </div>
                     </div>
                 </div>
