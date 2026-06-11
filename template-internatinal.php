@@ -58,11 +58,10 @@ get_header();
             <!-- Left Column: Founder Profile Panel -->
             <div class="col-lg-4 mt-5 mt-lg-0">
                 <div class="dpt-sticky-sidebar-panel">
-                    <div class="page-category-list wow fadeInUp" data-wow-delay="0.1s" style="background: #f8f9fa; border-radius: 12px; padding: 30px; border-left: 4px solid var(--bs-primary);">
+                    <div class="page-category-list wow fadeInUp" data-wow-delay="0.1s" style="background: #f8f9fa; border-radius: 12px; padding: 30px;">
                         <div class="text-center mb-4">
-                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/founder.jpg' ); ?>" class="img-fluid rounded-circle shadow mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Founder Profile">
+                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/why-choose-us-image.png' ); ?>" class="img-fluid rounded-circle shadow mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Founder Profile">
                             <h2 class="page-category-list-title mb-1" style="font-size: 22px;">Founder Profile</h2>
-                            <span class="text-primary font-weight-bold small text-uppercase tracking-wider">Chief Medical Director</span>
                         </div>
 
                         <div class="founder-biography-meta">
@@ -127,7 +126,7 @@ get_header();
                                     <div class="col-md-4 mb-3 mb-md-0">
                                         <div class="dpt-solution-card-image-box">
                                             <figure class="image-anime mb-0 rounded overflow-hidden">
-                                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/collaboration-item-image-' . $dpt_image_toggle . '.jpg' ); ?>" class="img-fluid" alt="<?php echo esc_attr( $dpt_frame['title'] ); ?>">
+                                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/post-' . $dpt_image_toggle . '.jpg' ); ?>" class="img-fluid" alt="<?php echo esc_attr( $dpt_frame['title'] ); ?>">
                                             </figure>
                                         </div>
                                     </div>
@@ -151,46 +150,52 @@ get_header();
              FACILITIES MATRIX: SERVICES AVAILABLE FOR COLLABORATION
              ========================================== -->
         <div class="dpt-facilities-matrix-section mt-5 pt-5">
+
             <div class="row section-row">
-                <div class="col-lg-12">
-                    <div class="section-title section-title-center text-center mb-5">
-                        <span class="section-sub-title text-uppercase badge bg-secondary px-3 py-2 rounded-pill mb-2 wow fadeInUp">Infrastructure Matrix</span>
-                        <h2 class="text-anime-style-3 font-weight-bold">Services Available For Strategic Collaboration</h2>
-                    </div>
+            <div class="col-lg-12">
+                <div class="section-title section-title-center">
+                    <span class="section-sub-title wow fadeInUp">Infrastructure Matrix</span>
+                    <h2 class="text-anime-style-3">Services Available For Strategic Collaboration</h2>
                 </div>
             </div>
+        </div>
             
-            <div class="row">
-                <?php 
-                $dpt_services = [
-                    [ 'icon' => 'fa-brain', 'title' => 'Neuro Rehabilitation', 'desc' => 'Advanced sensory-motor retraining strategies for neuro-degenerative frameworks.' ],
-                    [ 'icon' => 'fa-kit-medical', 'title' => 'Stroke Rehabilitation', 'desc' => 'Sequential biological and physical therapy pathways maximizing neuroplastic recovery.' ],
-                    [ 'icon' => 'fa-wheelchair-move', 'title' => 'Physiotherapy & Pain Management', 'desc' => 'Targeted musculoskeletal conditioning combined with pain intervention models.' ],
-                    [ 'icon' => 'fa-needle', 'title' => 'Acupuncture Clinics', 'desc' => 'Evidence-based neurological trigger management integration.' ],
-                    [ 'icon' => 'fa-dna', 'title' => 'Regenerative Wellness / PRP', 'desc' => 'Autologous growth factor applications within standard musculoskeletal guidelines.' ],
-                    [ 'icon' => 'fa-laptop-medical', 'title' => 'Telehealth Infrastructure', 'desc' => 'Encrypted pipelines offering remote secondary diagnostics across clinical desks.' ],
-                    [ 'icon' => 'fa-microscope', 'title' => 'Joint Research Hub', 'desc' => 'Collaborative clinical trials and cohort studies targeting functional biomechanics.' ],
-                    [ 'icon' => 'fa-passport', 'title' => 'International Desk Unit', 'desc' => 'Comprehensive assistance systems managing legal logistics and clinical documentation.' ]
-                ];
 
-                foreach ( $dpt_services as $dpt_s_index => $dpt_s_item ) :
-                    $dpt_s_delay = ( $dpt_s_index * 0.08 ); 
-                    ?>
-                    <div class="col-xl-3 col-md-4 mb-4">
-                        <div class="service-item-prime international-paitent p-4 rounded border bg-white h-100 shadow-sm" data-wow-delay="<?php echo esc_attr( $dpt_s_delay ); ?>s">
-                            <div class="service-item-header-prime mb-3">
-                                <div class="icon-box d-inline-block bg-light p-3 rounded-circle">
-                                    <i class="fa-solid <?php echo esc_attr( $dpt_s_item['icon'] ); ?> fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="sevice-item-content-prime">
-                                <h2 class="h6 font-weight-bold mb-2"><a href="#" class="text-decoration-none text-dark"><?php echo esc_html( $dpt_s_item['title'] ); ?></a></h2>
-                                <p class="text-muted small mb-0"><?php echo esc_html( $dpt_s_item['desc'] ); ?></p>
-                            </div>
-                        </div>
+        <div class="row">
+    <?php 
+    // Combine the "Why Choose" item with your services array
+    $dpt_services = [
+        [ 'icon' => 'fa-user-doctor', 'title' => 'Experienced Doctors', 'desc' => 'Our team of highly qualified specialists provides expert diagnosis and personalized care plans.' ],
+        [ 'icon' => 'fa-brain', 'title' => 'Neuro Rehabilitation', 'desc' => 'Advanced sensory-motor retraining strategies for neuro-degenerative frameworks.' ],
+        [ 'icon' => 'fa-kit-medical', 'title' => 'Stroke Rehabilitation', 'desc' => 'Sequential biological and physical therapy pathways maximizing neuroplastic recovery.' ],
+        [ 'icon' => 'fa-wheelchair-move', 'title' => 'Physiotherapy & Pain Management', 'desc' => 'Targeted musculoskeletal conditioning combined with pain intervention models.' ],
+        [ 'icon' => 'fa-needle', 'title' => 'Acupuncture Clinics', 'desc' => 'Evidence-based neurological trigger management integration.' ],
+        [ 'icon' => 'fa-dna', 'title' => 'Regenerative Wellness / PRP', 'desc' => 'Autologous growth factor applications within standard musculoskeletal guidelines.' ],
+        [ 'icon' => 'fa-laptop-medical', 'title' => 'Telehealth Infrastructure', 'desc' => 'Encrypted pipelines offering remote secondary diagnostics across clinical desks.' ],
+        [ 'icon' => 'fa-microscope', 'title' => 'Joint Research Hub', 'desc' => 'Collaborative clinical trials and cohort studies targeting functional biomechanics.' ],
+        [ 'icon' => 'fa-passport', 'title' => 'International Desk Unit', 'desc' => 'Comprehensive assistance systems managing legal logistics and clinical documentation.' ]
+    ];
+
+    foreach ( $dpt_services as $dpt_s_index => $dpt_s_item ) :
+        $dpt_s_delay = ( $dpt_s_index * 0.08 ); 
+    ?>
+        <div class="col-xl-3 col-md-4 mb-4">
+            <div class="service-item-prime p-4 rounded border bg-white h-100 shadow-sm" data-wow-delay="<?php echo esc_attr( $dpt_s_delay ); ?>s">
+                <div class="service-item-header-prime mb-3">
+                    <div class="icon-box d-inline-block bg-light p-3 rounded-circle">
+                        <i class="fa-solid <?php echo esc_attr( $dpt_s_item['icon'] ); ?> fa-2x text-primary"></i>
                     </div>
-                <?php endforeach; ?>
+                </div>
+                <div class="sevice-item-content-prime">
+                    <h2 class="h6 font-weight-bold mb-2">
+                        <a href="#" class="text-decoration-none text-dark"><?php echo esc_html( $dpt_s_item['title'] ); ?></a>
+                    </h2>
+                    <p class="text-muted small mb-0"><?php echo esc_html( $dpt_s_item['desc'] ); ?></p>
+                </div>
             </div>
+        </div>
+    <?php endforeach; ?>
+</div>
         </div>
 
         <!-- ==========================================

@@ -10,26 +10,44 @@
 <?php wp_body_open(); ?>
 
 <header class="main-header active-sticky-header">
-    <div class="top-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="top-header-contact">
-                        <span><i class="fa-solid fa-phone"></i> +880 13 2476 3317</span>
-                        <span><i class="fa-solid fa-envelope"></i> info@arawbd.com</span>
-                    </div>
+
+    <div class="top-header d-block d-md-none">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="header-btn">
+                    <a href="<?php echo esc_url( home_url( '/appointment' ) ); ?>" class="btn-default btn-highlighted">Appointment</a>
                 </div>
-                <div class="col-lg-6 text-lg-right d-flex justify-content-end align-items-center">
-                    <div class="top-header-address">
-                        <span><i class="fa-solid fa-location-dot"></i> Garden Tower, Shahjalal Uposhahar, Sylhet</span>
-                    </div>
-                    <div class="top-header-address">
-                        <?php echo do_shortcode('[gtranslate]');?>
-                    </div>
+            </div>
+            <div class="col-6 col-6 d-flex justify-content-end">
+                <div class="top-header-address">
+                    <?php echo do_shortcode('[gtranslate]');?>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="top-header d-none d-md-block">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="top-header-contact">
+                    <span><i class="fa-solid fa-phone"></i> +880 13 2476 3317</span>
+                    <span><i class="fa-solid fa-envelope"></i> info@arawbd.com</span>
+                </div>
+            </div>
+            <div class="col-lg-6 text-lg-right d-flex justify-content-end align-items-center">
+                <div class="top-header-address mr-3">
+                    <span><i class="fa-solid fa-location-dot"></i> Garden Tower, Shahjalal Uposhahar, Sylhet</span>
+                </div>
+                <div class="top-header-address">
+                    <?php echo do_shortcode('[gtranslate]');?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="header-sticky">
         <nav class="navbar navbar-expand-lg">

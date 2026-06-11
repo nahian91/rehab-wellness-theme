@@ -5481,10 +5481,6 @@ header.main-header .header-sticky.active{
         display: block;
     }
 
-	.header-btn{
-		display: none;
-	}
-
 	.bg-section{
 		width: 100%;
 		border-radius: 0;
@@ -5990,7 +5986,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.page-header{
-        padding: 170px 0 80px;
+        padding: 70px 0 70px;
 		border-radius: 0;
 		margin: 0;
     }
