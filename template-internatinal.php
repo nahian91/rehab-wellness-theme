@@ -2,9 +2,6 @@
 /**
  * Template Name: International
  *
- * A high-performance, structurally optimized full-width template 
- * designed for international patient coordination, combining asymmetric 
- * sidebar information desks, sequential processing flows, and a service infrastructure matrix.
  *
  * @package WordPress
  * @subpackage Custom_Theme
@@ -18,7 +15,9 @@ get_header();
 <div class="dpt-international-collaboration-page py-5">
     <div class="container">
         
-        <!-- Hero Section: Premium Image Reveal & Core Intent -->
+        <!-- ==========================================
+             HERO SECTION: ABOUT THE CENTER & MISSION 
+             ========================================== -->
         <div class="row align-items-center mb-5 pb-4">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="dpt-single-image-wrapper">
@@ -26,16 +25,16 @@ get_header();
                         <?php if ( has_post_thumbnail() ) : ?>
                             <?php the_post_thumbnail( 'full', [ 'class' => 'img-fluid rounded shadow-lg dpt-hero-thumb' ] ); ?>
                         <?php else : ?>
-                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/international.png' ); ?>" class="img-fluid rounded shadow-lg dpt-hero-thumb" alt="International Patient Care">
+                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/international.png' ); ?>" class="img-fluid rounded shadow-lg dpt-hero-thumb" alt="International Clinical Collaboration Hub">
                         <?php endif; ?>
                     </figure>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="dpt-service-hero-entry ps-lg-5">
-                    <span class="badge bg-primary text-uppercase px-3 py-2 mb-2 rounded-pill dpt-step-badge">Medical Network</span>
-                    <h1 class="text-anime-style-3 mb-4 font-weight-bold">World-Class Medical Infrastructure & Collaboration</h1>
-                    <p>We bridge borders to provide elite healthcare access, synchronizing clinical intelligence with personalized international hospitality frameworks.</p>
+                    <span class="badge bg-primary text-uppercase px-3 py-2 mb-2 rounded-pill dpt-step-badge">Global Partnership Network</span>
+                    <h1 class="text-anime-style-3 mb-4 font-weight-bold">About Our International Collaboration Center</h1>
+                    <p class="lead text-dark">We cross borders to bridge cutting-edge clinical intelligence, synchronizing academic innovation, advanced rehabilitation matrices, and specialized healthcare delivery with global institutions.</p>
                     <div class="text-muted dpt-hero-description-text entry-content">
                         <?php 
                         if ( have_posts() ) : 
@@ -51,77 +50,75 @@ get_header();
 
         <hr class="my-5 dpt-divider">
 
-        <!-- Split Layout: Sidebar Info Desk + Sequential Roadmap -->
+        <!-- ==========================================
+             SPLIT LAYOUT: FOUNDER PROFILE & PILLARS
+             ========================================== -->
         <div class="row pt-2">
             
-            <!-- Left Sidebar: International Desk Operational Metadata -->
-            <div class="col-lg-4 order-2 order-lg-1 mt-5 mt-lg-0">
+            <!-- Left Column: Founder Profile Panel -->
+            <div class="col-lg-4 mt-5 mt-lg-0">
                 <div class="dpt-sticky-sidebar-panel">
-                    <div class="page-category-list wow fadeInUp" data-wow-delay="0.1s">
-                        <h2 class="page-category-list-title">International Desk Support</h2>
+                    <div class="page-category-list wow fadeInUp" data-wow-delay="0.1s" style="background: #f8f9fa; border-radius: 12px; padding: 30px; border-left: 4px solid var(--bs-primary);">
+                        <div class="text-center mb-4">
+                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/founder.jpg' ); ?>" class="img-fluid rounded-circle shadow mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Founder Profile">
+                            <h2 class="page-category-list-title mb-1" style="font-size: 22px;">Founder Profile</h2>
+                            <span class="text-primary font-weight-bold small text-uppercase tracking-wider">Chief Medical Director</span>
+                        </div>
 
-                        <div class="case-study-category-item-list">
-                            <div class="case-study-category-item">
-                                <h2>Dedicated Helpline:</h2>
-                                <p>+880 171X-XXXXXX</p>
+                        <div class="founder-biography-meta">
+                            <p class="small text-muted mb-3">Driven by a vision to globalize advanced clinical infrastructure, our founder has engineered international ecosystems combining healthcare delivery with academic protocols.</p>
+                            
+                            <div class="case-study-category-item mb-3">
+                                <h3 style="font-size: 14px; font-weight: 700;" class="text-dark mb-1">Key Affiliations:</h3>
+                                <p class="small mb-0 text-muted">World Rehabilitation Federation, Global Telehealth Alliance</p>
+                            </div>
+
+                            <div class="case-study-category-item mb-3">
+                                <h3 style="font-size: 14px; font-weight: 700;" class="text-dark mb-1">Research Focus:</h3>
+                                <p class="small mb-0 text-muted">Neuro-regeneration paradigms, digitalized clinical pathways, and remote patient monitoring architectures.</p>
                             </div>
 
                             <div class="case-study-category-item">
-                                <h2>Support Email:</h2>
-                                <p>globalcare@domain.com</p>
-                            </div>
-
-                            <div class="case-study-category-item">
-                                <h2>Languages Supported:</h2>
-                                <p>English, Bengali, Arabic, Hindi, Urdu</p>
-                            </div>
-
-                            <div class="case-study-category-item">
-                                <h2>Visa Assistance Response:</h2>
-                                <p>Within 24-48 Hours (Invitation Letters provided)</p>
-                            </div>
-
-                            <div class="case-study-category-item">
-                                <h2>Airport Coordination:</h2>
-                                <p>Complimentary pickup & local transit setup</p>
+                                <h3 style="font-size: 14px; font-weight: 700;" class="text-dark mb-1">Desk Contact:</h3>
+                                <p class="small mb-0 text-muted">partnerships@domain.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Area: Case-Study Style Processing Workflow -->
-            <div class="col-lg-8 order-1 order-lg-2">
+            <!-- Right Column: Strategic Collaboration Framework -->
+            <div class="col-lg-8">
                 <div class="dpt-collaboration-workflow-wrapper">
-                    <h2 class="text-anime-style-3 mb-3">The Collaboration Roadmap</h2>
-                    <p class="text-muted mb-4">We ensure a frictionless ecosystem for patients traveling across borders, managing absolute clinical and logistical pathways.</p>
+                    <h2 class="text-anime-style-3 mb-3">Core Collaboration Frameworks</h2>
+                    <p class="text-muted mb-4">We actively facilitate strategic resource exchange across four vital operational pillars, built for global health entities and academic boards.</p>
                     
                     <div class="dpt-solution-timeline-list mt-4">
                         <?php 
-                        $dpt_steps = [
+                        $dpt_frameworks = [
                             [
-                                'label' => 'Phase 01',
-                                'title' => 'Remote Evaluation & Digital Diagnosis',
-                                'desc'  => 'Patients submit historical electronic health records (EHR) via our encrypted portal. Specialized clinical boards evaluate data assets to formulate tentative strategies.'
+                                'label' => 'Pillar 01',
+                                'title' => 'Training & Workshop Collaboration',
+                                'desc'  => 'We host cross-border medical fellowships, hands-on clinical workshops, and continuous medical education (CME) acceleration streams focused on advanced rehabilitation methodologies.'
                             ],
                             [
-                                'label' => 'Phase 02',
-                                'title' => 'Legal Documentation & Visa Endorsement',
-                                'desc'  => 'Our legal department registers documentation parameters and dispatches formal institutional invitation letters to local embassies, accelerating priority processing lanes.'
+                                'label' => 'Pillar 02',
+                                'title' => 'Tele-Rehabilitation Ecosystems',
+                                'desc'  => 'An enterprise-grade, encrypted remote care structure. We hand over real-time telemetry streams and clinical consulting access back to native medical practitioners globally.'
                             ],
                             [
-                                'label' => 'Phase 03',
-                                'title' => 'Integrated Institutional Clinical Care',
-                                'desc'  => 'Upon physical arrival, patients receive targeted attention from dedicated case handlers, directing swift motion through specialized lab analytics and diagnostic systems.'
+                                'label' => 'Pillar 03',
+                                'title' => 'Comprehensive Medical Tourism Support',
+                                'desc'  => 'Seamless cross-border management framework offering priority medical visa invitation documentation, dedicated dual-language case handlers, and end-to-end travel transit coordination.'
                             ],
                             [
-                                'label' => 'Phase 04',
-                                'title' => 'Continuous Telehealth Continuity Plan',
-                                'desc'  => 'Post-discharge timelines do not terminate support grids. Automated digital networks hand over follow-up telemetry streams back to native primary medical practitioners.'
+                                'label' => 'Pillar 04',
+                                'title' => 'Visiting Expert Program',
+                                'desc'  => 'An active pipeline allowing international clinical pioneers and specialized researchers to consult, co-operate in surgery, and lead structural masterclasses on site.'
                             ]
                         ];
 
-                        foreach ( $dpt_steps as $dpt_index => $dpt_step ) :
+                        foreach ( $dpt_frameworks as $dpt_index => $dpt_frame ) :
                             $dpt_step_delay = 0.15 * ( $dpt_index + 1 );
                             $dpt_image_toggle = ( ( $dpt_index + 1 ) % 2 === 0 ) ? 2 : 1;
                             ?>
@@ -130,15 +127,15 @@ get_header();
                                     <div class="col-md-4 mb-3 mb-md-0">
                                         <div class="dpt-solution-card-image-box">
                                             <figure class="image-anime mb-0 rounded overflow-hidden">
-                                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/case-study-solution-item-image-' . $dpt_image_toggle . '.jpg' ); ?>" class="img-fluid" alt="<?php echo esc_attr( $dpt_step['title'] ); ?>">
+                                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/collaboration-item-image-' . $dpt_image_toggle . '.jpg' ); ?>" class="img-fluid" alt="<?php echo esc_attr( $dpt_frame['title'] ); ?>">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="dpt-solution-card-body ps-md-2">
-                                            <span class="badge bg-primary text-uppercase px-3 py-2 mb-2 rounded-pill dpt-step-badge"><?php echo esc_html( $dpt_step['label'] ); ?></span>
-                                            <h3 class="h5 font-weight-bold mb-2 text-dark"><?php echo esc_html( $dpt_step['title'] ); ?></h3>
-                                            <p class="text-muted mb-0 small"><?php echo esc_html( $dpt_step['desc'] ); ?></p>
+                                            <span class="badge bg-primary text-uppercase px-3 py-2 mb-2 rounded-pill dpt-step-badge"><?php echo esc_html( $dpt_frame['label'] ); ?></span>
+                                            <h3 class="h5 font-weight-bold mb-2 text-dark"><?php echo esc_html( $dpt_frame['title'] ); ?></h3>
+                                            <p class="text-muted mb-0 small"><?php echo esc_html( $dpt_frame['desc'] ); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -150,175 +147,161 @@ get_header();
 
         </div>
 
-        <!-- Facilities Matrix Infrastructure Section -->
+        <!-- ==========================================
+             FACILITIES MATRIX: SERVICES AVAILABLE FOR COLLABORATION
+             ========================================== -->
         <div class="dpt-facilities-matrix-section mt-5 pt-5">
             <div class="row section-row">
                 <div class="col-lg-12">
-                    <div class="section-title section-title-center">
-                        <span class="section-sub-title wow fadeInUp">Our Services</span>
-                        <h2 class="text-anime-style-3">Comprehensive healthcare services for better living</h2>
+                    <div class="section-title section-title-center text-center mb-5">
+                        <span class="section-sub-title text-uppercase badge bg-secondary px-3 py-2 rounded-pill mb-2 wow fadeInUp">Infrastructure Matrix</span>
+                        <h2 class="text-anime-style-3 font-weight-bold">Services Available For Strategic Collaboration</h2>
                     </div>
                 </div>
             </div>
             
             <div class="row">
                 <?php 
-                $dpt_facilities = [
-                    [ 'icon' => 'fa-microscope', 'title' => 'Diagnostic Lab', 'desc' => 'AI-powered pathology for rapid results.' ],
-                    [ 'icon' => 'fa-heart-pulse', 'title' => 'Cardiac Care', 'desc' => 'State-of-the-art telemetry monitoring.' ],
-                    [ 'icon' => 'fa-bed-pulse', 'title' => 'Smart ICU', 'desc' => '24/7 critical care tracking systems.' ],
-                    [ 'icon' => 'fa-laptop-medical', 'title' => 'Telehealth Suite', 'desc' => 'Secure virtual consultation portal.' ],
-                    [ 'icon' => 'fa-x-ray', 'title' => 'Digital Imaging', 'desc' => 'High-resolution X-ray and MRI scans.' ],
-                    [ 'icon' => 'fa-syringe', 'title' => 'Pharmacy Station', 'desc' => 'On-site stocked medicine dispensary.' ],
-                    [ 'icon' => 'fa-user-nurse', 'title' => 'Recovery Lounge', 'desc' => 'Comfort-focused post-op recovery zones.' ],
-                    [ 'icon' => 'fa-shield-virus', 'title' => 'Sterilization Hub', 'desc' => 'Hospital-grade sanitization protocols.' ],
-                    [ 'icon' => 'fa-wheelchair', 'title' => 'Accessibility Zone', 'desc' => 'Full ADA-compliant movement areas.' ],
-                    [ 'icon' => 'fa-calendar-check', 'title' => 'Booking Kiosk', 'desc' => 'Fast-track digital appointment setup.' ],
-                    [ 'icon' => 'fa-dna', 'title' => 'Genomic Testing', 'desc' => 'Advanced personalized health reports.' ],
-                    [ 'icon' => 'fa-notes-medical', 'title' => 'Record Archives', 'desc' => 'Secure encrypted health history vault.' ]
+                $dpt_services = [
+                    [ 'icon' => 'fa-brain', 'title' => 'Neuro Rehabilitation', 'desc' => 'Advanced sensory-motor retraining strategies for neuro-degenerative frameworks.' ],
+                    [ 'icon' => 'fa-kit-medical', 'title' => 'Stroke Rehabilitation', 'desc' => 'Sequential biological and physical therapy pathways maximizing neuroplastic recovery.' ],
+                    [ 'icon' => 'fa-wheelchair-move', 'title' => 'Physiotherapy & Pain Management', 'desc' => 'Targeted musculoskeletal conditioning combined with pain intervention models.' ],
+                    [ 'icon' => 'fa-needle', 'title' => 'Acupuncture Clinics', 'desc' => 'Evidence-based neurological trigger management integration.' ],
+                    [ 'icon' => 'fa-dna', 'title' => 'Regenerative Wellness / PRP', 'desc' => 'Autologous growth factor applications within standard musculoskeletal guidelines.' ],
+                    [ 'icon' => 'fa-laptop-medical', 'title' => 'Telehealth Infrastructure', 'desc' => 'Encrypted pipelines offering remote secondary diagnostics across clinical desks.' ],
+                    [ 'icon' => 'fa-microscope', 'title' => 'Joint Research Hub', 'desc' => 'Collaborative clinical trials and cohort studies targeting functional biomechanics.' ],
+                    [ 'icon' => 'fa-passport', 'title' => 'International Desk Unit', 'desc' => 'Comprehensive assistance systems managing legal logistics and clinical documentation.' ]
                 ];
 
-                foreach ( $dpt_facilities as $dpt_f_index => $dpt_f_item ) :
-                    $dpt_f_delay = ( $dpt_f_index * 0.08 ); 
+                foreach ( $dpt_services as $dpt_s_index => $dpt_s_item ) :
+                    $dpt_s_delay = ( $dpt_s_index * 0.08 ); 
                     ?>
                     <div class="col-xl-3 col-md-4 mb-4">
-                        <!-- Service Item Start -->
-                        <div class="service-item-prime international-paitent" data-wow-delay="<?php echo esc_attr( $dpt_f_delay ); ?>s">
-                            <div class="service-item-header-prime">
-                                <div class="icon-box">
-                                    <i class="fa-solid <?php echo esc_attr( $dpt_f_item['icon'] ); ?> fa-2x text-primary"></i>
+                        <div class="service-item-prime international-paitent p-4 rounded border bg-white h-100 shadow-sm" data-wow-delay="<?php echo esc_attr( $dpt_s_delay ); ?>s">
+                            <div class="service-item-header-prime mb-3">
+                                <div class="icon-box d-inline-block bg-light p-3 rounded-circle">
+                                    <i class="fa-solid <?php echo esc_attr( $dpt_s_item['icon'] ); ?> fa-2x text-primary"></i>
                                 </div>
                             </div>
                             <div class="sevice-item-content-prime">
-                                <h2><a href="#"><?php echo esc_html( $dpt_f_item['title'] ); ?></a></h2>
-                                <p><?php echo esc_html( $dpt_f_item['desc'] ); ?></p>
+                                <h2 class="h6 font-weight-bold mb-2"><a href="#" class="text-decoration-none text-dark"><?php echo esc_html( $dpt_s_item['title'] ); ?></a></h2>
+                                <p class="text-muted small mb-0"><?php echo esc_html( $dpt_s_item['desc'] ); ?></p>
                             </div>
                         </div>
-                        <!-- Service Item End -->
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
 
-        <!-- FAQ System Infrastructure Accordion -->
+        <!-- ==========================================
+             CONTACT SECTION: FOREIGN ORGANIZATIONS CONCIERGE
+             ========================================== -->
         <div class="our-faqs mt-5 pt-4">
-            <div class="row">
-                <div class="col-xl-5">
-                    <!-- FAQ CTA Box Start -->
-                    <div class="faq-cta-box">
-                        <!-- FAQ CTA Image Start -->
-                        <div class="faq-cta-image">
-                            <figure class="image-anime">
-                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/faq-cta-image.jpg' ); ?>" alt="Support Assistance">
-                            </figure>
+            <div class="row align-items-stretch">
+                
+                <!-- Left Block: Informational Call to Action -->
+                <div class="col-xl-5 mb-4 mb-xl-0">
+                    <div class="faq-cta-box h-100 d-flex flex-column justify-content-between p-4 rounded text-white bg-dark" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.95));">
+                        <div class="faq-cta-content wow fadeInUp">
+                            <span class="badge bg-primary text-uppercase px-3 py-2 mb-3 rounded-pill">Institutional Access</span>
+                            <h3 class="h3 font-weight-bold mb-3 text-white">Global Institutional Gateway</h3>
+                            <p class="text-white-50">Our dedicated International Relations Desk processes global strategic requests from ministries of health, medical embassies, corporate health insurers, and academic institutions.</p>
+                            <p class="text-white-50">Please complete the formal organization criteria verification layout on the right to trigger rapid processing matrix responses within 24 business hours.</p>
                         </div>
-                        <!-- FAQ CTA Image End -->
-
-                        <!-- FAQ CTA Body Start -->
-                        <div class="faq-cta-body">
-                            <!-- FAQ CTA Content Start -->
-                            <div class="faq-cta-content wow fadeInUp">
-                                <h3>Have any Questions!</h3>
-                                <p>If you have any questions about our medical services, appointments, or treatments, our team is here to help. We are committed to providing clear information and friendly support to ensure you receive the care and guidance you need.</p>
+                        
+                        <div class="mt-4 pt-3 border-top border-secondary">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fa-solid fa-building-shield text-primary me-3 fa-lg"></i>
+                                <span class="small text-white-50">Secure, encrypted submission protocol</span>
                             </div>
-                            <!-- FAQ CTA Content End -->
-
-                            <!-- FAQ CTA Button Start -->
-                            <div class="faq-cta-btn wow fadeInUp" data-wow-delay="0.2s">
-                                <a href="#" class="btn-default">View all Questions</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-globe text-primary me-3 fa-lg"></i>
+                                <span class="small text-white-50">Direct pipeline to Chief Medical Director Desk</span>
                             </div>
-                            <!-- FAQ CTA Button End -->
                         </div>
-                        <!-- FAQ CTA Body End -->
                     </div>
-                    <!-- FAQ CTA Box End -->
                 </div>
 
+                <!-- Right Block: Updated Organization & Client Booking Interface -->
                 <div class="col-xl-7">
-                    <div class="section-title section-title-center mb-4">
-                        <span class="section-sub-title wow fadeInUp">FAQ Guide</span>
-                        <h2 class="text-anime-style-3">Frequently Asked Operational Processes</h2>
+                    <div class="p-4 p-md-5 rounded border bg-light shadow-sm">
+                        <div class="section-title mb-4">
+                            <span class="section-sub-title text-primary font-weight-bold text-uppercase small d-block mb-1 wow fadeInUp">Gateway Verification</span>
+                            <h2 class="h3 font-weight-bold text-dark mb-2">Foreign Organization Registration & Booking Desk</h2>
+                            <p class="text-muted small">Please submit accurate administrative and diagnostic tracking parameters below.</p>
+                        </div>
+
+                        <!-- Main Form System -->
+                        <form id="appointmentForm" action="#" method="POST" enctype="multipart/form-data" class="wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="row">
+                                <!-- 1. Patient Name / Contact Identity -->
+                                <div class="form-group col-md-6 mb-4">
+                                    <label for="name" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Patient Full Name / Corporate Delegate <span class="text-danger">*</span></label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter full name" required>
+                                </div>
+
+                                <!-- 2. Age -->
+                                <div class="form-group col-md-6 mb-4">
+                                    <label for="age" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Age <span class="text-danger">*</span></label>
+                                    <input type="number" name="age" class="form-control" id="age" placeholder="Enter age" required>
+                                </div>
+
+                                <!-- 3. Mobile Number -->
+                                <div class="form-group col-md-6 mb-4">
+                                    <label for="phone" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Mobile Number <span class="text-danger">*</span></label>
+                                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="Include country code" required>
+                                </div>
+
+                                <!-- 4. WhatsApp Number -->
+                                <div class="form-group col-md-6 mb-4">
+                                    <label for="whatsapp" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">WhatsApp Number</label>
+                                    <input type="tel" name="whatsapp" class="form-control" id="whatsapp" placeholder="Include country code">
+                                </div>
+
+                                <!-- 5. Main Problem / Institutional Request Scope -->
+                                <div class="form-group col-md-12 mb-4">
+                                    <label for="message" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Main Health Problem / Scope of Collaboration <span class="text-danger">*</span></label>
+                                    <textarea name="message" class="form-control" id="message" rows="4" placeholder="Briefly describe the clinical condition or specific organizational partnership metrics requested..." required></textarea>
+                                </div>
+
+                                <!-- 6. Preferred Date -->
+                                <div class="form-group col-md-6 mb-4">
+                                    <label for="date" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Preferred Date <span class="text-danger">*</span></label>
+                                    <input type="date" name="date" class="form-control" id="date" required>
+                                </div>
+
+                                <!-- 7. Preferred Service -->
+                                <div class="form-group col-md-6 mb-4">
+                                    <label for="service" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Preferred Service Sector <span class="text-danger">*</span></label>
+                                    <select name="service" class="form-control form-select" id="service" required>
+                                        <option value="" disabled selected>Select Preferred Service</option>
+                                        <option value="neuro_rehab">Neuro Rehabilitation</option>
+                                        <option value="stroke_rehab">Stroke Rehabilitation</option>
+                                        <option value="physio_pain">Physiotherapy & Pain Management</option>
+                                        <option value="acupuncture">Acupuncture</option>
+                                        <option value="regenerative_wellness">Regenerative Wellness / PRP</option>
+                                        <option value="training_collaboration">Training / Workshop Collaboration</option>
+                                        <option value="tele_rehab">Tele-Rehabilitation Coordination</option>
+                                        <option value="visiting_expert">Visiting Expert Program</option>
+                                    </select>
+                                </div>
+
+                                <!-- 8. Upload Report Option -->
+                                <div class="form-group col-md-12 mb-4">
+                                    <label for="report" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Upload Medical Report / Intent Documentation (Optional)</label>
+                                    <input type="file" name="report" class="form-control" id="report" accept=".pdf,.jpg,.png">
+                                </div>
+
+                                <!-- Submit Action Component -->
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn-default w-100 py-3 text-uppercase font-weight-bold" style="letter-spacing: 1px;">Initialize Strategic Request</button>
+                                </div>
+                            </div>
+                        </form>
+                        
                     </div>
-
-                    <!-- FAQ Accordion Start -->
-                    <div class="faq-accordion" id="accordion">
-                        <!-- FAQ Item 1 Start -->
-                        <div class="accordion-item wow fadeInUp">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                    1. How can I book an appointment with a doctor from overseas?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse" role="region" aria-labelledby="heading1" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item 1 End -->
-
-                        <!-- FAQ Item 2 Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    2. Do you provide emergency medical coordination for arrival?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" role="region" aria-labelledby="heading2" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item 2 End -->
-
-                        <!-- FAQ Item 3 Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                                    3. What medical services do you provide inside the matrix?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse show" role="region" aria-labelledby="heading3" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item 3 End -->
-
-                        <!-- FAQ Item 4 Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    4. How early should I arrive for my integrated appointments?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" role="region" aria-labelledby="heading4" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item 4 End -->
-
-                        <!-- FAQ Item 5 Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
-                            <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    5. What should I bring to my initial medical consultation?
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" role="region" aria-labelledby="heading5" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item 5 End -->
-                    </div>
-                    <!-- FAQ Accordion End -->
                 </div>
+                
             </div>
         </div>
 

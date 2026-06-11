@@ -71,25 +71,47 @@ get_header();?>
                         <!-- Appointment Form Start -->
 <form id="appointmentForm" action="#" method="POST" enctype="multipart/form-data" class="wow fadeInUp" data-wow-delay="0.2s">
     <div class="row">
-        <!-- Patient Name -->
+        <!-- 1. Patient Name -->
         <div class="form-group col-md-6 mb-4">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Patient Full Name" required>
+            <label for="name" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Patient Full Name <span class="text-danger">*</span></label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Enter patient full name" required>
         </div>
 
-        <!-- Age -->
+        <!-- 2. Age -->
         <div class="form-group col-md-6 mb-4">
-            <input type="number" name="age" class="form-control" id="age" placeholder="Age" required>
+            <label for="age" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Age <span class="text-danger">*</span></label>
+            <input type="number" name="age" class="form-control" id="age" placeholder="Enter age" required>
         </div>
 
-        <!-- Mobile Number -->
+        <!-- 3. Mobile Number -->
         <div class="form-group col-md-6 mb-4">
-            <input type="tel" name="phone" class="form-control" id="phone" placeholder="Mobile Number" required>
+            <label for="phone" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Mobile Number <span class="text-danger">*</span></label>
+            <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter mobile number" required>
         </div>
 
-        <!-- Preferred Service -->
+        <!-- 4. WhatsApp Number -->
         <div class="form-group col-md-6 mb-4">
+            <label for="whatsapp" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">WhatsApp Number</label>
+            <input type="tel" name="whatsapp" class="form-control" id="whatsapp" placeholder="Enter WhatsApp number">
+        </div>
+
+        <!-- 5. Main Problem -->
+        <div class="form-group col-md-12 mb-4">
+            <label for="message" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Main Health Problem <span class="text-danger">*</span></label>
+            <textarea name="message" class="form-control" id="message" rows="4" placeholder="Briefly describe the main health problem..." required></textarea>
+        </div>
+
+        <!-- 6. Preferred Date -->
+        <div class="form-group col-md-6 mb-4">
+            <label for="date" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Preferred Date <span class="text-danger">*</span></label>
+            <input type="date" name="date" class="form-control" id="date" required>
+        </div>
+
+        <!-- 7. Preferred Service -->
+        <div class="form-group col-md-6 mb-4">
+            <label for="service" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Preferred Service <span class="text-danger">*</span></label>
             <select name="service" class="form-control form-select" id="service" required>
-                <option value="" disabled selected>Preferred Service</option>
+                <option value="" disabled selected>Select Preferred Service</option>
                 <option value="neuro_rehab">Neuro Rehabilitation</option>
                 <option value="stroke_rehab">Stroke Rehabilitation</option>
                 <option value="physio_pain">Physiotherapy & Pain Management</option>
@@ -98,22 +120,13 @@ get_header();?>
             </select>
         </div>
 
-        <!-- Preferred Date -->
-        <div class="form-group col-md-6 mb-4">
-            <input type="date" name="date" class="form-control" id="date" required>
-        </div>
-
-        <!-- Report Upload -->
-        <div class="form-group col-md-6 mb-4">
-            <label for="report" style="margin-bottom: 5px; font-size: 14px;">Upload Medical Report (Optional)</label>
+        <!-- 8. Upload Report Option -->
+        <div class="form-group col-md-12 mb-4">
+            <label for="report" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Upload Medical Report (Optional)</label>
             <input type="file" name="report" class="form-control" id="report" accept=".pdf,.jpg,.png">
         </div>
 
-        <!-- Main Problem -->
-        <div class="form-group col-md-12 mb-4">
-            <textarea name="message" class="form-control" id="message" rows="4" placeholder="Briefly describe the main health problem..." required></textarea>
-        </div>
-
+        <!-- Submit Button -->
         <div class="col-md-12">
             <button type="submit" class="btn-default">Book Appointment</button>
         </div>
