@@ -265,3 +265,4 @@ function rehab_wellness_whatsapp_chat() {
     <?php
 }
 add_action( 'wp_footer', 'rehab_wellness_whatsapp_chat' );
+

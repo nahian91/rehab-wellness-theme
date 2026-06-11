@@ -19,9 +19,12 @@
                         <span><i class="fa-solid fa-envelope"></i> info@arawbd.com</span>
                     </div>
                 </div>
-                <div class="col-lg-6 text-lg-right">
+                <div class="col-lg-6 text-lg-right d-flex justify-content-end align-items-center">
                     <div class="top-header-address">
                         <span><i class="fa-solid fa-location-dot"></i> Garden Tower, Shahjalal Uposhahar, Sylhet</span>
+                    </div>
+                    <div class="top-header-address">
+                        <?php echo do_shortcode('[gtranslate]');?>
                     </div>
                 </div>
             </div>
