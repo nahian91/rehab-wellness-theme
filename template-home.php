@@ -179,6 +179,16 @@ get_header();?>
             endif;
             ?>
         </div>
+        <div class="col-lg-12">
+        <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
+            <div class="satisfy-client-images">
+                <div class="satisfy-client-image add-more">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/icon-phone-white.svg' ); ?>" alt="<?php esc_attr_e( 'Phone Icon', 'custom-theme' ); ?>">
+                </div>
+            </div>
+            <p>Helping You Move from Concern to Confidence with Expert Medical Care. - <a href="<?php echo esc_url( home_url( '/services' ) ); ?>">View all Services</a></p>
+        </div>
+        </div>
     </div>
 </div>
 <!-- Our Service Section End -->

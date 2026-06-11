@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header class="main-header">
+<header class="main-header active-sticky-header">
     <div class="top-header">
         <div class="container">
             <div class="row align-items-center">
@@ -21,8 +21,7 @@
                 </div>
                 <div class="col-lg-6 text-lg-right">
                     <div class="top-header-address">
-                        <span><i class="fa-solid fa-location-dot"></i> Garden Tower,
-Shahjalal Uposhahar, Sylhet</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Garden Tower, Shahjalal Uposhahar, Sylhet</span>
                     </div>
                 </div>
             </div>

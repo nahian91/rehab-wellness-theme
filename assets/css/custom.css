@@ -488,7 +488,7 @@ header.main-header .header-sticky.active{
 	right: 15px;
 	left: 15px;
     transform: translateY(0);
-	background: var(--primary-color);
+	background: #f4f4f4;
 	border: 1px solid var(--dark-divider-color);
 	border-top: none;
 	border-radius: 0 0 20px 20px;
@@ -11735,4 +11735,40 @@ header.main-header .header-sticky.active{
 
 .text-lg-right {
     text-align: right;
+}
+
+/* Container wrapper setup to avoid content jumping on layout calculation */
+header.active-sticky-header {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+/* Base sticky header styling state */
+header.active-sticky-header .header-sticky {
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    background: #ffffff; /* Customize with your theme color */
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* State 1: Active state triggered immediately when scrolling past .top-header */
+header.active-sticky-header .header-sticky.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    /* Smooth, subtle slide down entry when snapping to the top */
+    animation: dptHeaderSlideDown 0.3s ease-out forwards;
+}
+
+/* Smooth entry keyframe */
+@keyframes dptHeaderSlideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }

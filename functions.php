@@ -209,3 +209,59 @@ function my_acf_json_save_point( $path ) {
     return get_stylesheet_directory() . '/acf-json';
 }
 add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
+
+/**
+ * Add floating WhatsApp Chat icon to the bottom right.
+ */
+function rehab_wellness_whatsapp_chat() {
+    // Replace this with your actual WhatsApp phone number (include country code, no spaces or special characters)
+    $phone_number = '1234567890'; 
+    // Optional pre-filled message (URL encoded)
+    $initial_message = urlencode("Hello! I'd like to get more information about your services."); 
+    
+    $whatsapp_url = "https://wa.me/" . $phone_number . "?text=" . $initial_message;
+    ?>
+    <a href="<?php echo esc_url( $whatsapp_url ); ?>" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff !important;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 25px;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #fff !important;
+        }
+        .whatsapp-icon {
+            margin-top: 0;
+        }
+        /* Mobile adjustment so it doesn't block important elements */
+        @media screen and (max-width: 767px) {
+            .whatsapp-float {
+                width: 30px;
+                height: 30px;
+                bottom: 10px;
+                right: 10px;
+                font-size: 20px;
+            }
+        }
+    </style>
+    <?php
+}
+add_action( 'wp_footer', 'rehab_wellness_whatsapp_chat' );

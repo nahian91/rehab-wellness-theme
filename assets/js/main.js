@@ -23,39 +23,34 @@
         };
 
         // Trigger layout calculation on resize routines
-        $window.on('resize', function() {
+        $window.on('resize.dptHeader', function() {
             dptSetHeaderHeight();
         });
     
         // Handle scroll orchestration
-        $window.on("scroll", function() {
+        $window.on("scroll.dptHeader", function() {
             var fromTop = $window.scrollTop();
-            dptSetHeaderHeight();
-            
             var $stickyHeader = $("header.active-sticky-header .header-sticky");
-            var headerHeight = $stickyHeader.outerHeight();
             
-            // Toggle visibility threshold configurations
-            if (fromTop > (headerHeight + 100)) {
-                $stickyHeader.addClass("hide");
-            } else {
-                $stickyHeader.removeClass("hide");
-            }
+            // Dynamically check the top-header height if present, otherwise default to 50px
+            var topHeaderHeight = $('.top-header').outerHeight() || 50;
             
-            // Toggle active state classes
-            if (fromTop > 600) {
+            // As soon as the page scrolls past the top-header bar, stick the menu
+            if (fromTop > topHeaderHeight) {
+                dptSetHeaderHeight(); // Prevent the content below from jumping
                 $stickyHeader.addClass("active");
             } else {
                 $stickyHeader.removeClass("active");
+                $("header.active-sticky-header").css("height", "auto"); // Reset height fallback
             }
         });
-    }   
+    }
     
     /* ========================================== */
     /* 2. SLICK NAV MOBILE NAVIGATION             */
     /* ========================================== */
-    if ($('#menu').length) {
-        $('#menu').slicknav({
+    if ($('.nav-menu-wrapper').length) {
+        $('.nav-menu-wrapper').slicknav({
             label : '',
             prependTo : '.responsive-menu',
             duration: 300,
