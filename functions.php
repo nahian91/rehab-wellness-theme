@@ -266,7 +266,6 @@ function rehab_wellness_whatsapp_chat() {
 }
 add_action( 'wp_footer', 'rehab_wellness_whatsapp_chat' );
 
-<?php
 /**
  * BACKEND AJAX FORM PROCESSOR (CUSTOM RECEIVER EMAIL - DIRECT SERVER SEND)
  */
