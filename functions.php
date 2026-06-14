@@ -266,3 +266,91 @@ function rehab_wellness_whatsapp_chat() {
 }
 add_action( 'wp_footer', 'rehab_wellness_whatsapp_chat' );
 
+/**
+ * BACKEND AJAX FORM PROCESSOR (DIRECT SERVER SEND - NO SMTP)
+ */
+function handle_appointment_form_submission() {
+    // Security Verification step against CSRF injection
+    if ( ! isset( $_POST['appointment_nonce'] ) || ! wp_verify_nonce( $_POST['appointment_nonce'], 'submit_appointment_nonce' ) ) {
+        wp_send_json_error( [ 'message' => 'Security token verification failed.' ] );
+    }
+
+    // Capture inputs and process text sanitization
+    $name     = sanitize_text_field( $_POST['patient_name'] );
+    $age      = intval( $_POST['patient_age'] );
+    $phone    = sanitize_text_field( $_POST['patient_phone'] );
+    $whatsapp = !empty($_POST['patient_whatsapp']) ? sanitize_text_field( $_POST['patient_whatsapp'] ) : 'N/A';
+    $problem  = sanitize_textarea_field( $_POST['patient_problem'] );
+    $date     = sanitize_text_field( $_POST['preferred_date'] );
+    $service  = sanitize_text_field( $_POST['preferred_service'] );
+
+    // Validation Check for Mandatory Fields
+    if ( empty($name) || empty($age) || empty($phone) || empty($problem) || empty($date) || empty($service) ) {
+        wp_send_json_error( [ 'message' => 'Please fill in all mandatory fields.' ] );
+    }
+
+    // Handle File Attachment Securely
+    $attachments = [];
+    if ( ! empty( $_FILES['medical_report']['name'] ) ) {
+        require_once( ABSPATH . 'wp-admin/includes/file.php' );
+        
+        $allowed_types = [ 'application/pdf', 'image/jpeg', 'image/png', 'image/jpg' ];
+        if ( ! in_array( $_FILES['medical_report']['type'], $allowed_types ) ) {
+            wp_send_json_error( [ 'message' => 'Invalid file structure. Only PDFs and Images are permitted.' ] );
+        }
+
+        $uploaded_file = wp_handle_upload( $_FILES['medical_report'], [ 'test_form' => false ] );
+        
+        if ( isset( $uploaded_file['file'] ) ) {
+            $attachments[] = $uploaded_file['file']; 
+        } else {
+            wp_send_json_error( [ 'message' => 'File upload initialization failed.' ] );
+        }
+    }
+
+    // Email Configuration
+    $admin_email   = get_option( 'admin_email' );
+    $email_subject = 'New Appointment Booking Request: ' . $name;
+    
+    // Parse the domain name dynamically from your website URL (e.g., yourdomain.com)
+    $domain_name = parse_url( get_site_url(), PHP_URL_HOST );
+    
+    // BUILD STRATEGIC HEADERS FOR DIRECT SERVER SENDING
+    $headers   = array();
+    $headers[] = 'Content-Type: text/html; charset=UTF-8';
+    
+    // CRITICAL: "From" address MUST match your website's domain name, or servers will flag it as spoofing
+    $headers[] = 'From: Appointment System <noreply@' . $domain_name . '>';
+    
+    // Allows you to hit "Reply" in your email client to instantly email the patient back
+    $headers[] = 'Reply-To: ' . $name . ' <' . $admin_email . '>'; 
+
+    // Assemble HTML Email Format Structures
+    $email_body  = "<h2>New Session Intake Details</h2>";
+    $email_body .= "<p><strong>Patient Full Name:</strong> {$name}</p>";
+    $email_body .= "<p><strong>Age:</strong> {$age}</p>";
+    $email_body .= "<p><strong>Mobile Number:</strong> {$phone}</p>";
+    $email_body .= "<p><strong>WhatsApp Number:</strong> {$whatsapp}</p>";
+    $email_body .= "<p><strong>Preferred Date:</strong> {$date}</p>";
+    $email_body .= "<p><strong>Preferred Service:</strong> {$service}</p>";
+    $email_body .= "<p><strong>Main Health Problem:</strong><br>" . nl2br($problem) . "</p>";
+    $email_body .= "<p><em>If a medical report was provided, it is linked directly below as an email attachment file.</em></p>";
+
+    // Dispatch via standard server mail utility
+    $mail_sent = wp_mail( $admin_email, $email_subject, $email_body, $headers, $attachments );
+
+    // Clean up temporary server side file footprints instantly
+    if ( ! empty( $attachments ) ) {
+        foreach ( $attachments as $file_path ) {
+            @unlink( $file_path );
+        }
+    }
+
+    if ( $mail_sent ) {
+        wp_send_json_success( [ 'message' => 'Your appointment booking has been sent successfully!' ] );
+    } else {
+        wp_send_json_error( [ 'message' => 'System mail routine encountered a server configuration issue.' ] );
+    }
+}
+add_action( 'wp_ajax_process_appointment_form', 'handle_appointment_form_submission' );
+add_action( 'wp_ajax_nopriv_process_appointment_form', 'handle_appointment_form_submission' );

@@ -69,69 +69,112 @@ get_header();?>
 
                         <!-- Appointment Form Start -->
                         <!-- Appointment Form Start -->
-<form id="appointmentForm" action="#" method="POST" enctype="multipart/form-data" class="wow fadeInUp" data-wow-delay="0.2s">
+<form id="appointmentForm" action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>" method="POST" enctype="multipart/form-data" class="wow fadeInUp" data-wow-delay="0.2s">
+    <?php wp_nonce_field( 'submit_appointment_nonce', 'appointment_nonce' ); ?>
+    <input type="hidden" name="action" value="process_appointment_form">
+
+    <div id="form-response-msg" class="mb-4 d-none"></div>
+
     <div class="row">
-        <!-- 1. Patient Name -->
         <div class="form-group col-md-6 mb-4">
             <label for="name" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Patient Full Name <span class="text-danger">*</span></label>
-            <input type="text" name="name" class="form-control" id="name" placeholder="Enter patient full name" required>
+            <input type="text" name="patient_name" class="form-control" id="name" placeholder="Enter patient full name" required>
         </div>
 
-        <!-- 2. Age -->
         <div class="form-group col-md-6 mb-4">
             <label for="age" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Age <span class="text-danger">*</span></label>
-            <input type="number" name="age" class="form-control" id="age" placeholder="Enter age" required>
+            <input type="number" name="patient_age" class="form-control" id="age" placeholder="Enter age" min="0" max="120" required>
         </div>
 
-        <!-- 3. Mobile Number -->
         <div class="form-group col-md-6 mb-4">
             <label for="phone" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Mobile Number <span class="text-danger">*</span></label>
-            <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter mobile number" required>
+            <input type="tel" name="patient_phone" class="form-control" id="phone" placeholder="Enter mobile number" required>
         </div>
 
-        <!-- 4. WhatsApp Number -->
         <div class="form-group col-md-6 mb-4">
             <label for="whatsapp" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">WhatsApp Number</label>
-            <input type="tel" name="whatsapp" class="form-control" id="whatsapp" placeholder="Enter WhatsApp number">
+            <input type="tel" name="patient_whatsapp" class="form-control" id="whatsapp" placeholder="Enter WhatsApp number">
         </div>
 
-        <!-- 5. Main Problem -->
         <div class="form-group col-md-12 mb-4">
             <label for="message" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Main Health Problem <span class="text-danger">*</span></label>
-            <textarea name="message" class="form-control" id="message" rows="4" placeholder="Briefly describe the main health problem..." required></textarea>
+            <textarea name="patient_problem" class="form-control" id="message" rows="4" placeholder="Briefly describe the main health problem..." required></textarea>
         </div>
 
-        <!-- 6. Preferred Date -->
         <div class="form-group col-md-6 mb-4">
             <label for="date" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Preferred Date <span class="text-danger">*</span></label>
-            <input type="date" name="date" class="form-control" id="date" required>
+            <input type="date" name="preferred_date" class="form-control" id="date" min="<?php echo date('Y-m-d'); ?>" required>
         </div>
 
-        <!-- 7. Preferred Service -->
         <div class="form-group col-md-6 mb-4">
             <label for="service" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Preferred Service <span class="text-danger">*</span></label>
-            <select name="service" class="form-control form-select" id="service" required>
+            <select name="preferred_service" class="form-control form-select" id="service" required>
                 <option value="" disabled selected>Select Preferred Service</option>
-                <option value="neuro_rehab">Neuro Rehabilitation</option>
-                <option value="stroke_rehab">Stroke Rehabilitation</option>
-                <option value="physio_pain">Physiotherapy & Pain Management</option>
-                <option value="acupuncture">Acupuncture</option>
-                <option value="regenerative_wellness">Regenerative Wellness / PRP</option>
+                <option value="Neuro Rehabilitation">Neuro Rehabilitation</option>
+                <option value="Stroke Rehabilitation">Stroke Rehabilitation</option>
+                <option value="Physiotherapy & Pain Management">Physiotherapy & Pain Management</option>
+                <option value="Acupuncture">Acupuncture</option>
+                <option value="Regenerative Wellness / PRP">Regenerative Wellness / PRP</option>
             </select>
         </div>
 
-        <!-- 8. Upload Report Option -->
         <div class="form-group col-md-12 mb-4">
             <label for="report" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Upload Medical Report (Optional)</label>
-            <input type="file" name="report" class="form-control" id="report" accept=".pdf,.jpg,.png">
+            <input type="file" name="medical_report" class="form-control" id="report" accept=".pdf,.jpg,.jpeg,.png">
         </div>
 
-        <!-- Submit Button -->
         <div class="col-md-12">
-            <button type="submit" class="btn-default">Book Appointment</button>
+            <button type="submit" class="btn-default" id="submitBtn">Book Appointment</button>
         </div>
     </div>
 </form>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('appointmentForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        const responseBox = document.getElementById('form-response-msg');
+        const formData = new FormData(form);
+
+        // Interface Loading State Adjustment
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Processing...';
+        responseBox.className = 'mb-4 d-none';
+
+        fetch(form.getAttribute('action'), {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Book Appointment';
+            responseBox.classList.remove('d-none');
+            
+            if (data.success) {
+                responseBox.className = 'alert alert-success mb-4';
+                responseBox.innerText = data.data.message;
+                form.reset(); // Clear all inputs seamlessly on success
+            } else {
+                responseBox.className = 'alert alert-danger mb-4';
+                responseBox.innerText = data.data.message;
+            }
+        })
+        .catch(error => {
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Book Appointment';
+            responseBox.classList.remove('d-none');
+            responseBox.className = 'alert alert-danger mb-4';
+            responseBox.innerText = 'An unexpected system error occurred. Please try again.';
+        });
+    });
+});
+</script>
 <!-- Appointment Form End -->
                         <!-- Appointment Form End -->
                     </div>
