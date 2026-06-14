@@ -34,7 +34,7 @@
             <div class="col-lg-6">
                 <div class="top-header-contact">
                     <span><i class="fa-solid fa-phone"></i> +880 13 2476 3317</span>
-                    <span><i class="fa-solid fa-envelope"></i> info@arawbd.com</span>
+                    <span><i class="fa-solid fa-envelope"></i> arawsylhet@gmail.com</span>
                 </div>
             </div>
             <div class="col-lg-6 text-lg-right d-flex justify-content-end align-items-center">

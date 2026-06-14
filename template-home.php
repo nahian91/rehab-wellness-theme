@@ -21,30 +21,6 @@ get_header();?>
                         <div class="hero-btn">
                             <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-default btn-highlighted">Start Consultation</a>
                         </div>
-
-                        <div class="hero-client-box">
-                            <div class="satisfy-client-images">
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="Client 1">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/author-2.jpg" alt="Client 2">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/author-3.jpg" alt="Client 3">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="hero-client-content">
-                                <h2><span class="counter">4.9</span>/5 <i class="fa fa-solid fa-star"></i></h2>
-                                <p>More Than 2500 Reviews</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -65,13 +41,6 @@ get_header();?>
                             <figure>
                                 <img src="<?php echo get_template_directory_uri();?>/assets/images/about-us-image.jpg" alt="About Us">
                             </figure>
-                        </div>
-                        
-                        <div class="about-review-box hero-client-box">
-                            <div class="hero-client-content">
-                                <h2><span class="counter">4.9</span>/5 <i class="fa fa-solid fa-star"></i></h2>
-                                <p>Trusted by patients</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,17 +68,6 @@ get_header();?>
                     <div class="about-content-footer wow fadeInUp" data-wow-delay="0.6s">
                         <div class="about-us-btn">
                             <a href="about.html" class="btn-default">Learn More About Us</a>
-                        </div>
-                        <div class="about-us-author-box">
-                            <div class="about-us-author-image">
-                                <figure class="image-anime">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="Doctor">
-                                </figure>
-                            </div>
-                            <div class="about-us-author-content">
-                                <h3>Devon Lane</h3>
-                                <p>Internal Medicine Specialist</p>
-                            </div>
                         </div>
                     </div>
                 </div>
