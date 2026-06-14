@@ -22,13 +22,6 @@ get_header();?>
                                 <img src="<?php echo get_template_directory_uri();?>/assets/images/about-us-image.jpg" alt="About Us">
                             </figure>
                         </div>
-                        
-                        <div class="about-review-box hero-client-box">
-                            <div class="hero-client-content">
-                                <h2><span class="counter">4.9</span>/5 <i class="fa fa-solid fa-star"></i></h2>
-                                <p>Trusted by patients</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -55,17 +48,6 @@ get_header();?>
                     <div class="about-content-footer wow fadeInUp" data-wow-delay="0.6s">
                         <div class="about-us-btn">
                             <a href="about.html" class="btn-default">Learn More About Us</a>
-                        </div>
-                        <div class="about-us-author-box">
-                            <div class="about-us-author-image">
-                                <figure class="image-anime">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/author-1.jpg" alt="Doctor">
-                                </figure>
-                            </div>
-                            <div class="about-us-author-content">
-                                <h3>Devon Lane</h3>
-                                <p>Internal Medicine Specialist</p>
-                            </div>
                         </div>
                     </div>
                 </div>
