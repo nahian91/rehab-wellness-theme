@@ -266,8 +266,9 @@ function rehab_wellness_whatsapp_chat() {
 }
 add_action( 'wp_footer', 'rehab_wellness_whatsapp_chat' );
 
+<?php
 /**
- * BACKEND AJAX FORM PROCESSOR (DIRECT SERVER SEND - NO SMTP)
+ * BACKEND AJAX FORM PROCESSOR (CUSTOM RECEIVER EMAIL - DIRECT SERVER SEND)
  */
 function handle_appointment_form_submission() {
     // Security Verification step against CSRF injection
@@ -308,22 +309,27 @@ function handle_appointment_form_submission() {
         }
     }
 
-    // Email Configuration
-    $admin_email   = get_option( 'admin_email' );
+    /**
+     		* -----------------------------------------------------------
+     		* CUSTOM EMAIL CONFIGURATION
+     		* -----------------------------------------------------------
+     		*/
+    // EDIT THIS: Swap out placeholder with your actual custom destination email address
+    $receiver_email = 'arawsylhet@gmail.com'; 
+
+    // Quick safety fallback routine if the developer forgets to fill the string asset above
+    if ( empty( $receiver_email ) || ! is_email( $receiver_email ) ) {
+        $receiver_email = get_option( 'admin_email' );
+    }
+
     $email_subject = 'New Appointment Booking Request: ' . $name;
-    
-    // Parse the domain name dynamically from your website URL (e.g., yourdomain.com)
-    $domain_name = parse_url( get_site_url(), PHP_URL_HOST );
+    $domain_name   = parse_url( get_site_url(), PHP_URL_HOST );
     
     // BUILD STRATEGIC HEADERS FOR DIRECT SERVER SENDING
     $headers   = array();
     $headers[] = 'Content-Type: text/html; charset=UTF-8';
-    
-    // CRITICAL: "From" address MUST match your website's domain name, or servers will flag it as spoofing
     $headers[] = 'From: Appointment System <noreply@' . $domain_name . '>';
-    
-    // Allows you to hit "Reply" in your email client to instantly email the patient back
-    $headers[] = 'Reply-To: ' . $name . ' <' . $admin_email . '>'; 
+    $headers[] = 'Reply-To: ' . $name . ' <' . $receiver_email . '>'; 
 
     // Assemble HTML Email Format Structures
     $email_body  = "<h2>New Session Intake Details</h2>";
@@ -336,8 +342,8 @@ function handle_appointment_form_submission() {
     $email_body .= "<p><strong>Main Health Problem:</strong><br>" . nl2br($problem) . "</p>";
     $email_body .= "<p><em>If a medical report was provided, it is linked directly below as an email attachment file.</em></p>";
 
-    // Dispatch via standard server mail utility
-    $mail_sent = wp_mail( $admin_email, $email_subject, $email_body, $headers, $attachments );
+    // Dispatch via standard server mail utility directly to custom account
+    $mail_sent = wp_mail( $receiver_email, $email_subject, $email_body, $headers, $attachments );
 
     // Clean up temporary server side file footprints instantly
     if ( ! empty( $attachments ) ) {
@@ -354,3 +360,76 @@ function handle_appointment_form_submission() {
 }
 add_action( 'wp_ajax_process_appointment_form', 'handle_appointment_form_submission' );
 add_action( 'wp_ajax_nopriv_process_appointment_form', 'handle_appointment_form_submission' );
+
+
+/**
+ * BACKEND CONTACT FORM PROCESSOR (CUSTOM RECEIVER EMAIL - DIRECT SERVER SEND - NO SMTP)
+ */
+function dpt_handle_contact_form_submission() {
+    // 1. Cross-site Request Forgery Mitigation
+    if ( ! isset( $_POST['dpt_contact_nonce'] ) || ! wp_verify_nonce( $_POST['dpt_contact_nonce'], 'dpt_submit_contact_nonce' ) ) {
+        wp_send_json_error( [ 'message' => 'Security token verification failed.' ] );
+    }
+
+    // 2. Data Sourcing and Strict Input Sanitization
+    $first_name = sanitize_text_field( $_POST['fname'] );
+    $last_name  = sanitize_text_field( $_POST['lname'] );
+    $full_name  = trim( $first_name . ' ' . $last_name );
+    $phone      = sanitize_text_field( $_POST['call'] );
+    $visitor_mail = sanitize_email( $_POST['mail'] );
+    $message    = sanitize_textarea_field( $_POST['msg'] );
+
+    // 3. Compulsory Input Assertions
+    if ( empty( $first_name ) || empty( $last_name ) || empty( $phone ) || empty( $visitor_mail ) || empty( $message ) ) {
+        wp_send_json_error( [ 'message' => 'Please complete all required fields.' ] );
+    }
+
+    // 4. Client Email Integrity Screening
+    if ( ! is_email( $visitor_mail ) ) {
+        wp_send_json_error( [ 'message' => 'The email address provided is invalid.' ] );
+    }
+
+    /**
+     * -----------------------------------------------------------
+     * CUSTOM RECEIVER EMAIL ROUTING
+     * -----------------------------------------------------------
+     */
+    // CHANGE THIS: Input your custom receiver email address below
+    $dpt_receiver_email = 'arawsylhet@gmail.com';
+
+    // Automatic fallback rule to site administrator mail state if empty
+    if ( empty( $dpt_receiver_email ) || ! is_email( $dpt_receiver_email ) ) {
+        $dpt_receiver_email = get_option( 'admin_email' );
+    }
+
+    // 5. Build Direct Server Mailing Protocols
+    $email_subject = 'New Website Contact Message from: ' . $full_name;
+    $domain_name   = parse_url( get_site_url(), PHP_URL_HOST );
+    
+    $headers   = array();
+    $headers[] = 'Content-Type: text/html; charset=UTF-8';
+    
+    // Critical Domain alignment to prevent cross-server anti-spoof flags
+    $headers[] = 'From: Contact System <noreply@' . $domain_name . '>';
+    
+    // Direct link headers map directly to the sender's actual mailbox
+    $headers[] = 'Reply-To: ' . $full_name . ' <' . $visitor_mail . '>';
+
+    // 6. Assemble HTML Email Content
+    $email_body  = "<h2>New Contact Message Received</h2>";
+    $email_body .= "<p><strong>Sender Full Name:</strong> {$full_name}</p>";
+    $email_body .= "<p><strong>Email Address:</strong> {$visitor_mail}</p>";
+    $email_body .= "<p><strong>Phone Number:</strong> {$phone}</p>";
+    $email_body .= "<p><strong>Message Content:</strong><br>" . nl2br( $message ) . "</p>";
+
+    // 7. Dispatch Mail routine using native system channels
+    $mail_dispatched = wp_mail( $dpt_receiver_email, $email_subject, $email_body, $headers );
+
+    if ( $mail_dispatched ) {
+        wp_send_json_success( [ 'message' => 'Your message has been sent successfully!' ] );
+    } else {
+        wp_send_json_error( [ 'message' => 'System mail routine encountered a server configuration issue.' ] );
+    }
+}
+add_action( 'wp_ajax_dpt_process_contact_form', 'dpt_handle_contact_form_submission' );
+add_action( 'wp_ajax_nopriv_dpt_process_contact_form', 'dpt_handle_contact_form_submission' );

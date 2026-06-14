@@ -103,39 +103,101 @@ get_header();?>
                         <!-- Section Title End -->
 
                         <!-- Contact Form Start -->
-                        <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="row">
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name*" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
+                        <form id="contactForm" action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>" method="POST" class="wow fadeInUp" data-wow-delay="0.2s">
+    <!-- CSRF Protection Nonce Field and WP AJAX Handler Hook Identifier -->
+    <?php wp_nonce_field( 'dpt_submit_contact_nonce', 'dpt_contact_nonce' ); ?>
+    <input type="hidden" name="action" value="dpt_process_contact_form">
 
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name*" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
+    <div class="row">
+        <!-- First Name -->
+        <div class="form-group col-md-6 mb-4">
+            <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name*" required>
+            <div class="help-block with-errors"></div>
+        </div>
 
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="call" class="form-control" id="call" placeholder="Phone Number*" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
+        <!-- Last Name -->
+        <div class="form-group col-md-6 mb-4">
+            <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name*" required>
+            <div class="help-block with-errors"></div>
+        </div>
 
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="email" name ="mail" class="form-control" id="mail" placeholder="E-mail Address*" required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
+        <!-- Phone Number -->
+        <div class="form-group col-md-6 mb-4">
+            <input type="tel" name="call" class="form-control" id="call" placeholder="Phone Number*" required>
+            <div class="help-block with-errors"></div>
+        </div>
 
-                                <div class="form-group col-md-12 mb-5">
-                                    <textarea name="msg" class="form-control" id="msg" rows="5" placeholder="Write Message Here..."></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
+        <!-- E-mail Address -->
+        <div class="form-group col-md-6 mb-4">
+            <input type="email" name="mail" class="form-control" id="mail" placeholder="E-mail Address*" required>
+            <div class="help-block with-errors"></div>
+        </div>
 
-                                <div class="col-md-12">
-                                    <button type="submit" class="btn-default">Submit Message</button>
-                                    <div id="formsubmit" class="h3 hidden"></div>
-                                </div>
-                            </div>
-                        </form>
+        <!-- Message -->
+        <div class="form-group col-md-12 mb-5">
+            <textarea name="msg" class="form-control" id="msg" rows="5" placeholder="Write Message Here..." required></textarea>
+            <div class="help-block with-errors"></div>
+        </div>
+
+        <!-- Action Submit Action Trigger -->
+        <div class="col-md-12 mb-3">
+            <button type="submit" class="btn-default" id="dptContactSubmitBtn">Submit Message</button>
+        </div>
+
+        <!-- PLACED AT THE BOTTOM: Dynamic Message Output Box -->
+        <div class="col-md-12">
+            <div id="dpt-form-response-msg" class="d-none"></div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('dptContactSubmitBtn');
+        const responseBox = document.getElementById('dpt-form-response-msg');
+        const formData = new FormData(form);
+
+        // UI Processing States
+        submitBtn.disabled = true;
+        const originalBtnText = submitBtn.innerText;
+        submitBtn.innerText = 'Sending...';
+        responseBox.className = 'd-none';
+
+        fetch(form.getAttribute('action'), {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalBtnText;
+            responseBox.classList.remove('d-none');
+            
+            if (data.success) {
+                responseBox.className = 'alert alert-success mt-2';
+                responseBox.innerText = data.data.message;
+                form.reset(); // Wipe all input data channels upon successful processing
+            } else {
+                responseBox.className = 'alert alert-danger mt-2';
+                responseBox.innerText = data.data.message;
+            }
+        })
+        .catch(error => {
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalBtnText;
+            responseBox.classList.remove('d-none');
+            responseBox.className = 'alert alert-danger mt-2';
+            responseBox.innerText = 'An unexpected system error occurred. Please try again.';
+        });
+    });
+});
+</script>
                         <!-- Contact Form End -->
                     </div>
                     <!-- Contact Form End -->

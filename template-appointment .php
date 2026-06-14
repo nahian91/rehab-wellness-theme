@@ -73,8 +73,6 @@ get_header();?>
     <?php wp_nonce_field( 'submit_appointment_nonce', 'appointment_nonce' ); ?>
     <input type="hidden" name="action" value="process_appointment_form">
 
-    <div id="form-response-msg" class="mb-4 d-none"></div>
-
     <div class="row">
         <div class="form-group col-md-6 mb-4">
             <label for="name" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Patient Full Name <span class="text-danger">*</span></label>
@@ -123,8 +121,12 @@ get_header();?>
             <input type="file" name="medical_report" class="form-control" id="report" accept=".pdf,.jpg,.jpeg,.png">
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-12 mb-3">
             <button type="submit" class="btn-default" id="submitBtn">Book Appointment</button>
+        </div>
+
+        <div class="col-md-12">
+            <div id="form-response-msg" class="d-none"></div>
         </div>
     </div>
 </form>
@@ -144,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Interface Loading State Adjustment
         submitBtn.disabled = true;
         submitBtn.innerText = 'Processing...';
-        responseBox.className = 'mb-4 d-none';
+        responseBox.className = 'd-none';
 
         fetch(form.getAttribute('action'), {
             method: 'POST',
@@ -157,11 +159,11 @@ document.addEventListener('DOMContentLoaded', function() {
             responseBox.classList.remove('d-none');
             
             if (data.success) {
-                responseBox.className = 'alert alert-success mb-4';
+                responseBox.className = 'alert alert-success mt-2';
                 responseBox.innerText = data.data.message;
                 form.reset(); // Clear all inputs seamlessly on success
             } else {
-                responseBox.className = 'alert alert-danger mb-4';
+                responseBox.className = 'alert alert-danger mt-2';
                 responseBox.innerText = data.data.message;
             }
         })
@@ -169,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = false;
             submitBtn.innerText = 'Book Appointment';
             responseBox.classList.remove('d-none');
-            responseBox.className = 'alert alert-danger mb-4';
+            responseBox.className = 'alert alert-danger mt-2';
             responseBox.innerText = 'An unexpected system error occurred. Please try again.';
         });
     });
