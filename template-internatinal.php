@@ -60,7 +60,6 @@ get_header();
                 <div class="dpt-sticky-sidebar-panel">
                     <div class="page-category-list wow fadeInUp" data-wow-delay="0.1s" style="background: #f8f9fa; border-radius: 12px; padding: 30px;">
                         <div class="text-center mb-4">
-                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/why-choose-us-image.png' ); ?>" class="img-fluid rounded-circle shadow mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Founder Profile">
                             <h2 class="page-category-list-title mb-1" style="font-size: 22px;">Founder Profile</h2>
                         </div>
 
@@ -200,11 +199,11 @@ get_header();
 
         <!-- ==========================================
              CONTACT SECTION: FOREIGN ORGANIZATIONS CONCIERGE
-             ========================================== -->
+             ========================================== 
         <div class="our-faqs mt-5 pt-4">
             <div class="row align-items-stretch">
                 
-                <!-- Left Block: Informational Call to Action -->
+                
                 <div class="col-xl-5 mb-4 mb-xl-0">
                     <div class="faq-cta-box h-100 d-flex flex-column justify-content-between p-4 rounded text-white bg-dark" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.95));">
                         <div class="faq-cta-content wow fadeInUp">
@@ -227,7 +226,7 @@ get_header();
                     </div>
                 </div>
 
-                <!-- Right Block: Updated Organization & Client Booking Interface -->
+                
                 <div class="col-xl-7">
                     <div class="p-4 p-md-5 rounded border bg-light shadow-sm">
                         <div class="section-title mb-4">
@@ -236,46 +235,46 @@ get_header();
                             <p class="text-muted small">Please submit accurate administrative and diagnostic tracking parameters below.</p>
                         </div>
 
-                        <!-- Main Form System -->
+                        
                         <form id="appointmentForm" action="#" method="POST" enctype="multipart/form-data" class="wow fadeInUp" data-wow-delay="0.2s">
                             <div class="row">
-                                <!-- 1. Patient Name / Contact Identity -->
+                                
                                 <div class="form-group col-md-6 mb-4">
                                     <label for="name" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Patient Full Name / Corporate Delegate <span class="text-danger">*</span></label>
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Enter full name" required>
                                 </div>
 
-                                <!-- 2. Age -->
+                                
                                 <div class="form-group col-md-6 mb-4">
                                     <label for="age" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Age <span class="text-danger">*</span></label>
                                     <input type="number" name="age" class="form-control" id="age" placeholder="Enter age" required>
                                 </div>
 
-                                <!-- 3. Mobile Number -->
+                                
                                 <div class="form-group col-md-6 mb-4">
                                     <label for="phone" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Mobile Number <span class="text-danger">*</span></label>
                                     <input type="tel" name="phone" class="form-control" id="phone" placeholder="Include country code" required>
                                 </div>
 
-                                <!-- 4. WhatsApp Number -->
+                                
                                 <div class="form-group col-md-6 mb-4">
                                     <label for="whatsapp" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">WhatsApp Number</label>
                                     <input type="tel" name="whatsapp" class="form-control" id="whatsapp" placeholder="Include country code">
                                 </div>
 
-                                <!-- 5. Main Problem / Institutional Request Scope -->
+                                
                                 <div class="form-group col-md-12 mb-4">
                                     <label for="message" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Main Health Problem / Scope of Collaboration <span class="text-danger">*</span></label>
                                     <textarea name="message" class="form-control" id="message" rows="4" placeholder="Briefly describe the clinical condition or specific organizational partnership metrics requested..." required></textarea>
                                 </div>
 
-                                <!-- 6. Preferred Date -->
+                                
                                 <div class="form-group col-md-6 mb-4">
                                     <label for="date" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Preferred Date <span class="text-danger">*</span></label>
                                     <input type="date" name="date" class="form-control" id="date" required>
                                 </div>
 
-                                <!-- 7. Preferred Service -->
+                                
                                 <div class="form-group col-md-6 mb-4">
                                     <label for="service" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Preferred Service Sector <span class="text-danger">*</span></label>
                                     <select name="service" class="form-control form-select" id="service" required>
@@ -291,13 +290,11 @@ get_header();
                                     </select>
                                 </div>
 
-                                <!-- 8. Upload Report Option -->
+                                
                                 <div class="form-group col-md-12 mb-4">
                                     <label for="report" class="form-label" style="margin-bottom: 5px; font-size: 14px; font-weight: 500;">Upload Medical Report / Intent Documentation (Optional)</label>
                                     <input type="file" name="report" class="form-control" id="report" accept=".pdf,.jpg,.png">
                                 </div>
-
-                                <!-- Submit Action Component -->
                                 <div class="col-md-12">
                                     <button type="submit" class="btn-default w-100 py-3 text-uppercase font-weight-bold" style="letter-spacing: 1px;">Initialize Strategic Request</button>
                                 </div>
@@ -309,7 +306,7 @@ get_header();
                 
             </div>
         </div>
-
+    -->
     </div>
 </div>
 
