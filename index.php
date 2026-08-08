@@ -35,7 +35,7 @@
                             <a href="<?php the_permalink(); ?>">
                                 <figure>
                                     <?php if ( has_post_thumbnail() ) {
-                                        the_post_thumbnail('large');
+                                        the_post_thumbnail('medium');
                                     } ?>
                                 </figure>    
                             </a>
@@ -45,10 +45,13 @@
                         </div>
                         <div class="post-item-body">
                             <div class="post-item-content">
-                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <h2>
+    <a href="<?php the_permalink(); ?>">
+        <?php echo wp_trim_words( get_the_title(), 10, '...' ); ?>
+    </a>
+</h2>
                                 <br>
-                                <?php the_excerpt();?>
-                            </div>
+<p><?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?></p>                            </div>
                             <div class="post-item-btn">
                                 <a href="<?php the_permalink(); ?>" class="readmore-btn">Read More</a>
                             </div>

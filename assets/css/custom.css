@@ -11768,3 +11768,146 @@ header.active-sticky-header .header-sticky.active {
         transform: translateY(0);
     }
 }
+
+
+/* ==========================================================================
+   Gutenberg Default Block Styles
+   ========================================================================== */
+
+/* 1. Base Typography & Spacing */
+.entry-content > * + * {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+}
+
+.entry-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #333333;
+}
+
+/* 2. Headings (h1 - h6) */
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    color: #111111;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+.entry-content h1 { font-size: 2.25rem; }
+.entry-content h2 { font-size: 1.75rem; }
+.entry-content h3 { font-size: 1.35rem; }
+
+/* 3. Lists (wp-block-list) */
+.entry-content ul,
+.entry-content ol {
+    padding-left: 1.5em;
+    line-height: 1.6;
+}
+
+.entry-content li {
+    margin-bottom: 0.5em;
+}
+
+/* 4. Blockquotes (wp-block-quote) */
+.wp-block-quote {
+    border-left: 4px solid #0066cc;
+    margin: 2em 0;
+    padding: 0.5em 0 0.5em 1.25em;
+    font-style: italic;
+    color: #555555;
+}
+
+.wp-block-quote cite {
+    display: block;
+    font-size: 0.875rem;
+    font-style: normal;
+    color: #777777;
+    margin-top: 0.5em;
+}
+
+/* 5. Images & Captions (wp-block-image) */
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.wp-block-image figcaption {
+    font-size: 0.875rem;
+    color: #666666;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+/* Alignments */
+.wp-block-image.aligncenter {
+    text-align: center;
+}
+
+.wp-block-image.alignleft {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+}
+
+.wp-block-image.alignright {
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* 6. Buttons (wp-block-button) */
+.wp-block-button__link {
+    display: inline-block;
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 0.75em 1.5em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.wp-block-button__link:hover {
+    background-color: #004999;
+    color: #ffffff;
+}
+
+/* Outline Button Style */
+.is-style-outline .wp-block-button__link {
+    background-color: transparent;
+    border: 2px solid #0066cc;
+    color: #0066cc;
+}
+
+.is-style-outline .wp-block-button__link:hover {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+/* 7. Code & Preformatted Blocks */
+.wp-block-code,
+pre.wp-block-preformatted {
+    background-color: #f4f4f5;
+    padding: 1em;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+/* 8. Separator / HR (wp-block-separator) */
+.wp-block-separator {
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+    margin: 2.5em auto;
+    width: 100%;
+}
